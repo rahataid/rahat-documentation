@@ -76,6 +76,10 @@
         },
         {
           "type": "doc",
+          "id": "version-1.2/installation_guide"
+        },
+        {
+          "type": "doc",
           "id": "version-1.2/contributing_guidelines"
         },
         {
