@@ -100,7 +100,7 @@ docker compose -f docker-compose.prod.yml build
 
 2. Run the following command to start the production build of Rahat applications.
 ```
-docker compose -f docker-compose.prod.yml build
+docker compose -f docker-compose.prod.yml up
 ```
 
 For production build, application will run on following ports:
