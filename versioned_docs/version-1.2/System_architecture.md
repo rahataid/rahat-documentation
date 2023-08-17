@@ -12,7 +12,7 @@ In this section an overall view of the Rahat infrastructure is provided. If you 
 Rahat comprises a collection of projects:
 
 
-* [Rahat](https://github.com/esatya/rahat): API service for all the other web-apps
+* [Rahat](https://github.com/esatya/rahat-backend): API service for all the other web-apps
 * [Rahat-agency](https://github.com/esatya/rahat-agency): Rahat agency app used by agencies to track and distribute aids
 * [Rahat-mobilizer](https://github.com/esatya/rahat-mobilizer): Rahat mobilizer app to onboard beneficiaries
 * [Rahat-vendor](https://github.com/esatya/rahat-vendor): Rahat vendor app to serve beneficiary for aid distribution
