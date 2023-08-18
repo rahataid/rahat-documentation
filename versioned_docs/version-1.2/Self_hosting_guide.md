@@ -11,7 +11,7 @@ Welcome to the self-hosting guide. These guides help you to host your own Rahat 
 
 
 
-* [Rahat Server ](https://github.com/esatya/rahat)
+* [Rahat Server ](https://github.com/esatya/rahat-backend)
 * [Agency App ](https://github.com/esatya/rahat-agency/blob/master/README.md)
 * [Vendor App (Web)](https://github.com/esatya/rahat-vendor/blob/master/README.md)
 * [Mobilizer app (Web)](https://github.com/esatya/rahat-mobilizer/blob/main/README.md)
