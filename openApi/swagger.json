@@ -1,3075 +1,1845 @@
 {
   "openapi": "3.0.0",
-  "info": {
-    "title": "Rahat Server",
-    "version": "2.1.0",
-    "description": "Server application for Rahat Systems",
-    "contact": "support@rahat.io",
-    "license": {
-      "name": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-    }
-  },
-  "externalDocs": {
-    "description": "Test out more on our stage server api",
-    "url": "https://agency.rahat.io/documentation"
-  },
-  "servers": [{ "url": "https://agency-stage.rahat.io/api/v1" }],
-  "securityDefinitions": {
-    "access_token": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "access_token",
-      "description": "get token using user login method"
-    }
-  },
-  "tags": [
-    {
-      "name": "auth"
-    },
-    {
-      "name": "agency"
-    },
-    {
-      "name": "app"
-    },
-    {
-      "name": "beneficiaries"
-    },
-    {
-      "name": "institutions"
-    },
-    {
-      "name": "mobilizers"
-    },
-    {
-      "name": "projects"
-    },
-    {
-      "name": "roles"
-    },
-    {
-      "name": "transactions"
-    },
-    {
-      "name": "users"
-    },
-    {
-      "name": "vendors"
-    }
-  ],
   "paths": {
-    "/auth": {
-      "get": {
-        "tags": ["auth"],
-        "summary": "Get the token data",
-        "operationId": "getApiV1Auth",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
+      "/api/v1/app/settings": {
+          "post": {
+              "operationId": "AppController_createAppSettings",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateAppSettingDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "app"
+              ]
+          },
+          "get": {
+              "operationId": "AppController_getAppSettings",
+              "parameters": [
+                  {
+                      "name": "name",
+                      "required": false,
+                      "in": "query",
+                      "example": "CONTRACT_ADDRESS",
+                      "description": "Name of the app settings",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "app"
+              ]
           }
-        }
       },
-      "post": {
-        "summary": "Login using username and password",
-        "operationId": "postApiV1Auth",
-        "tags": ["auth"],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
+      "/api/v1/app/contracts": {
+          "get": {
+              "operationId": "AppController_getContracts",
+              "parameters": [],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "app"
+              ]
           }
-        }
-      }
-    },
-    "/beneficiaries": {
-      "get": {
-        "tags": ["beneficiaries"],
-        "summary": "List all beneficiarys.",
-        "operationId": "getApiV1Beneficiaries",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["beneficiaries"],
-        "summary": "Add a beneficiary.",
-        "operationId": "postApiV1Beneficiaries",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/app/blockchain": {
+          "get": {
+              "operationId": "AppController_getBlockchain",
+              "parameters": [],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "app"
+              ]
           }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Beneficiary" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Beneficiary" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/institutions": {
-      "get": {
-        "tags": ["institutions"],
-        "summary": "List all the financial institutions",
-        "operationId": "getApiV1Institutions",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["institutions"],
-        "summary": "Add a financial institutions",
-        "operationId": "postApiV1Institutions",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/app/contracts/{contractName}": {
+          "get": {
+              "operationId": "AppController_getContractByName",
+              "parameters": [
+                  {
+                      "name": "contractName",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "app"
+              ]
           }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Institution" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Institution" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/mobilizers": {
-      "get": {
-        "tags": ["mobilizers"],
-        "summary": "List all Mobilizers.",
-        "operationId": "getApiV1Mobilizers",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "start",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "limit",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "name",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "projectId",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "status",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "boolean"
-            },
-            "name": "show_archive",
-            "in": "query"
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["mobilizers"],
-        "summary": "Add a MOBILIZER.",
-        "operationId": "postApiV1Mobilizers",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Mobilizer" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Mobilizer" }
-              }
-            }
+      "/api/v1/users": {
+          "post": {
+              "operationId": "UserController_create",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateUserDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/projects": {
-      "get": {
-        "tags": ["projects"],
-        "summary": "List all the agencies projects",
-        "security": [
-          {
-            "access_token": []
+          "get": {
+              "operationId": "UserController_findAll",
+              "parameters": [
+                  {
+                      "name": "page",
+                      "required": false,
+                      "in": "query",
+                      "description": "Page to load",
+                      "example": "1",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "perPage",
+                      "required": false,
+                      "in": "query",
+                      "example": "10",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "name",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "orderBy",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "getApiV1Projects",
-        "parameters": [
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "start",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "limit",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "name",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "status",
-            "in": "query"
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["projects"],
-        "summary": "Add new project",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/users/register": {
+          "post": {
+              "operationId": "UserController_register",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateUserDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "postApiV1Projects",
-        "consumes": ["multipart/form-data"],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Project" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Project" }
-              }
-            }
-          },
-          "405": {
-            "description": "Invalid input"
-          }
-        }
-      }
-    },
-    "/roles": {
-      "get": {
-        "tags": ["roles"],
-        "summary": "Get all the roles",
-        "operationId": "getApiV1Roles",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "put": {
-        "tags": ["roles"],
-        "summary": "Add a new role",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/users/{walletAddress}/role": {
+          "patch": {
+              "operationId": "UserController_updateRole",
+              "parameters": [
+                  {
+                      "name": "walletAddress",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateUserRoleDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "putApiV1Roles",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/users": {
-      "get": {
-        "tags": ["users"],
-        "summary": "List all users",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1Users",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "name",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "start",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "limit",
-            "in": "query"
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["users"],
-        "summary": "Add a new user",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/users/{walletAddress}": {
+          "get": {
+              "operationId": "UserController_findOne",
+              "parameters": [
+                  {
+                      "name": "walletAddress",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "postApiV1Users",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model2" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model2" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/vendors": {
-      "get": {
-        "tags": ["vendors"],
-        "summary": "List all vendors.",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1Vendors",
-        "parameters": [
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "start",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "number"
-            },
-            "name": "limit",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "name",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "phone",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "projectId",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "status",
-            "in": "query"
-          },
-          {
-            "schema": {
-              "type": "boolean"
-            },
-            "name": "show_archive",
-            "in": "query"
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["vendors"],
-        "summary": "Add a vendor.",
-        "operationId": "postApiV1Vendors",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Vendor" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Vendor" }
-              }
-            }
+      "/api/v1/users/{id}": {
+          "patch": {
+              "operationId": "UserController_update",
+              "parameters": [
+                  {
+                      "name": "id",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateUserDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/agency/{id}": {
-      "get": {
-        "tags": ["agency"],
-        "summary": "Get an agency by id.",
-        "security": [
-          {
-            "access_token": []
+          "delete": {
+              "operationId": "UserController_remove",
+              "parameters": [
+                  {
+                      "name": "id",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "getApiV1AgencyId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the agency",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "put": {
-        "tags": ["agency"],
-        "summary": "Update the agency information",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/users/{walletAddress}/approve": {
+          "patch": {
+              "operationId": "UserController_approve",
+              "parameters": [
+                  {
+                      "name": "walletAddress",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "putApiV1AgencyId",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the agency",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Agency" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Agency" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/app/dashboards": {
-      "get": {
-        "tags": ["app"],
-        "summary": "Get the dashboard informations",
-        "operationId": "getApiV1AppDashboards",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/app/settings": {
-      "get": {
-        "tags": ["app"],
-        "summary": "List all the application settings",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1AppSettings",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/beneficiaries/{id}": {
-      "get": {
-        "tags": ["beneficiaries"],
-        "summary": "Get an beneficiary by Phone , Wallet Adress or id.",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1BeneficiariesId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "delete": {
-        "tags": ["beneficiaries"],
-        "summary": "Remove and archive a beneficiary,",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/users/login/otp": {
+          "post": {
+              "operationId": "UserController_requestOtp",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/RequestUserOtpDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "deleteApiV1BeneficiariesId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "put": {
-        "tags": ["beneficiaries"],
-        "summary": "Update beneficiary details.",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/users/login/verify-otp": {
+          "post": {
+              "operationId": "UserController_verifyOtp",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/VerifyUserOtpDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "users"
+              ]
           }
-        ],
-        "operationId": "putApiV1BeneficiariesId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Beneficiary" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Beneficiary" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/institutions/{id}": {
-      "get": {
-        "tags": ["institutions"],
-        "summary": "Get a financial institutions by Id",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1InstitutionsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "delete": {
-        "tags": ["institutions"],
-        "summary": "Remove and archive a financial institutions",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/projects": {
+          "post": {
+              "operationId": "ProjectController_create",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateProjectDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "projects"
+              ]
+          },
+          "get": {
+              "operationId": "ProjectController_findAll",
+              "parameters": [
+                  {
+                      "name": "page",
+                      "required": false,
+                      "in": "query",
+                      "description": "Page to load",
+                      "example": "1",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "perPage",
+                      "required": false,
+                      "in": "query",
+                      "example": "10",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "name",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "orderBy",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "projects"
+              ]
           }
-        ],
-        "operationId": "deleteApiV1InstitutionsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "put": {
-        "tags": ["institutions"],
-        "summary": "Update financial institutions details",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "putApiV1InstitutionsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model9" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model9" }
-              }
-            }
+      "/api/v1/projects/{address}": {
+          "get": {
+              "operationId": "ProjectController_findOne",
+              "parameters": [
+                  {
+                      "name": "address",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "projects"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/mobilizers/{id}": {
-      "get": {
-        "tags": ["mobilizers"],
-        "summary": "Get an MOBILIZER by Wallet Adress or id.",
-        "security": [
-          {
-            "access_token": []
+          "patch": {
+              "operationId": "ProjectController_update",
+              "parameters": [
+                  {
+                      "name": "address",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateProjectDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "projects"
+              ]
           }
-        ],
-        "operationId": "getApiV1MobilizersId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "delete": {
-        "tags": ["mobilizers"],
-        "summary": "Remove and archive a MOBILIZER,",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/projects/{address}/beneficiaries": {
+          "get": {
+              "operationId": "ProjectController_getBeneficiaries",
+              "parameters": [
+                  {
+                      "name": "address",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "projects"
+              ]
           }
-        ],
-        "operationId": "deleteApiV1MobilizersId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "put": {
-        "tags": ["mobilizers"],
-        "summary": "Update MOBILIZER details.",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "putApiV1MobilizersId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model10" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model10" }
-              }
-            }
+      "/api/v1/beneficiaries": {
+          "post": {
+              "operationId": "BeneficiaryController_create",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateBeneficiaryDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/projects/{id}": {
-      "get": {
-        "tags": ["projects"],
-        "summary": "Get a project by Id",
-        "security": [
-          {
-            "access_token": []
+          "get": {
+              "operationId": "BeneficiaryController_findAll",
+              "parameters": [
+                  {
+                      "name": "page",
+                      "required": false,
+                      "in": "query",
+                      "description": "Page to load",
+                      "example": "1",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "perPage",
+                      "required": false,
+                      "in": "query",
+                      "example": "10",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "name",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "orderBy",
+                      "required": false,
+                      "in": "query",
+                      "example": "name",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "order",
+                      "required": false,
+                      "in": "query",
+                      "example": "asc",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "phoneOwnership",
+                      "required": false,
+                      "in": "query",
+                      "schema": {}
+                  },
+                  {
+                      "name": "bankStatus",
+                      "required": false,
+                      "in": "query",
+                      "schema": {}
+                  },
+                  {
+                      "name": "internetAccess",
+                      "required": false,
+                      "in": "query",
+                      "schema": {}
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           }
-        ],
-        "operationId": "getApiV1ProjectsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "delete": {
-        "tags": ["projects"],
-        "summary": "Remove and archive a project",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/beneficiaries/geo": {
+          "get": {
+              "operationId": "BeneficiaryController_getGeoLocation",
+              "parameters": [],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           }
-        ],
-        "operationId": "deleteApiV1ProjectsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "put": {
-        "tags": ["projects"],
-        "summary": "Update project details",
-        "operationId": "putApiV1ProjectsId",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/beneficiaries/stats": {
+          "get": {
+              "operationId": "BeneficiaryController_getStats",
+              "parameters": [],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Project" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Project" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/roles/{id}": {
-      "get": {
-        "tags": ["roles"],
-        "summary": "Get a role by id",
-        "operationId": "getApiV1RolesId",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "delete": {
-        "tags": ["roles"],
-        "summary": "Delete a role by id",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/beneficiaries/{uuid}": {
+          "get": {
+              "operationId": "BeneficiaryController_findOne",
+              "parameters": [
+                  {
+                      "name": "uuid",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
+          },
+          "patch": {
+              "operationId": "BeneficiaryController_update",
+              "parameters": [
+                  {
+                      "name": "uuid",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateBeneficiaryDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
+          },
+          "delete": {
+              "operationId": "BeneficiaryController_remove",
+              "parameters": [
+                  {
+                      "name": "uuid",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           }
-        ],
-        "operationId": "deleteApiV1RolesId",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/transactions/tosign": {
-      "get": {
-        "tags": ["transactions"],
-        "summary": "Get a new transaction to sign",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1TransactionsTosign",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/transactions/{to}": {
-      "get": {
-        "tags": ["transactions"],
-        "summary": "List all transactions.",
-        "operationId": "getApiV1TransactionsTo",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "to",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/users/login": {
-      "get": {
-        "tags": ["users"],
-        "summary": "Login using username and password",
-        "operationId": "getApiV1UsersLogin",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/users/{id}": {
-      "get": {
-        "tags": ["users"],
-        "summary": "Find a user by id",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1UsersId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["users"],
-        "summary": "Update user data",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/beneficiaries/{uuid}/transactions": {
+          "get": {
+              "operationId": "BeneficiaryController_getTransactions",
+              "parameters": [
+                  {
+                      "name": "uuid",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "page",
+                      "required": false,
+                      "in": "query",
+                      "description": "Page to load",
+                      "example": "1",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "perPage",
+                      "required": false,
+                      "in": "query",
+                      "example": "10",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           }
-        ],
-        "operationId": "postApiV1UsersId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model6" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model6" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/vendors/{id}": {
-      "get": {
-        "tags": ["vendors"],
-        "summary": "Get an vendor by Wallet Adress or id.",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1VendorsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "delete": {
-        "tags": ["vendors"],
-        "summary": "Remove and archive a Vendor,",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/beneficiaries/{uuid}/projects": {
+          "post": {
+              "operationId": "BeneficiaryController_assignProject",
+              "parameters": [
+                  {
+                      "name": "uuid",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/AssignBeneficiaryToProjectDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           }
-        ],
-        "operationId": "deleteApiV1VendorsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "put": {
-        "tags": ["vendors"],
-        "summary": "Update vendor details.",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/beneficiaries/{uuid}/status": {
+          "patch": {
+              "operationId": "BeneficiaryController_updateStatus",
+              "parameters": [
+                  {
+                      "name": "uuid",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateBeneficiaryStatusDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "beneficiaries"
+              ]
           }
-        ],
-        "operationId": "putApiV1VendorsId",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Vendor" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Vendor" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/app/contracts/{contractName}": {
-      "get": {
-        "tags": ["app"],
-        "summary": "Get a contracts artifacts",
-        "operationId": "getApiV1AppContractsContractname",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "contractName",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/app/setup/contracts": {
-      "get": {
-        "tags": ["app"],
-        "summary": "setup a contracts and deploy to blockchain",
-        "operationId": "getApiV1AppSetupContracts",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/app/setup/wallet": {
-      "get": {
-        "tags": ["app"],
-        "summary": "Setup a new server wallet",
-        "operationId": "getApiV1AppSetupWallet",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/beneficiaries/{id}/token": {
-      "get": {
-        "tags": ["beneficiaries"],
-        "summary": "List token distributions to beneficiary",
-        "operationId": "getApiV1BeneficiariesIdToken",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["beneficiaries"],
-        "summary": "Distribute token to beneficiary",
-        "operationId": "postApiV1BeneficiariesIdToken",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/reports/dashboard/summary": {
+          "get": {
+              "operationId": "ReportsController_getDashboardSummary",
+              "parameters": [],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "reports"
+              ]
           }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/TokenDistribution" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/TokenDistribution" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/mobilizers/{id}/transactions": {
-      "get": {
-        "tags": ["mobilizers"],
-        "summary": "Get the token transactions by current MOBILIZER",
-        "operationId": "getApiV1MobilizersIdTransactions",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/projects/{id}/vendors": {
-      "get": {
-        "tags": ["projects"],
-        "summary": "List vendors registered to the project",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1ProjectsIdVendors",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/projects/{id}/beneficiaries": {
-      "get": {
-        "tags": ["projects"],
-        "summary": "List beneficiaries registered to the project",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "getApiV1ProjectsIdBeneficiaries",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "post": {
-        "tags": ["projects"],
-        "summary": "Add beneficiary to the project",
-        "operationId": "postApiV1ProjectsIdBeneficiaries",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model8" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model8" }
-              }
-            }
+      "/api/v1/auths": {
+          "post": {
+              "operationId": "AuthsController_create",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateAuthDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "auths"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/roles/{name}/permissions": {
-      "get": {
-        "tags": ["roles"],
-        "summary": "Get permissions list by role",
-        "security": [
-          {
-            "access_token": []
+          "get": {
+              "operationId": "AuthsController_findAll",
+              "parameters": [],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "auths"
+              ]
           }
-        ],
-        "operationId": "getApiV1RolesNamePermissions",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/users/roles/{role}": {
-      "get": {
-        "tags": ["users"],
-        "summary": "List by role",
-        "operationId": "getApiV1UsersRolesRole",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/vendors/{id}/transactions": {
-      "get": {
-        "tags": ["vendors"],
-        "summary": "Get the token transactions by current vendor",
-        "operationId": "getApiV1VendorsIdTransactions",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/app/contracts/{contractName}/bytecode": {
-      "get": {
-        "tags": ["app"],
-        "summary": "Get a contracts bytecode",
-        "operationId": "getApiV1AppContractsContractnameBytecode",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "contractName",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/transactions": {
-      "post": {
-        "tags": ["transactions"],
-        "summary": "Add a new transaction.",
-        "operationId": "postApiV1Transactions",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model1" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model1" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/app/setup": {
-      "post": {
-        "tags": ["app"],
-        "summary": "Setup a new server for the first time",
-        "operationId": "postApiV1AppSetup",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/AppSetup" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/AppSetup" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/auth/wallet": {
-      "post": {
-        "tags": ["auth"],
-        "summary": "Login using blockchain wallet",
-        "operationId": "postApiV1AuthWallet",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/mobilizers/register": {
-      "post": {
-        "tags": ["mobilizers"],
-        "summary": "Register a MOBILIZER.",
-        "operationId": "postApiV1MobilizersRegister",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model3" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model3" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/transactions/signed": {
-      "post": {
-        "tags": ["transactions"],
-        "summary": "sends signed Transaction",
-        "operationId": "postApiV1TransactionsSigned",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/users/check": {
-      "post": {
-        "tags": ["users"],
-        "summary": "Check If user Exists",
-        "operationId": "postApiV1UsersCheck",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model4" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model4" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/users/register": {
-      "post": {
-        "tags": ["users"],
-        "summary": "Register a new user",
-        "operationId": "postApiV1UsersRegister",
-
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model5" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model5" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/vendors/register": {
-      "post": {
-        "tags": ["vendors"],
-        "summary": "Register a vendor.",
-        "operationId": "postApiV1VendorsRegister",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model7" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model7" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/users/login/wallet": {
-      "post": {
-        "tags": ["users"],
-        "summary": "Login using blockchain wallet",
-        "operationId": "postApiV1UsersLoginWallet",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/roles/{id}/permissions": {
-      "delete": {
-        "tags": ["roles"],
-        "summary": "Remove permissions from a role",
-        "operationId": "deleteApiV1RolesIdPermissions",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "patch": {
-        "tags": ["roles"],
-        "summary": "Add permissions to a role",
-        "security": [
-          {
-            "access_token": []
+      "/api/v1/auths/login-wallet": {
+          "post": {
+              "operationId": "AuthsController_loginWallet",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/WalletLoginDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "auths"
+              ]
           }
-        ],
-        "operationId": "patchApiV1RolesIdPermissions",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model18" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model18" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/users/{id}/roles": {
-      "delete": {
-        "tags": ["users"],
-        "summary": "Remove roles from user",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "deleteApiV1UsersIdRoles",
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
       },
-      "patch": {
-        "tags": ["users"],
-        "summary": "Add roles to a user",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "operationId": "patchApiV1UsersIdRoles",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model19" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model19" }
-              }
-            }
+      "/api/v1/auths/{id}": {
+          "get": {
+              "operationId": "AuthsController_findOne",
+              "parameters": [
+                  {
+                      "name": "id",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "auths"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/mobilizers/approve": {
-      "patch": {
-        "tags": ["mobilizers"],
-        "summary": "Approves MOBILIZER to interact with projects of this agency",
-        "operationId": "patchApiV1MobilizersApprove",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model11" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model11" }
-              }
-            }
+          "patch": {
+              "operationId": "AuthsController_update",
+              "parameters": [
+                  {
+                      "name": "id",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateAuthDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "auths"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/vendors/approve": {
-      "patch": {
-        "tags": ["vendors"],
-        "summary": "Approves vendor to interact with projects of this agency",
-        "operationId": "patchApiV1VendorsApprove",
-        "security": [
-          {
-            "access_token": []
+          "delete": {
+              "operationId": "AuthsController_remove",
+              "parameters": [
+                  {
+                      "name": "id",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "auths"
+              ]
           }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model12" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model12" }
-              }
-            }
+      },
+      "/api/v1/transactions": {
+          "post": {
+              "operationId": "TransactionsController_create",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateTransactionDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "transactions"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/agency/{id}/contracts": {
-      "patch": {
-        "tags": ["agency"],
-        "summary": "Update contract addresses controlled by the agency",
-        "operationId": "patchApiV1AgencyIdContracts",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Id of the agency",
-            "name": "id",
-            "in": "path",
-            "required": true
+          "get": {
+              "operationId": "TransactionsController_findAll",
+              "parameters": [
+                  {
+                      "name": "page",
+                      "required": false,
+                      "in": "query",
+                      "description": "Page to load",
+                      "example": "1",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "perPage",
+                      "required": false,
+                      "in": "query",
+                      "example": "10",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "orderBy",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "transactions"
+              ]
           }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model13" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model13" }
-              }
-            }
+      },
+      "/api/v1/transactions/{txHash}": {
+          "get": {
+              "operationId": "TransactionsController_findOne",
+              "parameters": [
+                  {
+                      "name": "txHash",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "transactions"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/institutions/{id}/status": {
-      "patch": {
-        "tags": ["institutions"],
-        "summary": "Update financial institutions status",
-        "operationId": "patchApiV1InstitutionsIdStatus",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model14" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model14" }
-              }
-            }
+          "patch": {
+              "operationId": "TransactionsController_update",
+              "parameters": [
+                  {
+                      "name": "txHash",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateTransactionDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "transactions"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/mobilizers/{id}/status": {
-      "patch": {
-        "tags": ["mobilizers"],
-        "summary": "Change Vendors Status",
-        "operationId": "patchApiV1MobilizersIdStatus",
-        "security": [
-          {
-            "access_token": []
+          "delete": {
+              "operationId": "TransactionsController_remove",
+              "parameters": [
+                  {
+                      "name": "txHash",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "transactions"
+              ]
           }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model15" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model15" }
-              }
-            }
+      },
+      "/api/v1/vendors": {
+          "post": {
+              "operationId": "VendorsController_create",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateVendorDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "vendors"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/projects/{id}/status": {
-      "patch": {
-        "tags": ["projects"],
-        "summary": "Update project status",
-        "operationId": "patchApiV1ProjectsIdStatus",
-        "security": [
-          {
-            "access_token": []
+          "get": {
+              "operationId": "VendorsController_findAll",
+              "parameters": [
+                  {
+                      "name": "page",
+                      "required": false,
+                      "in": "query",
+                      "description": "Page to load",
+                      "example": "1",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "perPage",
+                      "required": false,
+                      "in": "query",
+                      "example": "10",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "name",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "name": "orderBy",
+                      "required": false,
+                      "in": "query",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "vendors"
+              ]
           }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model16" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model16" }
-              }
-            }
+      },
+      "/api/v1/vendors/{walletAddress}": {
+          "get": {
+              "operationId": "VendorsController_findOne",
+              "parameters": [
+                  {
+                      "name": "walletAddress",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "vendors"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    },
-    "/projects/{id}/token": {
-      "patch": {
-        "tags": ["projects"],
-        "summary": "Add token allocation to the project",
-        "operationId": "patchApiV1ProjectsIdToken",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Resource identifier",
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model17" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model17" }
-              }
-            }
+          "patch": {
+              "operationId": "VendorsController_update",
+              "parameters": [
+                  {
+                      "name": "walletAddress",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/UpdateVendorDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "vendors"
+              ]
           },
-          "405": { "description": "Invalid input" }
-        }
+          "delete": {
+              "operationId": "VendorsController_remove",
+              "parameters": [
+                  {
+                      "name": "walletAddress",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "vendors"
+              ]
+          }
+      },
+      "/api/v1/vendors/{walletAddress}/approval": {
+          "patch": {
+              "operationId": "VendorsController_approval",
+              "parameters": [
+                  {
+                      "name": "walletAddress",
+                      "required": true,
+                      "in": "path",
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "vendors"
+              ]
+          }
+      },
+      "/api/v1/vendors/register": {
+          "post": {
+              "operationId": "VendorsController_register",
+              "parameters": [],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "$ref": "#/components/schemas/CreateVendorDto"
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": ""
+                  }
+              },
+              "tags": [
+                  "vendors"
+              ]
+          }
       }
-    },
-    "/users/{id}/status": {
-      "patch": {
-        "tags": ["users"],
-        "summary": "Make user active or inactive",
-        "operationId": "patchApiV1UsersIdStatus",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "responses": {
-          "default": {
-            "schema": {
-              "type": "string"
-            },
-            "description": "Successful"
-          }
-        }
-      }
-    },
-    "/vendors/{id}/status": {
-      "patch": {
-        "tags": ["vendors"],
-        "summary": "Change Vendors Status",
-        "operationId": "patchApiV1VendorsIdStatus",
-        "security": [
-          {
-            "access_token": []
-          }
-        ],
-        "parameters": [
-          {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/definitions/Model15" }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": { "$ref": "#/definitions/Model15" }
-              }
-            }
-          },
-          "405": { "description": "Invalid input" }
-        }
-      }
-    }
   },
-  "definitions": {
-    "extras": {
-      "type": "object"
-    },
-    "Beneficiary": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "example": "Ram Nepali"
-        },
-        "phone": {
-          "type": "string",
-          "example": "787878"
-        },
-        "wallet_address": {
-          "type": "string",
-          "example": "0x00"
-        },
-        "email": {
-          "type": "string",
-          "example": "nepali@gamil.com"
-        },
-        "address": {
-          "type": "string",
-          "example": "kathmandu"
-        },
-        "address_temporary": {
-          "type": "string",
-          "example": "dang"
-        },
-        "gender": {
-          "type": "string"
-        },
-        "govt_id": {
-          "type": "string",
-          "example": "9799"
-        },
-        "govt_id_image": {
-          "type": "string",
-          "example": "http://source"
-        },
-        "photo": {
-          "type": "string",
-          "example": "http://source"
-        },
-        "projects": {
-          "type": "string",
-          "example": "5f6b2f815685931cbfe4dad8,2f6b2f815685931cbfe4dad7"
-        },
-        "extras": {
-          "$ref": "#/definitions/extras"
-        }
-      }
-    },
-    "Institution": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of institution",
-          "example": "Himalayan Bank"
-        },
-        "address": {
-          "type": "string",
-          "description": "Address of institution",
-          "example": "Kamaladi, Kathmandu"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Phone of institution",
-          "example": "01-4245980"
-        }
-      },
-      "required": ["name"]
-    },
-    "Mobilizer": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of Mobilizer",
-          "example": "Rastra"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Mobilizer phone",
-          "example": "12121212"
-        },
-        "wallet_address": {
-          "type": "string",
-          "description": "Mobilizer wallet address",
-          "example": "0x00000"
-        },
-        "email": {
-          "type": "string",
-          "description": "Mobilizer email",
-          "example": "rastra@gmail.com",
-          "x-format": {
-            "email": true
+  "info": {
+      "title": "Rahat Platform",
+      "description": "Rahat Platform",
+      "version": "0.1",
+      "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+      "securitySchemes": {
+          "rs-access-token": {
+              "scheme": "Bearer",
+              "bearerFormat": "Bearer",
+              "type": "apiKey",
+              "name": "rs-access-token",
+              "description": "Enter access token here",
+              "in": "header"
           }
-        },
-        "address": {
-          "type": "string",
-          "description": "Mobilizer permanent address",
-          "example": "nepal"
-        },
-        "govt_id": {
-          "type": "string",
-          "description": "Mobilizer government issued ID",
-          "example": "99988777nepal"
-        },
-        "govt_id_image": {
-          "type": "string",
-          "description": "ID Image"
-        },
-        "photo": {
-          "type": "string",
-          "description": "Photo"
-        },
-        "organization": {
-          "type": "string",
-          "description": "Name of Organization mobilizer is involved with",
-          "example": "rumsan"
-        }
-      }
-    },
-    "Model1": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "details": {
-          "type": "string"
-        },
-        "to": {
-          "type": "string"
-        },
-        "gas": {
-          "type": "string"
-        },
-        "data": {
-          "type": "string"
-        }
       },
-      "required": ["title", "details", "to", "gas", "data"]
-    },
-    "roles": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "Model2": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "wallet_address": {
-          "type": "string"
-        },
-        "agency": {
-          "type": "string"
-        },
-        "roles": {
-          "$ref": "#/definitions/roles"
-        }
-      }
-    },
-    "extra_files": {
-      "type": "object",
-      "properties": {
-        "identity_photo": {
-          "type": "string"
-        },
-        "signature_photo": {
-          "type": "string"
-        },
-        "mou_file": {
-          "type": "string"
-        }
-      }
-    },
-    "Vendor": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of vendor",
-          "example": "Rastra"
-        },
-        "wallet_address": {
-          "type": "string",
-          "description": "Vendor wallet address",
-          "example": "0x00000"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Vendor phone",
-          "example": "12121212"
-        },
-        "email": {
-          "type": "string",
-          "description": "Vendor email",
-          "example": "rastra@gmail.com",
-          "x-format": {
-            "email": true
+      "schemas": {
+          "CreateAppSettingDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "CONTRACT_ADDRESS",
+                      "description": "Name of the app settings"
+                  },
+                  "value": {
+                      "type": "object",
+                      "example": {
+                          "RahatDonor": "0xDcd6F86EB1b62216F79943f4E6177F6892538120",
+                          "RahatClaim": "0xCa8B87AF8CDa654eF873ae16665932abec836583",
+                          "RahatToken": "0x422416b9203de06be4487D17DD1C76725c6049d7",
+                          "RahatCommunity": "0x531e0540f4Ba3453C40EF1ef9D19dDa85e930aCc",
+                          "CVAProject": "0x216EC842b77e424671219ABB817467fCEa991409"
+                      }
+                  }
+              },
+              "required": [
+                  "name",
+                  "value"
+              ]
+          },
+          "CreateUserDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "Rahat User",
+                      "description": "Rahat User name"
+                  },
+                  "email": {
+                      "type": "string",
+                      "example": "user@mailinator.com"
+                  },
+                  "walletAddress": {
+                      "type": "string",
+                      "example": "0xac0C1207D054a64FFc68830b0db2e17Fc1e93766",
+                      "description": "User Wallet Address"
+                  },
+                  "profileImage": {
+                      "type": "string"
+                  },
+                  "role": {
+                      "type": "string",
+                      "example": "User"
+                  }
+              },
+              "required": [
+                  "name",
+                  "walletAddress",
+                  "profileImage",
+                  "role"
+              ]
+          },
+          "UpdateUserRoleDto": {
+              "type": "object",
+              "properties": {
+                  "role": {
+                      "type": "string",
+                      "description": "User role"
+                  }
+              },
+              "required": [
+                  "role"
+              ]
+          },
+          "UpdateUserDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "Rahat User",
+                      "description": "Rahat User name"
+                  },
+                  "email": {
+                      "type": "string",
+                      "example": "user@mailinator.com"
+                  },
+                  "walletAddress": {
+                      "type": "string",
+                      "example": "0xac0C1207D054a64FFc68830b0db2e17Fc1e93766",
+                      "description": "User Wallet Address"
+                  },
+                  "profileImage": {
+                      "type": "string"
+                  },
+                  "role": {
+                      "type": "string",
+                      "example": "User"
+                  }
+              }
+          },
+          "RequestUserOtpDto": {
+              "type": "object",
+              "properties": {
+                  "email": {
+                      "type": "email",
+                      "example": "user1@rahat.com"
+                  }
+              }
+          },
+          "VerifyUserOtpDto": {
+              "type": "object",
+              "properties": {
+                  "email": {
+                      "type": "email",
+                      "example": "user1@rahat.com"
+                  },
+                  "otp": {
+                      "type": "string",
+                      "example": "1234"
+                  }
+              },
+              "required": [
+                  "email",
+                  "otp"
+              ]
+          },
+          "CreateProjectDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "Blood Bank"
+                  },
+                  "startDate": {
+                      "type": "string",
+                      "example": "2022-01-05T12:34:56.789Z"
+                  },
+                  "endDate": {
+                      "type": "string",
+                      "example": "2022-01-15T12:34:56.789Z"
+                  },
+                  "contractAddress": {
+                      "type": "string",
+                      "example": "0x1234567890123456789012345678901234567890"
+                  },
+                  "location": {
+                      "type": "string",
+                      "example": "New York"
+                  },
+                  "projectManager": {
+                      "type": "string",
+                      "example": "John Doe"
+                  },
+                  "description": {
+                      "type": "string",
+                      "example": "A project about blood donation"
+                  },
+                  "owner": {
+                      "type": "number",
+                      "example": 1
+                  },
+                  "projectType": {
+                      "type": "string",
+                      "example": "Healthcare"
+                  },
+                  "budget": {
+                      "type": "number",
+                      "example": 100000
+                  },
+                  "disbursed": {
+                      "type": "number",
+                      "example": 50000
+                  },
+                  "extras": {
+                      "type": "string",
+                      "example": "Some extra information"
+                  },
+                  "deletedAt": {
+                      "type": "string",
+                      "example": null
+                  },
+                  "isApproved": {
+                      "type": "boolean",
+                      "example": true
+                  }
+              },
+              "required": [
+                  "name",
+                  "startDate",
+                  "endDate",
+                  "contractAddress"
+              ]
+          },
+          "UpdateProjectDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string"
+                  },
+                  "startDate": {
+                      "type": "string"
+                  },
+                  "endDate": {
+                      "type": "string"
+                  },
+                  "location": {
+                      "type": "string"
+                  },
+                  "projectType": {
+                      "type": "string"
+                  },
+                  "projectManager": {
+                      "type": "string"
+                  },
+                  "description": {
+                      "type": "string"
+                  },
+                  "isApproved": {
+                      "type": "boolean",
+                      "default": false
+                  }
+              }
+          },
+          "CreateBeneficiaryDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "Beneficiary Name",
+                      "description": "Beneficiary Name"
+                  },
+                  "walletAddress": {
+                      "type": "string",
+                      "example": "0xac0C1207D054a64FFc68830b0db2e17Fc1e93766",
+                      "description": "Beneficiary Wallet Address"
+                  },
+                  "address": {
+                      "type": "object"
+                  },
+                  "projectId": {
+                      "type": "string",
+                      "example": "1"
+                  },
+                  "latitude": {
+                      "type": "number",
+                      "example": "1"
+                  },
+                  "longitude": {
+                      "type": "number",
+                      "example": "1"
+                  },
+                  "isApproved": {
+                      "type": "boolean",
+                      "example": false
+                  },
+                  "phoneOwnership": {
+                      "type": "string",
+                      "example": "FEATURE"
+                  },
+                  "bankStatus": {
+                      "type": "string",
+                      "example": "UNDERBANKED"
+                  },
+                  "internetAccess": {
+                      "type": "string",
+                      "example": "HOME_INTERNET"
+                  },
+                  "gender": {
+                      "type": "string",
+                      "example": "UNKNOWN"
+                  }
+              },
+              "required": [
+                  "name",
+                  "walletAddress",
+                  "address",
+                  "projectId",
+                  "latitude",
+                  "longitude",
+                  "isApproved"
+              ]
+          },
+          "UpdateBeneficiaryDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "Beneficiary Name",
+                      "description": "Beneficiary Name"
+                  },
+                  "walletAddress": {
+                      "type": "string",
+                      "example": "0xac0C1207D054a64FFc68830b0db2e17Fc1e93766",
+                      "description": "Beneficiary Wallet Address"
+                  },
+                  "address": {
+                      "type": "object"
+                  },
+                  "projectId": {
+                      "type": "string",
+                      "example": "1"
+                  },
+                  "latitude": {
+                      "type": "number",
+                      "example": "1"
+                  },
+                  "longitude": {
+                      "type": "number",
+                      "example": "1"
+                  },
+                  "isApproved": {
+                      "type": "boolean",
+                      "example": false
+                  },
+                  "phoneOwnership": {
+                      "type": "string",
+                      "example": "FEATURE"
+                  },
+                  "bankStatus": {
+                      "type": "string",
+                      "example": "UNDERBANKED"
+                  },
+                  "internetAccess": {
+                      "type": "string",
+                      "example": "HOME_INTERNET"
+                  },
+                  "gender": {
+                      "type": "string",
+                      "example": "UNKNOWN"
+                  }
+              }
+          },
+          "AssignBeneficiaryToProjectDto": {
+              "type": "object",
+              "properties": {
+                  "projectId": {
+                      "type": "string",
+                      "example": "2"
+                  }
+              },
+              "required": [
+                  "projectId"
+              ]
+          },
+          "UpdateBeneficiaryStatusDto": {
+              "type": "object",
+              "properties": {
+                  "isApproved": {
+                      "type": "boolean",
+                      "example": true
+                  }
+              },
+              "required": [
+                  "isApproved"
+              ]
+          },
+          "CreateAuthDto": {
+              "type": "object",
+              "properties": {}
+          },
+          "WalletLoginDto": {
+              "type": "object",
+              "properties": {
+                  "walletAddress": {
+                      "type": "string",
+                      "description": "Wallet address",
+                      "example": "0x1234567890"
+                  }
+              },
+              "required": [
+                  "walletAddress"
+              ]
+          },
+          "UpdateAuthDto": {
+              "type": "object",
+              "properties": {}
+          },
+          "CreateTransactionDto": {
+              "type": "object",
+              "properties": {}
+          },
+          "UpdateTransactionDto": {
+              "type": "object",
+              "properties": {
+                  "txStatus": {
+                      "type": "string",
+                      "example": "PENDING",
+                      "description": "The status of the transaction"
+                  },
+                  "contractAddress": {
+                      "type": "string",
+                      "example": "0x1234567890",
+                      "description": "Contract Address"
+                  },
+                  "timestamp": {
+                      "type": "number",
+                      "example": 1234567890,
+                      "description": "The timestamp of the transaction"
+                  },
+                  "method": {
+                      "type": "string",
+                      "example": "method",
+                      "description": "The method of the transaction"
+                  },
+                  "methodParams": {
+                      "example": "methodParams",
+                      "description": "The method params of the transaction",
+                      "type": "array",
+                      "items": {
+                          "type": "string"
+                      }
+                  },
+                  "blockNumber": {
+                      "type": "number",
+                      "example": 1234567890,
+                      "description": "The block number of the transaction"
+                  },
+                  "from": {
+                      "type": "string",
+                      "example": "0xaed90",
+                      "description": "The from of the transaction"
+                  },
+                  "to": {
+                      "type": "string",
+                      "example": "0xaed90",
+                      "description": "The to of the transaction"
+                  },
+                  "value": {
+                      "type": "string",
+                      "example": "12",
+                      "description": "The value of the transaction"
+                  },
+                  "remarks": {
+                      "type": "string",
+                      "example": "remarks",
+                      "description": "The remarks of the transaction"
+                  },
+                  "events": {
+                      "example": "events",
+                      "description": "The hash of the transaction",
+                      "type": "array",
+                      "items": {
+                          "type": "string"
+                      }
+                  }
+              },
+              "required": [
+                  "txStatus",
+                  "contractAddress",
+                  "timestamp",
+                  "method",
+                  "methodParams",
+                  "blockNumber",
+                  "from",
+                  "to",
+                  "value",
+                  "remarks",
+                  "events"
+              ]
+          },
+          "CreateVendorDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "Rahat Distributor"
+                  },
+                  "walletAddress": {
+                      "type": "string",
+                      "example": "0x0000012"
+                  },
+                  "address": {
+                      "type": "object",
+                      "example": {
+                          "location": "ktm",
+                          "postal": 224214,
+                          "country": "nepal"
+                      }
+                  }
+              },
+              "required": [
+                  "name",
+                  "walletAddress",
+                  "address"
+              ]
+          },
+          "UpdateVendorDto": {
+              "type": "object",
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "example": "Rahat Distributor"
+                  },
+                  "walletAddress": {
+                      "type": "string",
+                      "example": "0x0000012"
+                  },
+                  "address": {
+                      "type": "object",
+                      "example": {
+                          "location": "ktm",
+                          "postal": 224214,
+                          "country": "nepal"
+                      }
+                  }
+              }
           }
-        },
-        "gender": {
-          "type": "string",
-          "example": "M"
-        },
-        "photo": {
-          "type": "string"
-        },
-        "shop_name": {
-          "type": "string",
-          "description": "Vendor shop name"
-        },
-        "address": {
-          "type": "string",
-          "example": "Lalitpur"
-        },
-        "govt_id": {
-          "type": "string",
-          "example": "99988777nepal"
-        },
-        "pan_number": {
-          "type": "string",
-          "description": "Vendor PAN number",
-          "example": "1240000"
-        },
-        "bank_name": {
-          "type": "string",
-          "description": "Bank name"
-        },
-        "bank_branch": {
-          "type": "string",
-          "description": "Bank branch name"
-        },
-        "bank_account": {
-          "type": "string",
-          "description": "Bank account number",
-          "example": "2354394935034395"
-        },
-        "projects": {
-          "type": "string",
-          "example": "6108e3a19a8e17b54e464dd1,6208e3a19a8e17b54e464dd2"
-        },
-        "govt_id_image": {
-          "type": "string",
-          "description": "Vendor government issued ID image url",
-          "x-format": {
-            "uri": true
-          }
-        },
-        "education": {
-          "type": "string",
-          "description": "Vendor eductaion"
-        },
-        "extra_files": {
-          "$ref": "#/definitions/extra_files"
-        }
-      },
-      "required": ["name", "wallet_address", "phone"]
-    },
-    "admin": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "example": "John Doe"
-        },
-        "phone": {
-          "type": "string",
-          "example": "123456789"
-        },
-        "email": {
-          "type": "string",
-          "example": "admin@test.com",
-          "x-format": {
-            "email": true
-          }
-        },
-        "wallet_address": {
-          "type": "string",
-          "example": "0x66bBca46661c3F51c401aBfaBaF33c5295480896"
-        }
-      },
-      "required": ["name", "phone", "email", "wallet_address"]
-    },
-    "token": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "example": "RAHAT"
-        },
-        "symbol": {
-          "type": "string",
-          "example": "RTH"
-        },
-        "supply": {
-          "type": "number",
-          "example": 100000
-        }
-      },
-      "required": ["name", "symbol", "supply"]
-    },
-    "AppSetup": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "example": "XYZ Org."
-        },
-        "phone": {
-          "type": "string",
-          "example": "123456789"
-        },
-        "email": {
-          "type": "string",
-          "example": "xyz@test.com",
-          "x-format": {
-            "email": true
-          }
-        },
-        "address": {
-          "type": "string",
-          "example": "Kathmandu"
-        },
-        "admin": {
-          "$ref": "#/definitions/admin"
-        },
-        "token": {
-          "$ref": "#/definitions/token"
-        }
-      },
-      "required": ["name", "phone", "email"]
-    },
-    "Model3": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of Mobilizer",
-          "example": "Rastra"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Mobilizer phone",
-          "example": "12121212"
-        },
-        "wallet_address": {
-          "type": "string",
-          "description": "Mobilizer wallet address",
-          "example": "0x172d77Ff5cB061FE2dc77C149f5608789152d642"
-        },
-        "email": {
-          "type": "string",
-          "description": "Mobilizer email",
-          "example": "rastra@gmail.com",
-          "x-format": {
-            "email": true
-          }
-        },
-        "address": {
-          "type": "string",
-          "description": "Mobilizer permanent address",
-          "example": "nepal"
-        },
-        "organization": {
-          "type": "string",
-          "description": "Name of Organization mobilizer is involved with",
-          "example": "rumsan"
-        },
-        "govt_id": {
-          "type": "string",
-          "description": "Mobilizer government issued ID",
-          "example": "99988777nepal"
-        },
-        "govt_id_image": {
-          "type": "string",
-          "description": "ID Image"
-        },
-        "photo": {
-          "type": "string",
-          "description": "Photo"
-        }
-      },
-      "required": ["wallet_address"]
-    },
-    "Model4": {
-      "type": "object",
-      "properties": {
-        "email": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "wallet_address": {
-          "type": "string"
-        }
       }
-    },
-    "Model5": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "wallet_address": {
-          "type": "string"
-        },
-        "agency": {
-          "type": "string"
-        }
-      }
-    },
-    "Model6": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        }
-      }
-    },
-    "Model7": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of vendor",
-          "example": "Rastra"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Vendor phone",
-          "example": "12121212"
-        },
-        "wallet_address": {
-          "type": "string",
-          "description": "Vendor wallet address",
-          "example": "0x172d77Ff5cB061FE2dc77C149f5608789152d642"
-        },
-        "email": {
-          "type": "string",
-          "description": "Vendor email",
-          "example": "rastra@gmail.com",
-          "x-format": {
-            "email": true
-          }
-        },
-        "address": {
-          "type": "string",
-          "example": "nepal"
-        },
-        "govt_id": {
-          "type": "string",
-          "example": "99988777nepal"
-        },
-        "govt_id_image": {
-          "type": "string",
-          "description": "ID Image"
-        },
-        "photo": {
-          "type": "string",
-          "description": "Photo"
-        }
-      },
-      "required": ["wallet_address"]
-    },
-    "TokenDistribution": {
-      "type": "object",
-      "properties": {
-        "beneficiary_id": {
-          "type": "string",
-          "description": "Beneficiary ID"
-        },
-        "project_id": {
-          "type": "string",
-          "description": "Project ID"
-        },
-        "amount": {
-          "type": "number",
-          "description": "Amount of token to be distributed"
-        },
-        "txhash": {
-          "type": "string",
-          "description": "Blockchain transaction hash"
-        }
-      },
-      "required": ["beneficiary_id", "project_id", "amount", "txhash"]
-    },
-    "Model8": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of beneficiary"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Beneficiary phone"
-        },
-        "wallet_address": {
-          "type": "string",
-          "description": "Beneficiary wallet address"
-        },
-        "email": {
-          "type": "string",
-          "description": "Beneficiary email",
-          "x-format": {
-            "email": true
-          }
-        },
-        "address": {
-          "type": "string",
-          "description": "Beneficiary permanent address"
-        },
-        "address_temporary": {
-          "type": "string",
-          "description": "Beneficiary temporary address"
-        },
-        "govt_id": {
-          "type": "string",
-          "description": "Beneficiary government issued ID"
-        },
-        "photo": {
-          "type": "string",
-          "description": "Beneficiary photo url"
-        },
-        "govt_id_image": {
-          "type": "string",
-          "description": "Beneficiary government issued ID image url"
-        }
-      },
-      "required": ["name", "phone"]
-    },
-    "Agency": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string",
-          "x-format": {
-            "email": true
-          }
-        },
-        "address": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        }
-      }
-    },
-    "Model9": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of institution"
-        },
-        "address": {
-          "type": "string",
-          "description": "Address of institution"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Phone of institution"
-        }
-      }
-    },
-    "Model10": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of Mobilizer",
-          "example": "Rastra"
-        },
-        "phone": {
-          "type": "string",
-          "description": "Mobilizer phone",
-          "example": "12121212"
-        },
-        "wallet_address": {
-          "type": "string",
-          "description": "Mobilizer wallet address",
-          "example": "0x00000"
-        },
-        "email": {
-          "type": "string",
-          "description": "Mobilizer email",
-          "example": "rastra@gmail.com",
-          "x-format": {
-            "email": true
-          }
-        },
-        "address": {
-          "type": "string",
-          "description": "Mobilizer permanent address",
-          "example": "nepal"
-        },
-        "govt_id": {
-          "type": "string",
-          "description": "Mobilizer government issued ID",
-          "example": "99988777nepal"
-        },
-        "govt_id_image": {
-          "type": "string",
-          "description": "Mobilizer government issued ID image url",
-          "example": "http://source",
-          "x-format": {
-            "uri": true
-          }
-        },
-        "organization": {
-          "type": "string",
-          "description": "Name of Organization mobilizer is involved with",
-          "example": "rumsan"
-        }
-      }
-    },
-    "Project": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of project"
-        },
-        "end_date": {
-          "type": "string",
-          "format": "date",
-          "description": "End date of project"
-        },
-        "project_manager": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string",
-          "example": "kupondole"
-        },
-        "description": {
-          "type": "string"
-        },
-        "financial_institutions": {
-          "type": "string"
-        }
-      }
-    },
-    "Model11": {
-      "type": "object",
-      "properties": {
-        "wallet_address": {
-          "type": "string",
-          "example": "0x00"
-        },
-        "projectId": {
-          "type": "string"
-        }
-      },
-      "required": ["wallet_address"]
-    },
-    "Model12": {
-      "type": "object",
-      "properties": {
-        "wallet_address": {
-          "type": "string",
-          "example": "0x00"
-        }
-      },
-      "required": ["wallet_address"]
-    },
-    "Model13": {
-      "type": "object",
-      "properties": {
-        "rahat": {
-          "type": "string"
-        },
-        "rahat_admin": {
-          "type": "string"
-        },
-        "token": {
-          "type": "string"
-        }
-      },
-      "required": ["rahat", "rahat_admin", "token"]
-    },
-    "Model14": {
-      "type": "object",
-      "properties": {
-        "status": {
-          "type": "string",
-          "description": "Status of institution",
-          "default": "active",
-          "enum": ["active", "suspended", "closed"]
-        }
-      },
-      "required": ["status"]
-    },
-    "Model15": {
-      "type": "object",
-      "properties": {
-        "status": {
-          "type": "string",
-          "enum": ["new", "active", "suspended"]
-        }
-      }
-    },
-    "Model16": {
-      "type": "object",
-      "properties": {
-        "status": {
-          "type": "string",
-          "description": "Status of project",
-          "default": "draft",
-          "enum": ["draft", "active", "suspended", "closed"]
-        }
-      },
-      "required": ["status"]
-    },
-    "Model17": {
-      "type": "object",
-      "description": "TokenAllocation",
-      "properties": {
-        "amount": {
-          "type": "number",
-          "description": "Token amount to allocate to the project"
-        },
-        "txhash": {
-          "type": "string",
-          "description": "Blockchain transaction hash"
-        }
-      },
-      "required": ["txhash"]
-    },
-    "Model18": {
-      "type": "object",
-      "properties": {
-        "permissions": {
-          "$ref": "#/definitions/roles"
-        }
-      }
-    },
-    "Model19": {
-      "type": "object",
-      "properties": {
-        "roles": {
-          "$ref": "#/definitions/roles"
-        }
-      }
-    }
   }
 }
