@@ -8,9 +8,9 @@
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Release 11.0.0]]></title>
+            <title><![CDATA[Release 2.11.0]]></title>
             <link>https://docs.rahat.io/blog/2022/05/31/ Release 2.11.0</link>
-            <guid>Release 11.0.0</guid>
+            <guid>Release 2.11.0</guid>
             <pubDate>Tue, 31 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to the Rahat May Release. The major upgrade in Rahat this month is the deployment of the Crowdfunding tool along with some minor bug fixes.]]></description>
             <content:encoded><![CDATA[<p>Welcome to the Rahat May Release. The major upgrade in Rahat this month is the deployment of the Crowdfunding tool along with some minor bug fixes. </p><h1>Rahat Crowdfunding platform</h1><p>Rahat Crowdfunding platform is a web-based blockchain-supported platform for the beneficiaries to organize an online fundraising campaign to collect the amount. With the help of Rahat crowdfunding platform, one can organize a campaign for needy people and collect the fund. On the other hand, people can donate amounts to fundraising campaigns. </p><p>One of the best things about the Rahat crowdfunding platform is it is an independent platform where anyone can create their fundraising account and create campaigns. The fundraiser does not have to be Rahat&#x27;s agency. </p><p>Click here to visit <a href="https://fund.rahat.io/">Rahat crowdfunding Website.</a> </p><p><img src="https://assets.rumsan.com/esatya/rahat-crowdfunding.png" alt="Rahat crowdfunding website"/></p><p>Rahat crowdfunding platform has two types of users.

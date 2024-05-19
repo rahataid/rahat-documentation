@@ -8,8 +8,8 @@
     <subtitle>Rahat - Aid Token Distribution Blog</subtitle>
     <icon>https://docs.rahat.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Release 11.0.0]]></title>
-        <id>Release 11.0.0</id>
+        <title type="html"><![CDATA[Release 2.11.0]]></title>
+        <id>Release 2.11.0</id>
         <link href="https://docs.rahat.io/blog/2022/05/31/ Release 2.11.0"/>
         <updated>2022-05-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the Rahat May Release. The major upgrade in Rahat this month is the deployment of the Crowdfunding tool along with some minor bug fixes.]]></summary>
