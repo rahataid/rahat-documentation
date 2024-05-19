@@ -22,4 +22,4 @@ Rahat comprises a collection of projects:
 * [Rahat-contracts](https://github.com/esatya/rahat-contracts): All the smart contracts implemented in Rahat application
 * [Rahat-OTP](https://github.com/esatya/rahat-otp): OTP service to verify transactions between beneficiary and vendor
 * [Rahat-aid-connect:](https://github.com/esatya/rahat-aid-connect) Rahat tool to onboard beneficiaries for agencies and implementers
-* [Rahat-fundraise](https://github.com/esatya/rahat-fundraise) : Rahat crowdfunding platform to raise fund for relief distribution
+
