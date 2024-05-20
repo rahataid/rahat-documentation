@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/esatya/rahat-documentation/actions/workflows/deploy.yml">
+  <a href="https://github.com/rahataid/rahat-documentation/actions/workflows/deploy.yml">
     <img src="https://github.com/esatya/rahat-documentation/actions/workflows/deploy.yml/badge.svg" alt="Current CI/CD build status." />
   </a>
   <a href="https://github.com/esatya/rahat-documentation/blob/main/CONTRIBUTING.md">
