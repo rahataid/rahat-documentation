@@ -4,14 +4,14 @@ id: intro
 
 # Welcome 
 
-We are a community of contributors - developers, volunteers, researchers and the humanitarian sector including employees of [Rumsan](http://www.rumsan.com). We create an environment where our community can effectively explore, create innovative and open aid distribution technology services which are inclusive, accountable and accessible for everyone.
+We are a community of contributors - developers, volunteers, researchers and the humanitarian sector including employees of Rumsan. We create an environment where our community can effectively explore, create innovative and open aid distribution technology services which are inclusive, accountable and accessible for everyone.
 
-This document aims to be a collection for all Rahat documentation and unlike blockchain this is mutable. The structure of the document has been inspired from various open source projects mainly -  [https://jitsi.github.io/handbook/](https://jitsi.github.io/handbook/) and [https://docs.treejer.com/](https://docs.treejer.com/). Check these great open source projects out.   
+Together, we create an environment where innovation thrives, developing open and inclusive aid distribution technology that's accountable and accessible to all. This document serves as a comprehensive collection of all Rahat documentation, with a dynamic structure that adapts and evolves.
 
-If you want to help out Rahat please join our community - 
+Join our [community discussions](https://github.com/orgs/rahataid/discussions) on GitHub and help shape the future of Rahat! Your contributions will not only benefit the project but also empower marginalised communities by improving access to aid distribution technology for the community.
 
-* [Github](https://github.com/esatya) 
+If you want to help out Rahat please join our community:
+
+* [Github](https://github.com/rahataid) 
 * [Twitter](https://twitter.com/rahataid) 
-* [Discord ](https://discord.com/invite/mpDbTAsnEe)
-* [Medium ](https://esatya.medium.com/)
-* [Linkedln](https://www.linkedin.com/company/esatya/)
+
