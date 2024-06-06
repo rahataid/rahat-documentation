@@ -4,7 +4,7 @@ import styles from "./HomepageFeatures.module.css";
 
 const fetchContributors = async () => {
   const contributors = await axios(
-    "https://api.github.com/repos/esatya/rahat-agency/contributors"
+    "https://api.github.com/repos/rahataid/rahat-platform-nx/contributors"
   );
   if (!contributors && !contributors.data) return [];
   return contributors.data;
