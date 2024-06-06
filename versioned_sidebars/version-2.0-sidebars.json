@@ -1,5 +1,5 @@
 {
-  "version-1.3/tutorialSidebar": [
+  "version-2.0/tutorialSidebar": [
     {
       "type": "category",
       "collapsed": true,
@@ -8,23 +8,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.3/intro"
+          "id": "version-2.0/intro"
         },
         {
           "type": "doc",
-          "id": "version-1.3/rahat"
+          "id": "version-2.0/rahat"
         },
         {
           "type": "doc",
-          "id": "version-1.3/opensource_license"
+          "id": "version-2.0/opensource_license"
         },
         {
           "type": "doc",
-          "id": "version-1.3/rumsan"
+          "id": "version-2.0/rumsan"
         },
         {
           "type": "doc",
-          "id": "version-1.3/partners_and_investors"
+          "id": "version-2.0/partners_and_investors"
         }
       ]
     },
@@ -36,15 +36,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.3/architecture"
+          "id": "version-2.0/architecture"
         },
         {
           "type": "doc",
-          "id": "version-1.3/architecture_design"
+          "id": "version-2.0/architecture_design"
         },
         {
           "type": "doc",
-          "id": "version-1.3/tech_stack"
+          "id": "version-2.0/tech_stack"
         }
       ]
     },
@@ -56,11 +56,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.3/user_guide"
+          "id": "version-2.0/user_guide"
         },
         {
           "type": "doc",
-          "id": "version-1.3/user_manual"
+          "id": "version-2.0/user_manual"
         }
       ]
     },
@@ -72,23 +72,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.3/developer_guide"
+          "id": "version-2.0/developer_guide"
         },
         {
           "type": "doc",
-          "id": "version-1.3/installation_guide"
+          "id": "version-2.0/installation_guide"
         },
         {
           "type": "doc",
-          "id": "version-1.3/contributing_guidelines"
+          "id": "version-2.0/contributing_guidelines"
         },
         {
           "type": "doc",
-          "id": "version-1.3/smart_contract_report_and_audit"
+          "id": "version-2.0/smart_contract_report_and_audit"
         },
         {
           "type": "doc",
-          "id": "version-1.3/self_hosting_guide"
+          "id": "version-2.0/self_hosting_guide"
         }
       ]
     },
@@ -100,15 +100,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.3/project_charter"
+          "id": "version-2.0/project_charter"
         },
         {
           "type": "doc",
-          "id": "version-1.3/contributing_guidelines"
+          "id": "version-2.0/contributing_guidelines"
         },
         {
           "type": "doc",
-          "id": "version-1.3/code_of_conduct"
+          "id": "version-2.0/code_of_conduct"
         }
       ]
     }
