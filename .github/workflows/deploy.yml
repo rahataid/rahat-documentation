@@ -41,8 +41,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: |
-          git config --global user.name "Raktim Shrestha"
-          git config --global user.email "raktim@rumsan.com"
+          git config --global user.name "sandab-rumsan"
+          git config --global user.email "sandab@rumsan.net"
       - run: yarn run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
