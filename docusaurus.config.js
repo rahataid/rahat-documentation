@@ -17,7 +17,7 @@ const config = {
   url: "https://docs.rahat.io",
   baseUrl: "/",
   projectName: "rahat-documentation", // Usually your repo name.
-  organizationName: "esatya", // Usually your GitHub org/user name.
+  organizationName: "rahataid", // Usually your GitHub org/user name.
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -37,7 +37,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/esatya?tab=repositories",
+          editUrl: "https://github.com/rahataid?tab=repositories",
         },
         blog: {
           path: "blog",
@@ -55,7 +55,7 @@ const config = {
       navbar: {
         logo: {
           alt: "Rahat Logo",
-          src: "https://rahat.esatya.io/images/logo.png",
+          src: "/img/rahat_logo.png",
         },
         items: [
           {
@@ -96,7 +96,7 @@ const config = {
           },
           { type: "localeDropdown", position: "right" },
           {
-            href: "https://github.com/esatya?tab=repositories",
+            href: "https://github.com/rahataid?tab=repositories",
             position: "right",
             className: "header-github-link",
             "aria-label": "GitHub repository",
@@ -119,8 +119,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Discord",
-                href: "https://discord.com/invite/PvSuZyDb",
+                label: "Github Discussion",
+                href: "https://github.com/orgs/rahataid/discussionsb",
               },
               {
                 label: "Twitter",
@@ -137,7 +137,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/esatya?tab=repositories",
+                href: "https://github.com/rahataid?tab=repositories",
               },
             ],
           },
