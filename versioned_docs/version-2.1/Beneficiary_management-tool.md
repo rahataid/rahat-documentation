@@ -156,10 +156,6 @@ import {  useRSQuery } from '@rumsan/react-query'
 
 ```
 
-### Client
-
-Below are the sdk client that will be used to connect :
-
 ### Example
 
 Let's take an example for the `appClient`
