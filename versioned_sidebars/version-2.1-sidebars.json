@@ -1,0 +1,132 @@
+{
+  "version-2.1/tutorialSidebar": [
+    {
+      "type": "category",
+      "collapsed": true,
+      "collapsible": true,
+      "label": "Introduction",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1/intro"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/system_overview"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "collapsed": true,
+      "collapsible": true,
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1/prerequisites"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/installation"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/configuration"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "collapsed": true,
+      "collapsible": true,
+      "label": "Core Repository",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/core_components"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/integration"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Rahat Stand-alone Apps",
+      "collapsed": true,
+      "collapsible": true,
+      "items": [
+        {
+          "type": "category",
+          "label": "Beneficiary Management Tool",
+          "items": [
+            "version-2.1/overview-beneficiary-management-tool",
+            {
+              "type": "category",
+              "label": "SDK Documentation",
+              "items": [
+                "version-2.1/sdk-documentation/apps",
+                "version-2.1/sdk-documentation/beneficiary",
+                "version-2.1/sdk-documentation/beneficiary_group",
+                "version-2.1/sdk-documentation/beneficiary_source",
+                "version-2.1/sdk-documentation/field_definition",
+                "version-2.1/sdk-documentation/group",
+                "version-2.1/sdk-documentation/settings_client",
+                "version-2.1/sdk-documentation/source",
+                "version-2.1/sdk-documentation/targets"
+              ]
+            }
+          ]
+        },
+        "version-2.1/communication-tool"
+      ]
+    },
+
+    {
+      "type": "category",
+      "collapsed": true,
+      "collapsible": true,
+      "label": "Project Repositories",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1/referral_voucher_project"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/cash_voucher_project"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/aa_project"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/crypto_transfer_project"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "collapsed": true,
+      "collapsible": true,
+      "label": "Community",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-2.1/contributing_guidelines"
+        },
+        {
+          "type": "doc",
+          "id": "version-2.1/code_of_conduct"
+        }
+      ]
+    }
+  ]
+}
