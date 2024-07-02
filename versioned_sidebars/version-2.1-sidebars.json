@@ -29,10 +29,6 @@
         {
           "type": "doc",
           "id": "version-2.1/installation"
-        },
-        {
-          "type": "doc",
-          "id": "version-2.1/configuration"
         }
       ]
     },
@@ -87,7 +83,6 @@
         "version-2.1/communication-tool"
       ]
     },
-
     {
       "type": "category",
       "collapsed": true,
