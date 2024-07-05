@@ -8,7 +8,7 @@ Welcome to the developer guide section !!!
 
 This section is focused to help developers who want to either integrate the Rahat API in their products or want to improve Rahat itself by developing new features or fixing bugs.
 
-Before you start contributing to Rahat, please thoroughly read the [Contribution Guideline](../version-1.2/Contributing_guidelines.md).
+Before you start contributing to Rahat, please thoroughly read the [Contribution Guideline](../version-2.1/Contributing_guidelines.md).
 
 ## Getting Started
 
