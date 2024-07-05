@@ -1,8 +1,8 @@
 module.exports = {
   tutorialSidebar: {
     Introduction: [
-      "intro",  
-      
+      "intro",
+
       "rahat-team",
       "brand-guidelines",
     ],
@@ -31,4 +31,5 @@ module.exports = {
     ],
   },
   apiSidebar: ["API"],
+
 };

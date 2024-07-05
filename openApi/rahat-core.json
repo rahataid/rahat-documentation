@@ -1,0 +1,3290 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+        "/v1/app/settings": {
+            "post": {
+                "operationId": "AppController_create",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateSettingDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "app"
+                ]
+            }
+        },
+        "/v1/beneficiaries": {
+            "get": {
+                "operationId": "BeneficiaryController_list",
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "required": true,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "required": true,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "required": true,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": true,
+                        "in": "query",
+                        "example": "10",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "projectId",
+                        "required": false,
+                        "in": "query",
+                        "example": "d8f61ebb-ae83-4a8b-8f36-ed756aa27d12",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "gender",
+                        "required": false,
+                        "in": "query",
+                        "example": "MALE",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "required": false,
+                        "in": "query",
+                        "example": "REFERRED",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "startDate",
+                        "required": true,
+                        "in": "query",
+                        "example": "2024-06-25T18:15:00.000Z",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "endDate",
+                        "required": true,
+                        "in": "query",
+                        "example": "2024-06-25T18:15:00.000Z",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            },
+            "post": {
+                "operationId": "BeneficiaryController_create",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateBeneficiaryDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/temp/{uuid}": {
+            "get": {
+                "operationId": "BeneficiaryController_listTempBenef",
+                "parameters": [
+                    {
+                        "name": "order",
+                        "required": true,
+                        "in": "query",
+                        "example": "desc",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "required": true,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": true,
+                        "in": "query",
+                        "example": "10",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "firstName",
+                        "required": false,
+                        "in": "query",
+                        "example": "Demo",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/temp-groups": {
+            "get": {
+                "operationId": "BeneficiaryController_listTempGroups",
+                "parameters": [
+                    {
+                        "name": "order",
+                        "required": true,
+                        "in": "query",
+                        "example": "desc",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "required": true,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": true,
+                        "in": "query",
+                        "example": "10",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "required": false,
+                        "in": "query",
+                        "example": "Demo",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/pii": {
+            "get": {
+                "operationId": "BeneficiaryController_listPiiData",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/stats": {
+            "get": {
+                "operationId": "BeneficiaryController_getStats",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/table-stats": {
+            "get": {
+                "operationId": "BeneficiaryController_getTableStats",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/projects/{uuid}": {
+            "post": {
+                "operationId": "BeneficiaryController_referBeneficiary",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddBenToProjectDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/bulk": {
+            "post": {
+                "operationId": "BeneficiaryController_createBulk",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/upload": {
+            "post": {
+                "operationId": "BeneficiaryController_upload",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/{uuid}": {
+            "patch": {
+                "operationId": "BeneficiaryController_update",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateBeneficiaryDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            },
+            "delete": {
+                "operationId": "BeneficiaryController_delete",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            },
+            "get": {
+                "operationId": "BeneficiaryController_getBeneficiary",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/remove/{uuid}": {
+            "patch": {
+                "operationId": "BeneficiaryController_remove",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/wallet/{wallet}": {
+            "get": {
+                "operationId": "BeneficiaryController_getBeneficiaryByWallet",
+                "parameters": [
+                    {
+                        "name": "wallet",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/phone/{phone}": {
+            "get": {
+                "operationId": "BeneficiaryController_getBeneficiaryByPhone",
+                "parameters": [
+                    {
+                        "name": "phone",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/verification-link/{uuid}": {
+            "get": {
+                "operationId": "BeneficiaryController_generateVerificationLink",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/validate-wallet": {
+            "post": {
+                "operationId": "BeneficiaryController_validateWallet",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ValidateWalletDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/verify-signature": {
+            "post": {
+                "operationId": "BeneficiaryController_verifySignature",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/groups": {
+            "post": {
+                "operationId": "BeneficiaryController_createGroup",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateBeneficiaryGroupsDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/groups/all": {
+            "get": {
+                "operationId": "BeneficiaryController_getAllGroups",
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "required": true,
+                        "in": "query",
+                        "example": "createdAt",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "required": true,
+                        "in": "query",
+                        "example": "asc",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "required": true,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": true,
+                        "in": "query",
+                        "example": "10",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "projectId",
+                        "required": false,
+                        "in": "query",
+                        "example": "d8f61ebb-ae83-4a8b-8f36-ed756aa27d12",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/groups/{uuid}": {
+            "get": {
+                "operationId": "BeneficiaryController_getOneGroup",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            },
+            "delete": {
+                "operationId": "BeneficiaryController_removeGroup",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            },
+            "patch": {
+                "operationId": "BeneficiaryController_updateGroup",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateBeneficiaryGroupDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/import-tools": {
+            "post": {
+                "operationId": "BeneficiaryController_importBeneficiariesFromTool",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/beneficiaries/import-temp": {
+            "post": {
+                "operationId": "BeneficiaryController_importTempBeneficiaries",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ImportTempBenefDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Beneficiaries"
+                ]
+            }
+        },
+        "/v1/settings": {
+            "get": {
+                "operationId": "SettingsController_listPublic",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "operationId": "SettingsController_create",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateSettingDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/v1/settings/{name}": {
+            "get": {
+                "operationId": "SettingsController_getPublic",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "patch": {
+                "operationId": "SettingsController_udpdate",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateSettingDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/v1/users": {
+            "get": {
+                "operationId": "UsersController_list",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "required": false,
+                        "in": "query",
+                        "example": 1,
+                        "description": "page number",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": false,
+                        "in": "query",
+                        "example": 10,
+                        "description": "number of items per page",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "required": false,
+                        "in": "query",
+                        "example": "createdAt",
+                        "description": "Sort field",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "required": false,
+                        "in": "query",
+                        "example": "desc",
+                        "description": "Sort order",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "post": {
+                "operationId": "UsersController_create",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateUserDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/users/me": {
+            "get": {
+                "operationId": "UsersController_getMe",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "patch": {
+                "operationId": "UsersController_updateMe",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateUserDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/users/me/update-auth": {
+            "patch": {
+                "operationId": "UsersController_changePassword",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateUserDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/users/{uuid}": {
+            "get": {
+                "operationId": "UsersController_get",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "description": "Unique identifier",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "patch": {
+                "operationId": "UsersController_update",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "description": "Unique identifier",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateUserDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "UsersController_delete",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "description": "Unique identifier",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/users/{uuid}/roles": {
+            "get": {
+                "operationId": "UsersController_getRoles",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "description": "Unique identifier",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "post": {
+                "operationId": "UsersController_addRoles",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "description": "Unique identifier",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "example": [
+                                    "admin",
+                                    "user"
+                                ],
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "UsersController_removeRoles",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "description": "Unique identifier",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "example": [
+                                    "admin",
+                                    "user"
+                                ],
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Users"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/vendors": {
+            "post": {
+                "operationId": "VendorsController_registerVendor",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/VendorRegisterDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Vendors"
+                ]
+            },
+            "get": {
+                "operationId": "VendorsController_listVendor",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Vendors"
+                ]
+            }
+        },
+        "/v1/vendors/stats": {
+            "get": {
+                "operationId": "VendorsController_getVendorCount",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Vendors"
+                ]
+            }
+        },
+        "/v1/vendors/{id}": {
+            "get": {
+                "operationId": "VendorsController_getVendor",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Vendors"
+                ]
+            }
+        },
+        "/v1/vendors/getOtp": {
+            "post": {
+                "operationId": "VendorsController_getOtp",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GetVendorOtp"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Vendors"
+                ]
+            }
+        },
+        "/v1/vendors/verifyOtp": {
+            "post": {
+                "operationId": "VendorsController_verifyOtp",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/VerifyVendorOtp"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Vendors"
+                ]
+            }
+        },
+        "/v1/vendors/update/{uuid}": {
+            "patch": {
+                "operationId": "VendorsController_updateVendor",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/VendorUpdateDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Vendors"
+                ]
+            }
+        },
+        "/v1/auth/login": {
+            "post": {
+                "operationId": "AuthsController_loginOtp",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OtpLoginDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Auth"
+                ]
+            }
+        },
+        "/v1/auth/otp": {
+            "post": {
+                "operationId": "AuthsController_getOtp",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/OtpDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Auth"
+                ]
+            }
+        },
+        "/v1/auth/wallet": {
+            "post": {
+                "operationId": "AuthsController_walletLogin",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/WalletLoginDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Auth"
+                ]
+            }
+        },
+        "/v1/auth/challenge": {
+            "post": {
+                "operationId": "AuthsController_getChallenge",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ChallengeDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Auth"
+                ]
+            }
+        },
+        "/v1/app/constants/{name}": {
+            "get": {
+                "operationId": "RumsanAppController_listConstants",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "App"
+                ]
+            }
+        },
+        "/v1/roles": {
+            "post": {
+                "operationId": "RolesController_createRole",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateRoleDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Roles & Permissions"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "get": {
+                "operationId": "RolesController_listRoles",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "required": false,
+                        "in": "query",
+                        "example": 1,
+                        "description": "page number",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": false,
+                        "in": "query",
+                        "example": 10,
+                        "description": "number of items per page",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "required": false,
+                        "in": "query",
+                        "example": "createdAt",
+                        "description": "Sort field",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "required": false,
+                        "in": "query",
+                        "example": "desc",
+                        "description": "Sort order",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Roles & Permissions"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/roles/search-by-permission": {
+            "post": {
+                "operationId": "RolesController_searchRolesByPermission",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SearchPermissionDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Roles & Permissions"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/roles/{name}": {
+            "patch": {
+                "operationId": "RolesController_updateRole",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/EditRoleDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Roles & Permissions"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "RolesController_deleteRole",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Roles & Permissions"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "get": {
+                "operationId": "RolesController_getRole",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Roles & Permissions"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/roles/{name}/permissions": {
+            "get": {
+                "operationId": "RolesController_listPermsByRole",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Roles & Permissions"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/projects": {
+            "post": {
+                "operationId": "ProjectController_create",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateProjectDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            },
+            "get": {
+                "operationId": "ProjectController_list",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            }
+        },
+        "/v1/projects/{uuid}": {
+            "get": {
+                "operationId": "ProjectController_findOne",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            },
+            "patch": {
+                "operationId": "ProjectController_update",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateProjectDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            },
+            "delete": {
+                "operationId": "ProjectController_remove",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            }
+        },
+        "/v1/projects/{uuid}/status": {
+            "patch": {
+                "operationId": "ProjectController_updateStatus",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateProjectStatusDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            }
+        },
+        "/v1/projects/{uuid}/beneficiaries": {
+            "get": {
+                "operationId": "ProjectController_listBeneficiaries",
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "required": true,
+                        "in": "query",
+                        "example": "ENROLLED",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "required": true,
+                        "in": "query",
+                        "example": "ENROLLED",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "required": true,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": true,
+                        "in": "query",
+                        "example": 10,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "required": true,
+                        "in": "query",
+                        "example": "ENROLLED",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "required": true,
+                        "in": "query",
+                        "example": "NOT_ASSIGNED",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "projectId",
+                        "required": true,
+                        "in": "query",
+                        "example": "d8f61ebb-ae83-4a8b-8f36-ed756aa27d12",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            }
+        },
+        "/v1/projects/{uuid}/settings": {
+            "post": {
+                "operationId": "ProjectController_addSettings",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateSettingDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            }
+        },
+        "/v1/projects/{uuid}/actions": {
+            "post": {
+                "operationId": "ProjectController_projectActions",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProjectCommunicationDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            }
+        },
+        "/v1/projects/{uuid}/stats": {
+            "get": {
+                "operationId": "ProjectController_projectStats",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {}
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Projects"
+                ]
+            }
+        },
+        "/v1/stats": {
+            "get": {
+                "operationId": "StatsController_findAll",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Stats"
+                ]
+            }
+        },
+        "/v1/stats/{name}": {
+            "get": {
+                "operationId": "StatsController_findOne",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Stats"
+                ]
+            }
+        },
+        "/v1/upload/file": {
+            "post": {
+                "operationId": "UploadController_uploadFile",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "description": "Upload file",
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FileUploadDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Upload"
+                ]
+            }
+        },
+        "/v1/grievances": {
+            "post": {
+                "operationId": "GrievanceController_create",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateGrievanceDTO"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Grievances"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            },
+            "get": {
+                "operationId": "GrievanceController_findAll",
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "required": false,
+                        "in": "query",
+                        "example": "createdAt",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "required": false,
+                        "in": "query",
+                        "example": "asc",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "required": false,
+                        "in": "query",
+                        "example": 1,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "perPage",
+                        "required": false,
+                        "in": "query",
+                        "example": "10",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "projectId",
+                        "required": false,
+                        "in": "query",
+                        "example": "d8f61ebb-ae83-4a8b-8f36-ed756aa27d12",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Grievances"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/grievances/{uuid}/change-status": {
+            "patch": {
+                "operationId": "GrievanceController_changeStatus",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ChangeGrievanceStatusDTO"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Grievances"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/grievances/{uuid}": {
+            "delete": {
+                "operationId": "GrievanceController_softDelete",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Grievances"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/v1/token": {
+            "post": {
+                "operationId": "TokenController_create",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateTokenDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Tokens"
+                ]
+            },
+            "get": {
+                "operationId": "TokenController_findAll",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Tokens"
+                ]
+            }
+        },
+        "/v1/token/{contractAddress}": {
+            "get": {
+                "operationId": "TokenController_findOne",
+                "parameters": [
+                    {
+                        "name": "contractAddress",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Tokens"
+                ]
+            }
+        },
+        "/v1/token/{id}": {
+            "delete": {
+                "operationId": "TokenController_remove",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "Tokens"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "Rahat Core",
+        "description": "API service for Rahat Core",
+        "version": "1.0",
+        "contact": {}
+    },
+    "tags": [],
+    "servers": [],
+    "components": {
+        "securitySchemes": {
+            "JWT": {
+                "scheme": "bearer",
+                "bearerFormat": "JWT",
+                "type": "http"
+            }
+        },
+        "schemas": {
+            "CreateSettingDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "SMTP",
+                        "description": "Name of the setting"
+                    },
+                    "value": {
+                        "type": "object",
+                        "example": {
+                            "host": "smtp.gmail.com",
+                            "Port": 465,
+                            "secure": true,
+                            "username": "test",
+                            "password": "test"
+                        },
+                        "description": "Settings value. Can be string | number | boolean | object"
+                    },
+                    "requiredFields": {
+                        "example": [
+                            "host",
+                            "port",
+                            "secure",
+                            "username",
+                            "PASSWORD"
+                        ],
+                        "description": "Settings value. Can be string | number | boolean | object",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "isReadOnly": {
+                        "type": "boolean",
+                        "example": false,
+                        "description": "If true, setting value cannot be changed"
+                    },
+                    "isPrivate": {
+                        "type": "boolean",
+                        "example": true,
+                        "description": "If true, setting value is not returned in public API"
+                    }
+                },
+                "required": [
+                    "name",
+                    "value",
+                    "requiredFields",
+                    "isReadOnly",
+                    "isPrivate"
+                ]
+            },
+            "CreateBeneficiaryDto": {
+                "type": "object",
+                "properties": {
+                    "uuid": {
+                        "type": "object",
+                        "example": "fd2beb03-d9d5-4f28-8bf4-941d3b0f7689",
+                        "description": "Beneficiary ID"
+                    },
+                    "birthDate": {
+                        "format": "date-time",
+                        "type": "string",
+                        "example": "1997-03-08",
+                        "description": "Date of birth in the YYYY-MM-DD format."
+                    },
+                    "age": {
+                        "type": "number",
+                        "example": "20",
+                        "description": "Age of the beneficiary."
+                    },
+                    "gender": {
+                        "type": "string",
+                        "example": "FEMALE",
+                        "description": "Gender "
+                    },
+                    "location": {
+                        "type": "string",
+                        "example": "lalitpur",
+                        "description": "location of the beneficiary"
+                    },
+                    "latitude": {
+                        "type": "number",
+                        "example": "26.24",
+                        "description": "Latitude of community"
+                    },
+                    "longitude": {
+                        "type": "number",
+                        "example": "86.24",
+                        "description": "longitude of community"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "example": "9785623749",
+                        "description": "Notes to remember"
+                    },
+                    "walletAddress": {
+                        "type": "string",
+                        "example": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+                        "description": "Ethereum address"
+                    },
+                    "extras": {
+                        "type": "object",
+                        "format": "json",
+                        "description": "Additional JSON data",
+                        "example": {
+                            "hasCitizenship": true,
+                            "passportNumber": "1234567",
+                            "email": "test@mailinator.com"
+                        }
+                    },
+                    "bankedStatus": {
+                        "type": "string",
+                        "example": "BANKED",
+                        "description": "beneficiary bankin access"
+                    },
+                    "internetStatus": {
+                        "type": "string",
+                        "example": "HOME_INTERNET",
+                        "description": "Beneficiary internet access"
+                    },
+                    "phoneStatus": {
+                        "type": "string",
+                        "example": "FEATURE_PHONE",
+                        "description": "Beneficiary phone ownership"
+                    },
+                    "piiData": {
+                        "type": "object",
+                        "format": "json",
+                        "description": "Optional PII data for specific use cases",
+                        "example": {
+                            "name": "Ram Shrestha",
+                            "phone": "98670023857",
+                            "extras": {
+                                "bank": "Laxmi Bank",
+                                "account": "9872200001"
+                            }
+                        }
+                    },
+                    "projectUUIDs": {
+                        "example": [
+                            "f3522209-225a-4ca3-8398-7bab506a96fb"
+                        ],
+                        "description": "Array of project UUIDs",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "uuid",
+                    "birthDate",
+                    "age",
+                    "gender",
+                    "location",
+                    "walletAddress",
+                    "bankedStatus",
+                    "internetStatus",
+                    "phoneStatus",
+                    "projectUUIDs"
+                ]
+            },
+            "AddBenToProjectDto": {
+                "type": "object",
+                "properties": {
+                    "referrerBeneficiary": {
+                        "type": "uuid",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
+                        "description": "UUID of the beneficiary"
+                    },
+                    "referrerVendor": {
+                        "type": "uuid",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
+                        "description": "UUID of the vendor"
+                    },
+                    "birthDate": {
+                        "format": "date-time",
+                        "type": "string",
+                        "example": "1997-03-08",
+                        "description": "Date of birth in the YYYY-MM-DD format."
+                    },
+                    "gender": {
+                        "type": "string",
+                        "example": "MALE",
+                        "description": "Gender "
+                    },
+                    "type": {
+                        "type": "string",
+                        "example": "ENROLLED",
+                        "description": "Beneficiary type"
+                    },
+                    "location": {
+                        "type": "string",
+                        "example": "lalitpur",
+                        "description": "location of the beneficiary"
+                    },
+                    "latitude": {
+                        "type": "number",
+                        "example": "26.24",
+                        "description": "Latitude of community"
+                    },
+                    "longitude": {
+                        "type": "number",
+                        "example": "86.24",
+                        "description": "longitude of community"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "example": "9785623749",
+                        "description": "Notes to remember"
+                    },
+                    "walletAddress": {
+                        "type": "string",
+                        "example": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+                        "description": "Ethereum address",
+                        "format": "hex",
+                        "minLength": 42,
+                        "maxLength": 42
+                    },
+                    "extras": {
+                        "type": "object",
+                        "format": "json",
+                        "description": "Additional JSON data",
+                        "example": {
+                            "hasCitizenship": true,
+                            "passportNumber": "1234567"
+                        }
+                    },
+                    "bankedStatus": {
+                        "type": "string",
+                        "example": "BANKED",
+                        "description": "beneficiary bankin access"
+                    },
+                    "internetStatus": {
+                        "type": "string",
+                        "example": "HOME_INTERNET",
+                        "description": "Beneficiary internet access"
+                    },
+                    "phoneStatus": {
+                        "type": "string",
+                        "example": "FEATURE_PHONE",
+                        "description": "Beneficiary phone ownership"
+                    },
+                    "piiData": {
+                        "type": "object",
+                        "format": "json",
+                        "description": "Optional PII data for specific use cases",
+                        "example": {
+                            "name": "Ram Shrestha",
+                            "phone": "98670023857",
+                            "extras": {
+                                "bank": "Laxmi Bank",
+                                "account": "9872200001"
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "referrerBeneficiary",
+                    "referrerVendor",
+                    "birthDate",
+                    "gender",
+                    "type",
+                    "location",
+                    "walletAddress",
+                    "bankedStatus",
+                    "internetStatus",
+                    "phoneStatus"
+                ]
+            },
+            "UpdateBeneficiaryDto": {
+                "type": "object",
+                "properties": {
+                    "uuid": {
+                        "type": "object",
+                        "example": "0-0-0-0-0",
+                        "description": "Beneficiary ID"
+                    },
+                    "birthDate": {
+                        "format": "date-time",
+                        "type": "string",
+                        "example": "1997-03-08",
+                        "description": "Date of birth in the YYYY-MM-DD format."
+                    },
+                    "gender": {
+                        "type": "string",
+                        "example": "FEMALE",
+                        "description": "Gender "
+                    },
+                    "location": {
+                        "type": "string",
+                        "example": "lalitpur",
+                        "description": "location of the beneficiary"
+                    },
+                    "latitude": {
+                        "type": "number",
+                        "example": "26.24",
+                        "description": "Latitude of community"
+                    },
+                    "longitude": {
+                        "type": "number",
+                        "example": "86.24",
+                        "description": "longitude of community"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "example": "9785623749",
+                        "description": "Notes to remember"
+                    },
+                    "walletAddress": {
+                        "type": "string",
+                        "example": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
+                        "description": "Ethereum address",
+                        "format": "hex",
+                        "minLength": 42,
+                        "maxLength": 42
+                    },
+                    "extras": {
+                        "type": "object",
+                        "format": "json",
+                        "description": "Additional JSON data",
+                        "example": {
+                            "hasCitizenship": true,
+                            "passportNumber": "1234567"
+                        }
+                    },
+                    "bankedStatus": {
+                        "type": "string",
+                        "example": "BANKED",
+                        "description": "beneficiary bankin access"
+                    },
+                    "internetStatus": {
+                        "type": "string",
+                        "example": "HOME_INTERNET",
+                        "description": "Beneficiary internet access"
+                    },
+                    "phoneStatus": {
+                        "type": "string",
+                        "example": "FEATURE_PHONE",
+                        "description": "Beneficiary phone ownership"
+                    },
+                    "piiData": {
+                        "type": "object",
+                        "format": "json",
+                        "description": "Optional PII data for specific use cases",
+                        "example": {
+                            "name": "Ram Shrestha",
+                            "phone": "98670023857",
+                            "extras": {
+                                "bank": "Laxmi Bank",
+                                "account": "9872200001"
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "uuid",
+                    "birthDate",
+                    "gender",
+                    "location",
+                    "walletAddress",
+                    "bankedStatus",
+                    "internetStatus",
+                    "phoneStatus"
+                ]
+            },
+            "ValidateWalletDto": {
+                "type": "object",
+                "properties": {
+                    "encryptedData": {
+                        "type": "string",
+                        "example": "f525e780ee8a0681f9e3e5306cc2f285765f57d2f89ef29e8e13a58563d7faabd90df875241426f1a83b27d81a0ca7d9",
+                        "description": "Encrypted Data"
+                    },
+                    "walletAddress": {
+                        "type": "string",
+                        "example": "0x17469fF5Bdc86a5FCeb4604534fF2a47a821d421",
+                        "description": "Wallet Address"
+                    }
+                },
+                "required": [
+                    "encryptedData",
+                    "walletAddress"
+                ]
+            },
+            "Beneficiary": {
+                "type": "object",
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "example": "e4e24059-73f3-447d-a075-1c30f5b9b1eb",
+                        "description": "Beneficiary UUID"
+                    }
+                },
+                "required": [
+                    "uuid"
+                ]
+            },
+            "CreateBeneficiaryGroupsDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Group Name",
+                        "description": "Name of the beneficiary group"
+                    },
+                    "beneficiaries": {
+                        "example": [
+                            {
+                                "uuid": "3c991927-a404-4b8f-b065-b1d64077caea"
+                            }
+                        ],
+                        "description": "Array of beneficiaries",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Beneficiary"
+                        }
+                    }
+                },
+                "required": [
+                    "name",
+                    "beneficiaries"
+                ]
+            },
+            "UpdateBeneficiaryGroupDto": {
+                "type": "object",
+                "properties": {
+                    "uuid": {
+                        "type": "object",
+                        "example": "0-0-0-0",
+                        "description": "Beneficiary Group ID"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "John Doe",
+                        "description": "Beneficiary Group Name"
+                    },
+                    "beneficiaries": {
+                        "example": [
+                            {
+                                "uuid": "5fc184e3-9bb1-44d2-9db1-819b4e9b6305"
+                            }
+                        ],
+                        "description": "Array of beneficiaries",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Beneficiary"
+                        }
+                    }
+                },
+                "required": [
+                    "uuid",
+                    "name",
+                    "beneficiaries"
+                ]
+            },
+            "ImportTempBenefDto": {
+                "type": "object",
+                "properties": {
+                    "groupUUID": {
+                        "type": "object",
+                        "description": "Group UUID",
+                        "example": "19d4dcfd-8ed9-42c4-b282-4820b79d6330"
+                    }
+                },
+                "required": [
+                    "groupUUID"
+                ]
+            },
+            "UpdateSettingDto": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "object",
+                        "example": {
+                            "host": "smtp.gmail.com",
+                            "Port": 465,
+                            "secure": true,
+                            "username": "test",
+                            "password": "test"
+                        },
+                        "description": "Settings value. Can be string | number | boolean | object"
+                    }
+                },
+                "required": [
+                    "value"
+                ]
+            },
+            "CreateUserDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Jane",
+                        "description": "The full name of the User"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "example": "FEMALE",
+                        "description": "Gender of the User"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "jane@rumsan.com",
+                        "description": "Email of the User"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "example": "9841234567",
+                        "description": "Phone number of the User"
+                    },
+                    "wallet": {
+                        "type": "string",
+                        "example": "0x1234567890abcdef",
+                        "description": "Wallet address of the User"
+                    },
+                    "roles": {
+                        "example": [
+                            "admin",
+                            "user"
+                        ],
+                        "description": "Roles of the User",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "name",
+                    "gender",
+                    "email",
+                    "phone",
+                    "wallet",
+                    "roles"
+                ]
+            },
+            "UpdateUserDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Jane",
+                        "description": "The full name of the User"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "example": "FEMALE",
+                        "description": "Gender of the User"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "jane@rumsan.com",
+                        "description": "Email of the User"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "example": "9841234567",
+                        "description": "Phone number of the User"
+                    },
+                    "wallet": {
+                        "type": "string",
+                        "example": "0x1234567890abcdef",
+                        "description": "Wallet address of the User"
+                    }
+                },
+                "required": [
+                    "name",
+                    "gender",
+                    "email",
+                    "phone",
+                    "wallet"
+                ]
+            },
+            "VendorRegisterDto": {
+                "type": "object",
+                "properties": {
+                    "service": {
+                        "type": "object",
+                        "example": "EMAIL"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "John Doe"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "john@mailinator.com"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "example": "9834123456"
+                    },
+                    "wallet": {
+                        "type": "string",
+                        "example": "0x000000000000000000000"
+                    },
+                    "extras": {
+                        "type": "object",
+                        "example": {
+                            "isVendor": true
+                        }
+                    }
+                },
+                "required": [
+                    "service",
+                    "name"
+                ]
+            },
+            "GetVendorOtp": {
+                "type": "object",
+                "properties": {
+                    "service": {
+                        "type": "object",
+                        "example": "EMAIL"
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "john@mailinator.com"
+                    }
+                },
+                "required": [
+                    "service",
+                    "address"
+                ]
+            },
+            "VerifyVendorOtp": {
+                "type": "object",
+                "properties": {
+                    "challenge": {
+                        "type": "string",
+                        "example": ""
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "john@mailinator.com"
+                    },
+                    "otp": {
+                        "type": "string",
+                        "example": ""
+                    }
+                },
+                "required": [
+                    "challenge",
+                    "address",
+                    "otp"
+                ]
+            },
+            "VendorUpdateDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "John Doe"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "john@mailinator.com"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "example": "9834123456"
+                    },
+                    "extras": {
+                        "type": "object",
+                        "example": {
+                            "isVendor": true
+                        }
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "VendorAddToProjectDto": {
+                "type": "object",
+                "properties": {
+                    "projectId": {
+                        "type": "string",
+                        "example": "d8f61ebb-ae83-4a8b-8f36-ed756aa27d12"
+                    },
+                    "vendorId": {
+                        "type": "string",
+                        "example": "d8f61ebb-ae83-4a8b-8f36-ed756aa27d12"
+                    }
+                },
+                "required": [
+                    "projectId",
+                    "vendorId"
+                ]
+            },
+            "OtpLoginDto": {
+                "type": "object",
+                "properties": {
+                    "challenge": {
+                        "type": "string",
+                        "example": ""
+                    },
+                    "otp": {
+                        "type": "string",
+                        "example": ""
+                    },
+                    "service": {
+                        "type": "object",
+                        "example": "EMAIL"
+                    }
+                },
+                "required": [
+                    "challenge",
+                    "otp",
+                    "service"
+                ]
+            },
+            "OtpDto": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "string",
+                        "example": "rumsan@mailinator.com"
+                    },
+                    "service": {
+                        "type": "object",
+                        "example": "EMAIL"
+                    },
+                    "clientId": {
+                        "type": "string",
+                        "example": "105cd449-53f6-44e4-85f3-feaa7d762ffa"
+                    }
+                },
+                "required": [
+                    "address",
+                    "service",
+                    "clientId"
+                ]
+            },
+            "WalletLoginDto": {
+                "type": "object",
+                "properties": {}
+            },
+            "ChallengeDto": {
+                "type": "object",
+                "properties": {}
+            },
+            "CreateRoleDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Manager"
+                    },
+                    "isSystem": {
+                        "type": "boolean",
+                        "example": false
+                    },
+                    "permissions": {
+                        "type": "object",
+                        "example": "{\"user\":[\"manage\",\"read\"]}"
+                    }
+                },
+                "required": [
+                    "name",
+                    "isSystem",
+                    "permissions"
+                ]
+            },
+            "SearchPermissionDto": {
+                "type": "object",
+                "properties": {}
+            },
+            "EditRoleDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Manager"
+                    },
+                    "isSystem": {
+                        "type": "boolean",
+                        "example": false
+                    },
+                    "permissions": {
+                        "type": "object",
+                        "example": "{\"user\":[\"manage\",\"read\"]}"
+                    }
+                }
+            },
+            "CreateProjectDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Cash Distribution"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "Cash Distribution for the flood victims"
+                    },
+                    "type": {
+                        "type": "string",
+                        "example": "el"
+                    },
+                    "extras": {
+                        "type": "object",
+                        "example": "Some extra Descriptions"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "UpdateProjectDto": {
+                "type": "object",
+                "properties": {}
+            },
+            "UpdateProjectStatusDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "Some extra information"
+                    }
+                }
+            },
+            "ProjectCommunicationDto": {
+                "type": "object",
+                "properties": {
+                    "action": {
+                        "type": "string",
+                        "example": "beneficiary.create"
+                    },
+                    "payload": {
+                        "type": "object",
+                        "example": {
+                            "name": "John Doe"
+                        }
+                    }
+                },
+                "required": [
+                    "action",
+                    "payload"
+                ]
+            },
+            "FileUploadDto": {
+                "type": "object",
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "format": "binary"
+                    }
+                },
+                "required": [
+                    "file"
+                ]
+            },
+            "CreateGrievanceDTO": {
+                "type": "object",
+                "properties": {
+                    "projectId": {
+                        "type": "string",
+                        "example": "47a1293c-aea2-40bd-97af-c1b7ef047406",
+                        "description": "Id of the project"
+                    },
+                    "reporterContact": {
+                        "type": "string",
+                        "example": "9841234567",
+                        "description": "Contact number of the reporter"
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "Grievance title",
+                        "description": "Title of the grievance"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "Grievance description",
+                        "description": "Description of the grievance"
+                    },
+                    "type": {
+                        "type": "string",
+                        "example": "TECHNICAL",
+                        "description": "Type of grievance",
+                        "enum": [
+                            "TECHNICAL",
+                            "NON_TECHNICAL",
+                            "OTHER"
+                        ]
+                    },
+                    "status": {
+                        "type": "object",
+                        "example": "NEW",
+                        "description": "Status of the grievance"
+                    },
+                    "reportedBy": {
+                        "type": "string",
+                        "example": "Sarvesh Karki"
+                    }
+                },
+                "required": [
+                    "projectId",
+                    "reporterContact",
+                    "title",
+                    "description",
+                    "type",
+                    "status",
+                    "reportedBy"
+                ]
+            },
+            "ChangeGrievanceStatusDTO": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "object",
+                        "example": "UNDER_REVIEW",
+                        "description": "Status of the grievance"
+                    }
+                },
+                "required": [
+                    "status"
+                ]
+            },
+            "CreateTokenDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Rahat Token"
+                    },
+                    "symbol": {
+                        "type": "string",
+                        "example": "RHT"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "This is Rahat Token"
+                    },
+                    "decimals": {
+                        "type": "number",
+                        "example": 18
+                    },
+                    "initialSupply": {
+                        "type": "number",
+                        "example": 1000
+                    },
+                    "fromBlock": {
+                        "type": "number",
+                        "example": 235
+                    },
+                    "contractAddress": {
+                        "type": "string",
+                        "example": "0x40BdA327da6460B106001709ef2F730825c634D8"
+                    },
+                    "transactionHash": {
+                        "type": "string",
+                        "example": "0x9c6d83987ff6dfd81b4e428b4f4c468d2769b451ca2d4c31b99bb338e8cbeec9"
+                    }
+                },
+                "required": [
+                    "name",
+                    "symbol",
+                    "description",
+                    "fromBlock",
+                    "contractAddress"
+                ]
+            }
+        }
+    }
+}
