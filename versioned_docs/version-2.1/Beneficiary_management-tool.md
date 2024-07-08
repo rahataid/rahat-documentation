@@ -1,5 +1,5 @@
 ---
-id: overview-beneficiary-management-tool
+id: community-tool
 ---
 
 # Overview

@@ -60,9 +60,9 @@
       "items": [
         {
           "type": "category",
-          "label": "Beneficiary Management Tool",
+          "label": "Community Tool",
           "items": [
-            "version-2.1/overview-beneficiary-management-tool",
+            "version-2.1/community-tool",
             {
               "type": "category",
               "label": "SDK Documentation",
@@ -91,7 +91,7 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/referral_voucher_project"
+          "id": "version-2.1/crypto_transfer_project"
         },
         {
           "type": "doc",
@@ -103,7 +103,7 @@
         },
         {
           "type": "doc",
-          "id": "version-2.1/crypto_transfer_project"
+          "id": "version-2.1/referral_voucher_project"
         }
       ]
     },
