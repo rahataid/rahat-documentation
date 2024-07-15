@@ -25,7 +25,9 @@ const config = {
     [
       "docusaurus-plugin-openapi",
       {
-        openapiPath: require.resolve("./openApi/swagger.json"),
+        id: "rahat-core",
+        openapiPath: require.resolve("./openApi/rahat-core.json"),
+        routeBasePath: "api/rahat-core",
       },
     ],
   ],
@@ -65,7 +67,7 @@ const config = {
             label: "Docs",
           },
           {
-            to: "api/",
+            to: "api/rahat-core",
             activeBasePath: "api",
             label: "API",
             position: "right",
