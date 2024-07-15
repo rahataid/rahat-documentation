@@ -4,4 +4,7 @@ id: rahat
 
 # About Rahat 
 
-Rahat is a collection of open source blockchain-based digital relief distribution management projects  for humanitarian agencies to support marginalized communities. It issues, manages and monitors relief distribution in the form of digital tokens. It creates a transparent, efficient and cheaper way to distribute cash or goods. It mobilizes the local community encouraging financial resilience and freedom. For more information, please visit [https://rahat.io](https://rahat.io.)
+The name 'Rahat,' derived from Nepali, signifies relief, and indeed, our mission is to break down barriers to financial inclusion and promote resilience among the most vulnerable populations. Rahat is developed by Rumsan, a blockchain company focused on social impact. 
+
+As an open-source blockchain-based financial access platform, Rahat is dedicated to promoting financial inclusion and resilience across marginalized communities. We have positively impacted over 20,000 vulnerable beneficiaries across Nepal, Indonesia, and Pakistan, and have provided essential digital and financial literacy support to over 3,000+ individuals. 
+For more information, please visit [https://rahat.io](https://rahat.io.)

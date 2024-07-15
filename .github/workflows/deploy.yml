@@ -7,43 +7,36 @@ on:
     branches:
       - main
 jobs:
-  # build:
-  #   name: Test Build
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix:
-  #       node-version: [14.x]
-
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Use Node.js ${{ matrix.node-version }}
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: ${{ matrix.node-version }}
-  #     - run: npm install
-  #     - run: npm run build
-
   deploy:
     name: Deployment to Github-pages
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [20.x]
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        uses: actions/setup-node@v1
+          # DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn
-      - run: |
+
+      
+      - name: Set-up git
+        run: |
           git config --global user.name "sandab-rumsan"
           git config --global user.email "sandab@rumsan.net"
-      - run: yarn run build
+
+      - name: Build App
+        run: |
+          yarn
+          yarn run build
+          
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
