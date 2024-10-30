@@ -1,3 +1,7 @@
+---
+id: rip_guide
+---
+
 # 🌐 Rahat Improvement Proposal (RIP) Guide  
 📜 **Licensed by CC-BY-4.0**
 
