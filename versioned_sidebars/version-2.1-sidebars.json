@@ -119,8 +119,7 @@
         },
           {
             "type": "doc",
-          "id": "version-2.1/rip_guide",
-          "label": "Rahat Improvement Proposal (RIP) Guide"
+          "id": "version-2.1/rip_guide"
           },
         {
           "type": "doc",
