@@ -2,7 +2,7 @@
 id: rip_guide
 ---
 
-# 🌐 Rahat Improvement Proposal (RIP) Guide  
+# Rahat Improvement Proposal Guide  
 📜 **Licensed by CC-BY-4.0**
 
 ---
@@ -40,11 +40,9 @@ Your contributions are the foundation of Rahat’s growth! Here’s what you gai
 👥 Anyone in the Rahat community—developers, users, or contributors—can submit an RIP.
 
 ### How to Submit  
-1. **Navigate to Issues** in Rahat’s GitHub repository.
-2. **Select the RIP Proposal Template** and fill in essential fields like title, motivation, and description.
+1. **Navigate to Issues** in [rahat-platform](https://github.com/rahataid/rahat-platform) GitHub repository.
+2. **Select the Rahat Improvement Proposal Template** and fill in essential fields like title, motivation, and description.
 3. **Submit** the issue, which will be reviewed at the next Open Source Committee meeting.
-
-For a **detailed guide**, [click here](#).
 
 ---
 
@@ -61,7 +59,7 @@ RIPs are grouped based on their platform impact:
 
 ## 🛠️ Detailed RIP Review Process  
 
-1. **Proposal Submission** *(Status: Proposed)*  
+1. **Proposal Submission**  
    - **Description**: Community members submit an RIP through GitHub Issues.
    - **Deliverables**: Issue created with essential fields (Title, Abstract, Motivation, Example Usage, Pitch).
 
