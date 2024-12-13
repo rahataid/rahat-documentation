@@ -10,7 +10,7 @@ Referral Project provides Voucher Redemption support to affiliated vendors durin
 
 ### Prerequisites
 
-Before you begin, go to the rahat-core repo and run the [rahat-core](https://github.com/rahataid/rahat-platform-nx) project. This project is dependent on the rahat-core project.
+Before you begin, go to the rahat-core repo and run the [rahat-core](https://github.com/rahataid/rahat-platform) project. This project is dependent on the rahat-core project.
 
 Also ensure your system has the following dependencies installed:
 
@@ -23,7 +23,7 @@ Also ensure your system has the following dependencies installed:
 Step1: Clone project
 
 ```bash
-git clone git@github.com:rahataid/rahat-platform-nx.git
+git clone git@github.com:rahataid/rahat-platform.git
 ```
 
 Step2: Go to the project directory and bootstrap the project
@@ -42,7 +42,7 @@ pnpm start
 
 1. Deploy and verify contracts in public chain from local machine
 2. Deploy subgraph for the deployed contract
-3. Update .env file of Rahat-Core(rahat-platform-nx)
+3. Update .env file of Rahat-Core(rahat-platform)
 
    - Update blockchain network details
    - Update communication message sender API

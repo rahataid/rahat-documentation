@@ -23,7 +23,7 @@ Before you begin, ensure your system has the following dependencies installed:
    Use the following command to clone the repository:
 
    ```bash
-   git clone git@github.com:rahataid/rahat-platform-nx.git
+   git clone git@github.com:rahataid/rahat-platform.git
    ```
 
 2. **Bootstrap Rahat Core Services**

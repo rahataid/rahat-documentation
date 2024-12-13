@@ -7,7 +7,7 @@ id: installation
 ## Cloning the Repository
 
 ```bash
-git clone git@github.com:rahataid/rahat-platform-nx.git
+git clone git@github.com:rahataid/rahat-platform.git
 ```
 
 ## Installing Services and Dependencies
