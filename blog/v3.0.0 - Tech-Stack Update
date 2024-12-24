@@ -1,0 +1,47 @@
+# Release v3.0.0 - Tech-Stack Update
+
+We are excited to announce the latest updates to our platform! This release brings significant improvements to both the backend and frontend, enhancing the overall performance, scalability, and user experience.
+
+---
+
+## 🚀 What's Changed
+
+### Backend Framework Update
+The backend framework has been upgraded to **Nest.js**, a progressive Node.js framework that provides an efficient, reliable, and scalable architecture. This change allows us to better manage and extend our application with cleaner code and improved performance.
+
+### Database Migration to PostgreSQL
+We've transitioned our database to **PostgreSQL**, a powerful, open-source object-relational database system. This upgrade provides:
+- More robust data management
+- Greater flexibility
+- Better support for complex queries
+- Enhanced data integrity and security
+
+### Frontend Framework Update
+The frontend framework has been updated to **Next.js**, a React-based framework that provides server-side rendering and static site generation. This update enhances our platform’s:
+- Loading speed
+- SEO
+- Overall responsiveness and user engagement
+
+[Learn more about this update](#)
+
+---
+
+## 🌟 New Contributors
+
+We’re thrilled to welcome new contributors to our project! Their valuable contributions have played a crucial role in this release:
+
+- **[@karun-rumsan](#)**  
+  Made their first contribution by enhancing the platform's user interface, improving navigation and overall usability.  
+  [View their contribution](#)
+
+- **[@AjayRB5248](#)**  
+  Contributed by implementing dynamic features that have improved the flexibility and functionality of the platform.  
+  [View their contribution](#)
+
+---
+
+## 🙌 Acknowledgments
+
+We extend our sincere gratitude to all our contributors for their hard work and dedication. Your efforts are helping us build a more robust and user-friendly platform.
+
+Stay tuned for more updates!
