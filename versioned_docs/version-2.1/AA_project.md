@@ -123,7 +123,7 @@ DB_PORT=5555
 DB_USERNAME=rahat
 DB_PASSWORD=rahat123
 DB_NAME=rahat-aa
-DB_RAHAT_CORE=rahat-platform-nx
+DB_RAHAT_CORE=rahat-platform
 
 # Prisma database connection
 DATABASE_URL=postgresql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?schema=public

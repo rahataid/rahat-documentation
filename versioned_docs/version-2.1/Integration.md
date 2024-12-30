@@ -23,7 +23,7 @@ Before you begin, ensure your system has the following dependencies installed:
    Use the following command to clone the repository:
 
    ```bash
-   git clone git@github.com:rahataid/rahat-platform-nx.git
+   git clone git@github.com:rahataid/rahat-platform.git
    ```
 
 2. **Bootstrap Rahat Core Services**
@@ -38,9 +38,7 @@ Before you begin, ensure your system has the following dependencies installed:
 
    Rahat currently supports the following projects:
 
-   - [rahat-project-el](https://github.com/rahataid/rahat-project-el)
    - [rahat-project-c2c](https://github.com/rahataid/rahat-project-c2c)
-   - [rahat-project-aa](https://github.com/rahataid/rahat-project-aa)
    - [rahat-project-cva](https://github.com/rahataid/rahat-project-cva)
 
    Clone the project you want to run and follow the instructions in its README.md file.

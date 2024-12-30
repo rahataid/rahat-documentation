@@ -63,7 +63,7 @@ If you find any bug and you're not sure how to fix it, or you don't know how to 
 
 
 
-* [Rahat-Platform](https://github.com/rahataid/rahat-platform-nx)
+* [Rahat-Platform](https://github.com/rahataid/rahat-platform)
 * [Rahat-UI](https://github.com/rahataid/rahat-ui)
 * [Rahat-vendor](https://github.com/rahataid/rahat-vendor-ionic)
 * [Rahat-contracts](https://github.com/rahataid/rahat-contracts)

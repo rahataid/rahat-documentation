@@ -18,4 +18,4 @@ To set up the development environment for Rahat, we need the following services 
  - redis
  - ganache
 
-The best way to setup all of these services is thourgh docker. You can use the following [docker-compose file](https://github.com/rahataid/rahat-platform-nx/tree/main/tools/docker-compose) to setup all the services.
+The best way to setup all of these services is thourgh docker. You can use the following [docker-compose file](https://github.com/rahataid/rahat-platform/tree/main/tools/docker-compose) to setup all the services.
