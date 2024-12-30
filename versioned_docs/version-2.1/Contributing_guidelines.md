@@ -53,7 +53,7 @@ If you are a beginner or want to start contributing to Rahat get started with ou
 
 If you find any bug and you're not sure how to fix it, or you don't know how to do a pull request, then you can create an Issue. Filing an Issue will help us see the problem and fix it. Issues in [Rahat Github repositories](https://github.com/orgs/esatya) are the primary means by which bug reports, feedback, and general discussions are made. A contributor is invited to create an issue, discuss it, and provide a fix if needed.
 
-- [Rahat-Platform](https://github.com/rahataid/rahat-platform-nx)
+- [Rahat-Platform](https://github.com/rahataid/rahat-platform)
 - [Rahat-UI](https://github.com/rahataid/rahat-ui)
 - [Rahat-vendor](https://github.com/rahataid/rahat-vendor-ionic)
 - [Rahat-contracts](https://github.com/rahataid/rahat-contracts)

@@ -14,7 +14,7 @@ The Rahat Open Source Project uses mixed licensing.
 
 ### Web-Apps (Standalone) - TBD
 
-1. [Rahat-Platform](https://github.com/rahataid/rahat-platform-nx): Rahat-Platform-nx is a backend for Rahat, also known as Rahat core
+1. [Rahat-Platform](https://github.com/rahataid/rahat-platform): Rahat-Platform-nx is a backend for Rahat, also known as Rahat core
 2. [Rahat-UI](https://github.com/rahataid/rahat-ui): Rahat UI is a comprehensive UI kit designed specifically for the Rahat platform, enabling seamless integration and user interaction.
 3. [Rahat-vendor](https://github.com/rahataid/rahat-vendor-ionic): Rahat vendor app to serve beneficiary for aid distribution
 
