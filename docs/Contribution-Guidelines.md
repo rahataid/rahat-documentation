@@ -89,4 +89,4 @@ If you want to connect with our contributors, you can connect us at Join us at D
 
 ➡️[Click here to join.](https://discord.gg/zDwzuCAhmu)
 
-Last updated : 02/28/2022
+Last updated : 02/28/2024
