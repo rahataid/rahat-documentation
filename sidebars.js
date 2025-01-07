@@ -2,7 +2,6 @@ module.exports = {
   tutorialSidebar: {
     Introduction: [
       "intro",
-
       "rahat-team",
       "brand-guidelines",
     ],
