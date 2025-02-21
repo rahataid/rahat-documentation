@@ -1,5 +1,5 @@
 ---
-id: intro
+id: rahat
 ---
 
 # Rahat: Empowering Communities through Blockchain
