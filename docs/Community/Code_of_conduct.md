@@ -1,9 +1,10 @@
 ---
-id: code-of-conduct
-sidebar_position: 2
+id: code_of_conduct
 ---
 
-# Code of Conduct
+# Code of Conduct 
+
+We aspire to create a positive social atmosphere for our community. We want to facilitate healthy, constructive community behavior. This code of conduct applies to every member of the community, including Rumsan staff, members, project maintainers, volunteers, event participants, sponsors, and vendors.
 
 ## Our Pledge
 
