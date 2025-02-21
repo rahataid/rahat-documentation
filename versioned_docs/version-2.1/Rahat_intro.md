@@ -2,8 +2,6 @@
 id: intro
 ---
 
-# Rahat: Blockchain company focused on social impact
-
 # Rahat: Empowering Communities through Blockchain
 
 **Rahat**, meaning "relief" in Nepali, is a blockchain-powered platform designed to break down barriers to financial inclusion and build resilience for marginalized communities. Developed by **Rumsan**, Rahat is an open-source project that is transforming the way vulnerable populations access financial services and digital tools.
