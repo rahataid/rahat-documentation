@@ -38,12 +38,12 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/rahataid/rahat-documentation/blob/main",
+          editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
           showLastUpdateTime: true,
           versions: {
             current: {
-              label: 'Current', // This label appears in the dropdown
-              path: 'next',  // The URL path for the latest docs
+              label: 'Next',
+              path: 'next',
             },
           },
         },
