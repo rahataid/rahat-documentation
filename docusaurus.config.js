@@ -40,6 +40,12 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/rahataid/rahat-documentation/blob/main",
           showLastUpdateTime: true,
+          versions: {
+            current: {
+              label: 'Current', // This label appears in the dropdown
+              path: 'next',  // The URL path for the latest docs
+            },
+          },
         },
         blog: {
           path: "blog",
@@ -84,12 +90,6 @@ const config = {
             position: "left",
             dropdownActiveClassDisabled: true,
             dropdownItemsAfter: [
-              ...Object.entries(ArchivedVersions).map(
-                ([versionName, versionUrl]) => ({
-                  to: versionUrl,
-                  label: versionName,
-                })
-              ),
               {
                 to: "/versions",
                 label: "All versions",

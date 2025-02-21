@@ -7,7 +7,7 @@ import versions from '../../versions.json';
 
 
 export default function VersionsPage() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   const latestVersion = versions[0];
   return (
     <Layout
@@ -20,28 +20,28 @@ export default function VersionsPage() {
             <h3 id="latest" style={{ marginTop: '25px' }}>Current version (Stable)</h3>
             <p>Latest stable version of Rahat</p>
             <table>
-                <tbody>
-                  <tr>
-                    <th>{latestVersion}</th>
-                    <td>
-                      <Link to={`/docs/next/intro`}>Documentation</Link>
-                    </td>
-                    <td>
-                      <a href="https://github.com/esatya/rahat">
-                        Release Notes
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="rc">Latest version</h3>
-              <p>Here you can find the latest unreleased documentation and code.</p>
-              <table>
+              <tbody>
+                <tr>
+                  <th>{latestVersion}</th>
+                  <td>
+                    <Link to={`docs/next/Introduction/rahat`}>Documentation</Link>
+                  </td>
+                  <td>
+                    <a href="https://github.com/esatya/rahat">
+                      Release Notes
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="rc">Latest version</h3>
+            <p>Here you can find the latest unreleased documentation and code.</p>
+            <table>
               <tbody>
                 <tr>
                   <th>main</th>
                   <td>
-                    <Link to={`/docs/next/intro`}>Documentation</Link>
+                    <Link to={`docs/next/Introduction/rahat`}>Documentation</Link>
                   </td>
                   <td>
                     <a href="https://github.com/esatya/rahat">Source Code</a>
@@ -59,7 +59,7 @@ export default function VersionsPage() {
                       <tr key={version}>
                         <th>{version}</th>
                         <td>
-                          <Link to={`/docs/next/intro`}>
+                          <Link to={`docs/next/Introduction/rahat`}>
                             Documentation
                           </Link>
                         </td>
@@ -69,7 +69,7 @@ export default function VersionsPage() {
               </tbody>
             </table>
           </div>
-        </div>   
+        </div>
       </main>
     </Layout>
   );
