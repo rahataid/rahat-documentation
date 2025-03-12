@@ -94,8 +94,8 @@ This repository uses [eslint ](https://github.com/eslint/eslint)to enforce [air-
 
 ## Connect with Rahat Contributors[​](https://docs.rahat.io/docs/next/Contribution-Guidelines#connect-with-rahat-contributors)
 
-If you want to connect with our contributors, you can connect us at Join us at Discord
+If you want to connect with our contributors, you can connect us at Join us at Telegram
 
-➡️[Click here to join.](https://discord.gg/zDwzuCAhmu)
+➡️[Click here to join.](https://t.me/+bzS2bx6Wmp41Y2Y1)
 
 Last updated : 03/15/2022
