@@ -97,5 +97,3 @@ This repository uses [eslint ](https://github.com/eslint/eslint)to enforce [air-
 If you want to connect with our contributors, you can connect us at Join us at Telegram
 
 ➡️[Click here to join.](https://t.me/+bzS2bx6Wmp41Y2Y1)
-
-Last updated : 03/15/2022
