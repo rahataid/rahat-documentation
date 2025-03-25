@@ -82,7 +82,7 @@ If you have expertise and experience in cash transfer and want to share your ins
 
 The Rahat ecosystem is expanding and, as a result, so is the need for documentation. You can find the "official" Rahat Documentation [here ](https://docs.rahat.io/)— which provides high-level overviews and technical documentation.
 
-Whether it’s writing How-To guides, video demos, or creating diagrams on how the protocol ties together, there is something for everyone. If you speak another language, translations could help as well. Join our[ Discord](https://discord.gg/zDwzuCAhmu) and share your insights, so we can help you get started. Feel free to contact us with any documentation questions 👉 team@rahat.io.
+Whether it’s writing How-To guides, video demos, or creating diagrams on how the protocol ties together, there is something for everyone. If you speak another language, translations could help as well. 
 
 ### **For Designs[​](https://docs.rahat.io/docs/next/Contribution-Guidelines#for-designs)**
 
