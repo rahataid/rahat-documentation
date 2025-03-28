@@ -1,6 +1,3 @@
----
-id: rahat
----
 
 # Key Features of Rahat  
 
