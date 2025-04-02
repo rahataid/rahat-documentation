@@ -12,32 +12,23 @@ pnpm (Package Manager): Version 6.16.1 or higher
 
 # System Requirements
 
-## OS  
-- Ubuntu 20.04+ / macOS / Windows (WSL recommended for Windows users)  
+## OS
+- Ubuntu 20.04+ / macOS / Windows (WSL recommended for Windows users)
 
-## CPU  
-- At least 4 cores (for development)  
+## Hardware
+- **CPU**: At least 4 cores (for development)
+- **RAM**: Minimum 8GB (16GB recommended for production)
+- **Storage**: Minimum 50GB free space
 
-## RAM  
-- Minimum 8GB (16GB recommended for production)  
+# Software Dependencies
 
-## Storage  
-- Minimum 50GB free space  
+- **Node.js** (LTS recommended, e.g., 18.x or later)
+- **npm** or **yarn** (package manager)
+- **PostgreSQL** (database)
+- **Prisma ORM** (for database management)
+- **Docker & Docker Compose** (for containerized services)
 
----
+# Environment Variables
 
-# Software Dependencies  
-
-- **Node.js** (LTS recommended, e.g., 18.x or later)  
-- **npm** or **yarn** (package manager)  
-- **PostgreSQL** (database)  
-- **Prisma ORM** (for database management)  
-- **Docker** & **Docker Compose** (for containerized services)  
-
----
-
-# Environment Variables  
-
-Refer to the `.env.example` file:  
-[`.env.example`](https://github.com/rahataid/rahat-platform/blob/main/.env.example)  
-
+Refer to the example `.env` file for configuring environment variables:  
+[.env.example](https://github.com/rahataid/rahat-platform/blob/main/.env.example)
