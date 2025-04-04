@@ -6,6 +6,8 @@ Here’s a structured **Developer-Friendly Installation Documentation** outline 
 
 
 ### Automatic Setup:
+# Rahat Setup
+
 - Prod:
     ```sh
     curl -fsSL https://raw.githubusercontent.com/rahataid/Rahat-Setup/refs/heads/main/setup.sh | bash
