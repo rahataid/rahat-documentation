@@ -82,3 +82,6 @@ export CWD=${PWD}
     cd docker
     docker compose -f docker-compose-local.yaml restart
     ```
+
+[![Rahat Setup Walkthrough](https://img.youtube.com/vi/CQ3LshvsJOU/0.jpg)](https://www.youtube.com/watch?v=CQ3LshvsJOU)
+
