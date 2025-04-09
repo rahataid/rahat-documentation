@@ -24,6 +24,4 @@ Includes development, testing, and deployment utilities to streamline engineerin
 ### Configuration Files
 Stores environment settings and deployment configurations to support flexible setups across various use cases and environments.
 
----
-
 By adopting this structured yet flexible environment, Rahat supports rapid feature integration, efficient version control, and seamless testing across modules. The platform is designed to adapt to evolving humanitarian needs, regulatory shifts, and emerging technologies—making it a future-ready solution for impactful, tech-driven aid delivery.
