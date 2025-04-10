@@ -11,7 +11,7 @@ Rahat is an open-source platform, and we encourage contributors to help us impro
 ## How to Report an Issue?
 
 ### 1. Check for Existing Issues  
-Before reporting, browse through the [Issue Tracker] to see if your issue has already been reported or is being worked on.
+Before reporting, browse through the Issue Tracker to see if your issue has already been reported or is being worked on.
 
 ### 2. Use the Right Template  
 When creating an issue, use the provided template to ensure clarity and completeness.
@@ -38,7 +38,7 @@ Steps to reproduce:
 **Environment**: Rahat vX.Y.Z (specify version if possible)
 
 ### 4. Submit Your Issue  
-Once you've filled in the details, submit your issue in the [Rahat GitHub Repository] and our team will review it.
+Once you've filled in the details, submit your issue in the Rahat GitHub Repository and our team will review it.
 
 ## Why Report Issues?
 
