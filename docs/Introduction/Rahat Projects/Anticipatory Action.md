@@ -13,8 +13,8 @@ The Anticipatory Action (AA) Tool is a comprehensive solution for managing antic
 - Access to data sources like GLoFAS and DHM for station-level data analysis.
 - Daily monitoring feature to update data and support informed decision-making.
 
-#### Manage Trigger Thresholds
-- Establish predefined criteria for triggering response actions based on specific thresholds.
+#### Manage Trigger Statements
+- Establish predefined criteria for triggering response actions based on specific statements.
 - Enables proactive disaster preparedness and timely, targeted responses.
 
 #### Activity Management
@@ -25,7 +25,11 @@ The Anticipatory Action (AA) Tool is a comprehensive solution for managing antic
 #### AA Fund/Budget Management
 - Allocate and track resources and budgets throughout the disaster response process.
 - Supports token or voucher-based distribution using blockchain technology.
-- Enhances transparency, accountability, and reduces fraud or mismanagement.
+- Enhances transparency and accountability, and reduces fraud or mismanagement.
+
+#### Payout Initiation
+- With the integration of applications such as NCHL or FSP, payouts can be initiated directly from the system.
+- This payout initiation is supported by the Budget Management feature and integration with external apps like NCHL.
 
 #### Communication Management
 - Facilitates seamless communication among stakeholders.
@@ -34,13 +38,6 @@ The Anticipatory Action (AA) Tool is a comprehensive solution for managing antic
 #### Import Beneficiary from Community Tool
 - Import beneficiary data via APIs from the Community Tool.
 - Improves targeting and categorization of beneficiaries based on multiple criteria.
-
-#### Beneficiary Targeting
-- Filter and target beneficiaries based on physical, geographical, social, and economic criteria.
-- Allows precise segmentation and tailored support for aid distribution.
-
-#### Grouping Beneficiaries
-- Group beneficiaries based on real-time requirements to streamline aid distribution.
 
 #### Reporting
 - Generates reports based on beneficiary data, coverage areas, activity completion, etc.
