@@ -1,8 +1,9 @@
-## Cash and Voucher Assistance (CVA)
+## Rahat Crypto CVA
 
-Cash and Voucher Assistance (CVA) provides financial support to individuals and families affected by humanitarian crises or participating in development programs. Unlike traditional in-kind aid which involves distributing goods such as food, clothing, or shelter materials—CVA empowers beneficiaries by giving them the **freedom to choose** what they need most. This approach enhances **dignity, autonomy, and efficiency**, ensuring that support is more tailored to individual needs.
+Rahat Crypto CVA is one of the project under the Rahat platform that leverages blockchain technology to deliver crypto-based Cash and Voucher Assistance (CVA) in humanitarian settings. Designed to serve underbanked and vulnerable populations—especially during disasters—Rahat enables secure, transparent, and direct disbursement of aid using stablecoins like USDC.
 
-The **Rahat CVA** solution leverages blockchain technology to facilitate **transparent, secure, and traceable** cash and in-kind aid distribution. It is designed to streamline the aid process for humanitarian organizations while making the experience more accessible and inclusive for beneficiaries.
+As more humanitarian organizations embrace crypto donations, Rahat bridges the gap between donors and beneficiaries by streamlining both first-mile and last-mile aid distribution. The platform supports both documented and undocumented individuals—such as refugees—by enabling community-based verification and onboarding, even without formal IDs or bank accounts.
+
 
 ### Key Features of Rahat CVA
 
