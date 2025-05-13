@@ -21,7 +21,7 @@ Ensure the `.env` file is correctly configured with the following values:
 ### Adding Network Settings
 
 - The script for configuring network settings is located [here](https://github.com/rahataid/rahat-platform/blob/main/tools/scripts/local-setup/web3_setup/settingsSeed.ts). This script updates the database with the necessary blockchain settings.
-
+    
 Ensure these values are correctly assigned when adding blockchain settings:
 
 - `CHAIN_ID =`
