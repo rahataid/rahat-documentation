@@ -59,7 +59,9 @@ If you find any bug and you're not sure how to fix it, or you don't know how to 
 - [Rahat-contracts](https://github.com/rahataid/rahat-contracts)
 - [Rahat-OTP](https://github.com/rahataid/rahat-otp)
 - [Rahat-Documentation](https://github.com/rahataid/rahat-documentation)
-
+- [Rahat-C2C](https://github.com/rahataid/rahat-project-c2c)
+- [Rahat-Offramping](https://github.com/rahataid/rahat-offramp)
+  
 ## Reporting Bugs[​](https://docs.rahat.io/docs/next/Contribution-Guidelines#reporting-bugs)
 
 This section guides you through submitting a bug report for Rahat. Following these guidelines helps maintainers and the community understand your report 📝, reproduce the behavior 💻 💻, and find related reports 🔎. Before creating bug reports, please check [this list](https://github.com/orgs/esatya/projects/2) as you might find out that you don't need to create one. When you are creating a bug report, please [include as many details as possible](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#how-do-i-submit-a-good-bug-report).
