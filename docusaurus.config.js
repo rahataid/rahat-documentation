@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const {themes} = require("prism-react-renderer");
 const ArchivedVersions = require("./archivedVersions.json");
 
 /** @type {import('@docusaurus/types').Config} */
@@ -21,16 +20,16 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  plugins: [
-    [
-      "docusaurus-plugin-openapi",
-      {
-        id: "rahat-core",
-        openapiPath: require.resolve("./openApi/rahat-core.json"),
-        routeBasePath: "api/rahat-core",
-      },
-    ],
-  ],
+  // plugins: [
+  //   [
+  //     "docusaurus-plugin-openapi",
+  //     {
+  //       id: "rahat-core",
+  //       path: require.resolve("./openApi/rahat-core.json"),
+  //       routeBasePath: "api/rahat-core",
+  //     },
+  //   ],
+  // ],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -147,8 +146,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Rahat. A part of Rumsan Company. Designed by Rumsan | <a href="https://assets.rumsan.net/rumsan-group/rumsan-privacy-policy.pdf" target="_blank">Privacy Policy</a> | `,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: themes.github,
+        darkTheme: themes.dracula,
       },
       // algolia: {
       //   indexName: "jest-v2",

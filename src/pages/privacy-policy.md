@@ -29,31 +29,23 @@ While using our Service, our projects will collect certain personally identifiab
 
 <table>
   <tr>
-   <td>For Agency Admin
-   </td>
-   <td>Name, Email, Phone
-   </td>
+   <td>For Agency Admin</td>
+   <td>Name, Email, Phone</td>
   </tr>
   <tr>
-   <td>For Beneficiaries
-   </td>
+   <td>For Beneficiaries</td>
    <td>Name, Phone Number, Address,Email Address, Age, Gender \
-Image: Beneficiary’s profile image and Government identification document
-   </td>
+Image: Beneficiary’s profile image and Government identification document</td>
   </tr>
   <tr>
-   <td>For Vendors
-   </td>
+   <td>For Vendors</td>
    <td>Name, Phone Number, Email, Address \
-Image: Vendor’s profile image and Government identification document
-   </td>
+Image: Vendor’s profile image and Government identification document</td>
   </tr>
   <tr>
-   <td>For Social Mobilizers
-   </td>
+   <td>For Social Mobilizers</td>
    <td>Name, Phone Number, Email, Address  \
-Image: social mobilizer’s profile image and Government identification document
-   </td>
+Image: social mobilizer’s profile image and Government identification document</td>
   </tr>
 </table>
 
@@ -95,4 +87,4 @@ This policy is effective as of 2022-02-22
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at [team@rumsan.com](mailto:team@rumsan.com). 
 
---- 
+---
