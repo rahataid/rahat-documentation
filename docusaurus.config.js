@@ -144,7 +144,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Rahat. A part of Rumsan Company. Designed by Rumsan | <a href="https://assets.rumsan.net/rumsan-group/rumsan-privacy-policy.pdf" target="_blank">Privacy Policy</a> | `,
+        copyright: `Copyright © ${new Date().getFullYear()} Rahat. A part of Rumsan Company. Designed by Rumsan | <a href="https://rahat.io/privacy-policy" target="_blank">Privacy Policy</a> | `,
       },
       prism: {
         theme: lightCodeTheme,
