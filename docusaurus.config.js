@@ -20,16 +20,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  // plugins: [
-  //   [
-  //     "docusaurus-plugin-openapi",
-  //     {
-  //       id: "rahat-core",
-  //       path: require.resolve("./openApi/rahat-core.json"),
-  //       routeBasePath: "api/rahat-core",
-  //     },
-  //   ],
-  // ],
+  plugins: [],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -65,18 +56,6 @@ const config = {
           src: "/img/rahat_logo.png",
         },
         items: [
-          {
-            type: "doc",
-            docId: "intro",
-            position: "right",
-            label: "Docs",
-          },
-          {
-            to: "api/rahat-core",
-            activeBasePath: "api",
-            label: "API",
-            position: "right",
-          },
           { to: "blog", label: "Releases", position: "right" },
           {
             to: "/help",
