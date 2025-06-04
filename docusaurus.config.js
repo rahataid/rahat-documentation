@@ -20,13 +20,27 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  plugins: [],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'user',
+        path: 'user-docs',
+        routeBasePath: 'user-docs',
+        sidebarPath: require.resolve('./sidebars-user.js'),
+        editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
+        showLastUpdateTime: true,
+      },
+    ],
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
           showLastUpdateTime: true,
@@ -37,6 +51,7 @@ const config = {
             },
           },
         },
+        
         blog: {
           path: "blog",
           blogSidebarCount: "ALL",
@@ -56,13 +71,25 @@ const config = {
           src: "/img/rahat_logo.png",
         },
         items: [
+          {
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'Developer Docs',
+          },
+          {
+            type: 'doc',
+            docsPluginId: 'user',
+            docId: 'Introduction/Welcome',
+            position: 'left',
+            label: 'User Guide',
+          },
           { to: "blog", label: "Releases", position: "right" },
           {
             to: "/help",
             position: "right",
             label: "Help",
           },
-
           {
             type: "docsVersionDropdown",
             position: "left",
