@@ -12,7 +12,7 @@ Rahat is an open-source platform, and we encourage contributors to help us impro
 
 ### 1. Check for Existing Issues
 
-Before reporting, go to the [Rahat GitHub Issue Tracker](https://github.com/esatya/rahat-xyz/issues) and browse through the list to see if your issue has already been reported or is currently being worked on.
+Before reporting a new issue, please review the existing issues in the respective repository to ensure it hasn’t already been reported or is currently being addressed.
 
 ### 2. Create a New Issue on GitHub
 
