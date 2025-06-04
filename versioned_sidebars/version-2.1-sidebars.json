@@ -1,5 +1,5 @@
 {
-  "version-2.1/tutorialSidebar": [
+  "tutorialSidebar": [
     {
       "type": "category",
       "collapsed": true,
@@ -8,11 +8,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/intro"
+          "id": "intro"
         },
         {
           "type": "doc",
-          "id": "version-2.1/system_overview"
+          "id": "system_overview"
         }
       ]
     },
@@ -24,11 +24,11 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/prerequisites"
+          "id": "prerequisites"
         },
         {
           "type": "doc",
-          "id": "version-2.1/installation"
+          "id": "installation"
         }
       ]
     },
@@ -40,15 +40,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/overview"
+          "id": "overview"
         },
         {
           "type": "doc",
-          "id": "version-2.1/core_components"
+          "id": "core_components"
         },
         {
           "type": "doc",
-          "id": "version-2.1/integration"
+          "id": "integration"
         }
       ]
     },
@@ -62,25 +62,25 @@
           "type": "category",
           "label": "Community Tool",
           "items": [
-            "version-2.1/community-tool",
+            "community-tool",
             {
               "type": "category",
               "label": "SDK Documentation",
               "items": [
-                "version-2.1/sdk-documentation/apps",
-                "version-2.1/sdk-documentation/beneficiary",
-                "version-2.1/sdk-documentation/beneficiary_group",
-                "version-2.1/sdk-documentation/beneficiary_source",
-                "version-2.1/sdk-documentation/field_definition",
-                "version-2.1/sdk-documentation/group",
-                "version-2.1/sdk-documentation/settings_client",
-                "version-2.1/sdk-documentation/source",
-                "version-2.1/sdk-documentation/targets"
+                "sdk-documentation/apps",
+                "sdk-documentation/beneficiary",
+                "sdk-documentation/beneficiary_group",
+                "sdk-documentation/beneficiary_source",
+                "sdk-documentation/field_definition",
+                "sdk-documentation/group",
+                "sdk-documentation/settings_client",
+                "sdk-documentation/source",
+                "sdk-documentation/targets"
               ]
             }
           ]
         },
-        "version-2.1/communication-tool"
+        "communication-tool"
       ]
     },
     {
@@ -91,19 +91,19 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/crypto_transfer_project"
+          "id": "crypto_transfer_project"
         },
         {
           "type": "doc",
-          "id": "version-2.1/cash_voucher_project"
+          "id": "cash_voucher_project"
         },
         {
           "type": "doc",
-          "id": "version-2.1/aa_project"
+          "id": "aa_project"
         },
         {
           "type": "doc",
-          "id": "version-2.1/referral_voucher_project"
+          "id": "referral_voucher_project"
         }
       ]
     },
@@ -115,15 +115,15 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-2.1/contributing_guidelines"
+          "id": "contributing_guidelines"
         },
         {
           "type": "doc",
-          "id": "version-2.1/rip_guide"
+          "id": "rip_guide"
         },
         {
           "type": "doc",
-          "id": "version-2.1/code_of_conduct"
+          "id": "code_of_conduct"
         }
       ]
     }

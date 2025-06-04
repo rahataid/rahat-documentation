@@ -33,7 +33,7 @@ export default function HelpPage() {
                   <li style={{ fontSize: "20px" }}>
                     {" "}
                     Look at the full{" "}
-                    <Link to="/api/rahat-core">API Reference</Link>.
+                    <Link to="/docs/intro">API Reference</Link>.
                   </li>
                 </ul>
               </p>
