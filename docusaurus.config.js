@@ -30,6 +30,12 @@ const config = {
         sidebarPath: require.resolve('./sidebars-user.js'),
         editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
         showLastUpdateTime: true,
+        versions: {
+          current: {
+            label: 'Next',
+            path: 'next',
+          },
+        },
       },
     ],
   ],
@@ -92,7 +98,8 @@ const config = {
           },
           {
             type: "docsVersionDropdown",
-            position: "left",
+            position: "right",
+            docsPluginId: "default", // For developer docs
             dropdownActiveClassDisabled: true,
             dropdownItemsAfter: [
               {
@@ -100,6 +107,22 @@ const config = {
                 label: "All versions",
               },
             ],
+            dropdownItemsBefore: [],
+            className: 'developer-version-dropdown',
+          },
+          {
+            type: "docsVersionDropdown",
+            position: "right",
+            docsPluginId: "user", // For user docs
+            dropdownActiveClassDisabled: true,
+            dropdownItemsAfter: [
+              {
+                to: "/user-docs/versions",
+                label: "All versions",
+              },
+            ],
+            dropdownItemsBefore: [],
+            className: 'user-version-dropdown',
           },
           { type: "localeDropdown", position: "right" },
           {
