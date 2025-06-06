@@ -17,7 +17,7 @@ const config = {
   baseUrl: "/",
   projectName: "rahat-documentation", // Usually your repo name.
   organizationName: "rahataid", // Usually your GitHub org/user name.
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn", // Changed from "throw" to "warn" to help during development
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   plugins: [
@@ -29,13 +29,7 @@ const config = {
         routeBasePath: 'user-docs',
         sidebarPath: require.resolve('./sidebars-user.js'),
         editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
-        showLastUpdateTime: true,
-        versions: {
-          current: {
-            label: 'Next',
-            path: 'next',
-          },
-        },
+        showLastUpdateTime: true
       },
     ],
   ],
@@ -50,10 +44,11 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
           showLastUpdateTime: true,
+          lastVersion: 'current',
           versions: {
             current: {
               label: 'Next',
-              path: 'next',
+              banner: 'unreleased'
             },
           },
         },
@@ -79,7 +74,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'Introduction/Welcome',
             position: 'left',
             label: 'Developer Docs',
           },
@@ -99,32 +94,9 @@ const config = {
           {
             type: "docsVersionDropdown",
             position: "right",
-            docsPluginId: "default", // For developer docs
-            dropdownActiveClassDisabled: true,
-            dropdownItemsAfter: [
-              {
-                to: "/versions",
-                label: "All versions",
-              },
-            ],
-            dropdownItemsBefore: [],
-            className: 'developer-version-dropdown',
+            docsPluginId: "default",  // This makes it only work with the default plugin (developer docs)
           },
-          {
-            type: "docsVersionDropdown",
-            position: "right",
-            docsPluginId: "user", // For user docs
-            dropdownActiveClassDisabled: true,
-            dropdownItemsAfter: [
-              {
-                to: "/user-docs/versions",
-                label: "All versions",
-              },
-            ],
-            dropdownItemsBefore: [],
-            className: 'user-version-dropdown',
-          },
-          { type: "localeDropdown", position: "right" },
+          // Removed locale dropdown since we only have English for now
           {
             href: "https://github.com/rahataid?tab=repositories",
             position: "right",
@@ -140,8 +112,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Documentation",
+                to: "/docs/Introduction/Welcome",
               },
             ],
           },

@@ -41,9 +41,9 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   display: block;
 }
 
-/* Show user version dropdown when viewing user docs */
+/* Show  version dropdown when viewing user docs */
 [class*='docs-doc-id-user-'] .user-version-dropdown {
-  display: block;
+  display: none;
 }
 
 /* Style adjustments for version dropdowns */

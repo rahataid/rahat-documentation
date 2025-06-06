@@ -40,7 +40,7 @@ function HomepageHeader() {
             </p>
             <Link
               className={clsx("button button--secondary button--lg", cardStyles.cardButton)}
-              to="/docs/next/Introduction/Welcome"
+              to="/docs/Introduction/Welcome"
             >
               <Translate>View Developer Docs</Translate>
             </Link>
