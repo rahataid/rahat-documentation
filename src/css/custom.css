@@ -30,6 +30,28 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: #2b7ec1;
 }
 
+/* Hide version dropdowns by default */
+.developer-version-dropdown,
+.user-version-dropdown {
+  display: none;
+}
+
+/* Show developer version dropdown when viewing developer docs */
+[class*='docs-doc-id-'] .developer-version-dropdown {
+  display: block;
+}
+
+/* Show  version dropdown when viewing user docs */
+[class*='docs-doc-id-user-'] .user-version-dropdown {
+  display: none;
+}
+
+/* Style adjustments for version dropdowns */
+.developer-version-dropdown,
+.user-version-dropdown {
+  margin-left: 0.5rem;
+}
+
 .header-github-link:before {
   background: url(../../static/img/github.svg) no-repeat;
   content: "";

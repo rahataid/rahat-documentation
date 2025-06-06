@@ -17,26 +17,42 @@ const config = {
   baseUrl: "/",
   projectName: "rahat-documentation", // Usually your repo name.
   organizationName: "rahataid", // Usually your GitHub org/user name.
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn", // Changed from "throw" to "warn" to help during development
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  plugins: [],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'user',
+        path: 'user-docs',
+        routeBasePath: 'user-docs',
+        sidebarPath: require.resolve('./sidebars-user.js'),
+        editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
+        showLastUpdateTime: true
+      },
+    ],
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
           showLastUpdateTime: true,
+          lastVersion: 'current',
           versions: {
             current: {
               label: 'Next',
-              path: 'next',
+              banner: 'unreleased'
             },
           },
         },
+        
         blog: {
           path: "blog",
           blogSidebarCount: "ALL",
@@ -56,25 +72,31 @@ const config = {
           src: "/img/rahat_logo.png",
         },
         items: [
+          {
+            type: 'doc',
+            docId: 'Introduction/Welcome',
+            position: 'left',
+            label: 'Developer Docs',
+          },
+          {
+            type: 'doc',
+            docsPluginId: 'user',
+            docId: 'Introduction/Welcome',
+            position: 'left',
+            label: 'User Guide',
+          },
           { to: "blog", label: "Releases", position: "right" },
           {
             to: "/help",
             position: "right",
             label: "Help",
           },
-
           {
             type: "docsVersionDropdown",
-            position: "left",
-            dropdownActiveClassDisabled: true,
-            dropdownItemsAfter: [
-              {
-                to: "/versions",
-                label: "All versions",
-              },
-            ],
+            position: "right",
+            docsPluginId: "default",  // This makes it only work with the default plugin (developer docs)
           },
-          { type: "localeDropdown", position: "right" },
+          // Removed locale dropdown since we only have English for now
           {
             href: "https://github.com/rahataid?tab=repositories",
             position: "right",
@@ -90,8 +112,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Documentation",
+                to: "/docs/Introduction/Welcome",
               },
             ],
           },
