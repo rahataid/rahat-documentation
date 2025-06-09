@@ -21,6 +21,18 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   plugins: [
+
+      [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dev',
+        path: 'dev-docs',
+        routeBasePath: 'dev-docs',
+        sidebarPath: require.resolve('./sidebars-dev.js'),
+        editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
+        showLastUpdateTime: true
+      },
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -74,6 +86,13 @@ const config = {
         items: [
           {
             type: 'doc',
+            docId: 'Introduction/Welcome',
+            position: 'left',
+            label: 'Old Docs',
+          },
+                   {
+            type: 'doc',
+            docsPluginId: 'user',
             docId: 'Introduction/Welcome',
             position: 'left',
             label: 'Developer Docs',
