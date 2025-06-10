@@ -92,7 +92,7 @@ const config = {
           },
                    {
             type: 'doc',
-            docsPluginId: 'user',
+            docsPluginId: 'dev',
             docId: 'Introduction/Welcome',
             position: 'left',
             label: 'Developer Docs',
