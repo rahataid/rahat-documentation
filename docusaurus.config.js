@@ -104,16 +104,16 @@ const config = {
             position: 'left',
             label: 'User Guide',
           },
+          {
+            type: "docsVersionDropdown",
+            position: "right",
+            docsPluginId: "default",  // This makes it only work with the default plugin (developer docs)
+          },
           { to: "blog", label: "Releases", position: "right" },
           {
             to: "/help",
             position: "right",
             label: "Help",
-          },
-          {
-            type: "docsVersionDropdown",
-            position: "right",
-            docsPluginId: "default",  // This makes it only work with the default plugin (developer docs)
           },
           // Removed locale dropdown since we only have English for now
           {
