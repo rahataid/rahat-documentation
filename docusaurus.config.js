@@ -25,8 +25,18 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   plugins: [
-
-      [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'community',
+        path: 'community-docs',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./sidebars-community.js'),
+        editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
+        showLastUpdateTime: true
+      },
+    ],
+    [
       '@docusaurus/plugin-content-docs',
       {
         id: 'dev',
@@ -88,13 +98,14 @@ const config = {
           src: "/img/rahat_logo.png",
         },
         items: [
+   
           {
             type: 'doc',
             docId: 'Introduction/Welcome',
             position: 'left',
             label: 'Old Docs',
           },
-                   {
+          {
             type: 'doc',
             docsPluginId: 'dev',
             docId: 'Introduction/Welcome',
@@ -107,6 +118,25 @@ const config = {
             docId: 'Introduction/Welcome',
             position: 'left',
             label: 'User Guide',
+          },
+          {
+            type: 'dropdown',
+            label: 'Community',
+            position: 'left',
+            items: [
+              {
+                label: 'Contribution',
+                to: '/community/contribution-guidelines',
+              },
+              {
+                label: 'PR Guidelines',
+                to: '/community/pr-guidelines',
+              },
+              {
+                label: 'Coding Standards',
+                to: '/community/coding-standards',
+              },
+            ],
           },
           {
             type: "docsVersionDropdown",
