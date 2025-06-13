@@ -6,6 +6,10 @@ const ArchivedVersions = require("./archivedVersions.json");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
