@@ -1,3 +1,5 @@
+# Getting Started
+
 # Step 1: Login to Rahat Dashboard
 
 To get started with Rahat, you'll need to log in to the dashboard.
