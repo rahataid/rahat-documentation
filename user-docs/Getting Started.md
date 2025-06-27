@@ -1,0 +1,35 @@
+# Getting Started
+
+# Step 1: Login to Rahat Dashboard
+
+To get started with Rahat, you'll need to log in to the dashboard.
+
+## 🔗 Open the Rahat Dashboard
+
+Click the link below to open the Rahat Dashboard in your browser:
+
+👉 [https://demo.rahat.io](https://demo.rahat.io)
+
+![Login Page Screenshot](https://assets.rumsan.net/rahat/login-page.png)
+
+## ✉️ Login with Your Registered Email
+
+Login using your registered email address.
+
+> 🧪 **For demo purposes**, you can use the email: `rumsan@mailinator.com`.
+
+![Email Registration Screenshot](https://assets.rumsan.net/rahat/email-registration.png)
+
+## 🔐 Enter the OTP
+
+After submitting your email, you will receive a One-Time Password (OTP) via email or SMS.
+
+To access the demo OTP:
+
+1. Visit [https://www.mailinator.com](https://www.mailinator.com)
+2. In the public inbox field, type: **`rumsan`**
+3. Open the latest email and copy the OTP.
+4. Enter the OTP in the login screen to enter the dashboard.
+
+![OTP Entry Screenshot](https://assets.rumsan.net/rahat/otp.png)
+
