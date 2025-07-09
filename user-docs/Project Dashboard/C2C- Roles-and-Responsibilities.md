@@ -131,3 +131,60 @@ a. Go to **Disbursement section** → Click on the **transaction details**.
 
 b. Click the **Execute** button.
 
+Screenshot
+
+c. The system will now automatically send the USDC to each beneficiary’s wallet.
+
+d. Beneficiary will receive Message in their Mobile Number about the disbursement and how to use the money. 
+
+Screenshot
+
+**⚠️ Disclaimer:** _The link will be different for every project._
+
+---
+
+## 🔄 Offramping via Rahat Offramping Service
+
+If a beneficiary wishes to **convert their received USDC into mobile money**, they can use the **Rahat Offramping Service**.
+
+---
+
+### 📩 How to Start Offramping
+
+- Beneficiaries will receive an **email or SMS** with a link to start the offramping process.
+- The message may look like this:  
+  
+  SCREENSHOT
+  
+- By clicking on the link, beneficiaries are taken to the **Rahat Offramping Portal**:  
+
+  https://assets.rumsan.net/rahat/crypto-offramp.png
+
+## 📘 Want to Learn More?
+
+If you want to understand how beneficiaries can **offramp USDC**, including the steps and flow, click the link below:
+
+🔗 **[How Offramping Works for Beneficiaries](#)**
+
+## 📊 Tracking Offramping Transactions (for Admins)
+
+All offramping activities done through the **Rahat Offramping Service** are **logged and trackable** by the admin team.
+
+To view these transactions:
+
+1. **Log in** to the Rahat Dashboard.
+2. Go to the **C2C Project Dashboard**.
+3. Navigate to the **Transactions** section.
+4. Click on the **Offramping Transaction** tab.
+
+You will be able to view:
+
+- Beneficiary name  
+- Amount offramped  
+- Fiat received  
+- Chain  
+- Status  
+- Timestamp
+
+
+
