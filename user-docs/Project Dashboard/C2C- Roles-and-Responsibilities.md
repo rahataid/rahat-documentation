@@ -156,7 +156,7 @@ If a beneficiary wishes to **convert their received USDC into mobile money**, th
   
 - By clicking on the link, beneficiaries are taken to the **Rahat Offramping Portal**:  
 
-  https://assets.rumsan.net/rahat/crypto-offramp.png
+![Crypto Offramp](https://assets.rumsan.net/rahat/crypto-offramp.png)
 
 ## 📘 Want to Learn More?
 
