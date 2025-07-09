@@ -79,8 +79,6 @@ Each option is simply a way to send money. Choose one based on where the funds a
 
 Choose one of the following based on where the funds are coming from:
 
----
-
 ### 1. 🧮 Project Balance
 
 - Funds are held in a **project-specific smart contract**.
@@ -89,15 +87,11 @@ Choose one of the following based on where the funds are coming from:
 
 📎 [See how to fund your project contract](#)
 
----
-
 ### 2. 👛 User Wallet
 
 - This option sends USDC directly from your **connected wallet** (like MetaMask).
 - You must have **USDC in your wallet**.
 - You will be asked to **connect your wallet** before proceeding.
-
----
 
 ### 3. 🛡️ Multisig Wallet (Gnosis Safe)
 
@@ -106,4 +100,34 @@ Choose one of the following based on where the funds are coming from:
 - Funds are stored in a **Gnosis Safe**.
 
 📎 [See full guide on multisig disbursement](#)
+
+---
+
+## 🔐 Disbursement via Multisig – Detailed Steps
+
+### 1. After selecting **Multisig Wallet** as your treasury source:
+
+a. **Input the amount of USDC** you want to send per beneficiary.
+
+![Disbursement via Multisig - Step 1](https://assets.rumsan.net/rahat/disburesemnt-1.png)
+
+b. The platform will **create a transaction request** and send it to the **Gnosis Safe dashboard**.
+
+![Disbursement via Multisig - Step 2](https://assets.rumsan.net/rahat/disbursement-2.png)
+
+### 2. The **Gnosis Safe signers will receive a notification** in the **Safe Wallet Dashboard**.
+
+![Gnosis Safe Wallet Dashboard](https://assets.rumsan.net/rahat/wallet-dashboard.png)
+
+### 3. Once the required number of signers approve it (e.g., 2 out of 4), the transaction becomes ready.
+
+![Screenshot - June 11, 2025 at 4:37 PM](https://assets.rumsan.net/rahat/screenshot-2025-06-11-at-4.37.26-pm.png)
+
+### 4. **Execute the Transaction:**  
+
+a. Go to **Disbursement section** → Click on the **transaction details**.
+
+![Screenshot - June 11, 2025 at 4:37 PM](https://assets.rumsan.net/rahat/screenshot-2025-06-11-at-4.37.26-pm.png)
+
+b. Click the **Execute** button.
 
