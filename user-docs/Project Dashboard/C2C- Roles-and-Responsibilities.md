@@ -65,7 +65,7 @@ Make sure:
 2. Select the **specific beneficiary** you want to send funds to.
 3. Click **Disburse**.
 
-SCREENSHOT HERE
+![Screenshot](https://assets.rumsan.net/rahat/screenshot-2025-06-11-at-4.31.26-pm.png)
 
 ### 🔹 You will now see 3 Treasury Source Options:
 
@@ -99,7 +99,26 @@ Choose one of the following based on where the funds are coming from:
 
 📎 [See full guide on multisig disbursement](#)
 
----
+## 🔐 Disbursement via Project Balance – Detailed Steps
+
+To disburse funds using the **Project Balance**, follow these steps:
+
+### 1. Load Balance into Project Contract
+
+First, you must load the balance into the project contract.
+
+**Go to the Fund Management section**
+
+- **Option 1:** Copy the **Project Contract Wallet Address** from the dashboard and paste it into your wallet.  
+- **Option 2:** Scan the QR code by clicking the QR code icon.
+
+![Fund Management](https://assets.rumsan.net/rahat/fund-managment-.png)
+
+### 2. Initiate Disbursement
+
+- Select **Project Balance** as your **treasury source**.
+- Enter the **amount** to disburse.
+- Complete the **disbursement**.
 
 ## 🔐 Disbursement via Multisig – Detailed Steps
 
@@ -129,13 +148,13 @@ a. Go to **Disbursement section** → Click on the **transaction details**.
 
 b. Click the **Execute** button.
 
-Screenshot
+![Screenshot](https://assets.rumsan.net/rahat/screenshot-2025-06-11-at-4.33.14-pm.png)
 
 c. The system will now automatically send the USDC to each beneficiary’s wallet.
 
 d. Beneficiary will receive Message in their Mobile Number about the disbursement and how to use the money. 
 
-Screenshot
+![Disbursement Message](https://assets.rumsan.net/rahat/disbursment-message-.png)
 
 **⚠️ Disclaimer:** _The link will be different for every project._
 
@@ -152,8 +171,8 @@ If a beneficiary wishes to **convert their received USDC into mobile money**, th
 - Beneficiaries will receive an **email or SMS** with a link to start the offramping process.
 - The message may look like this:  
   
-  SCREENSHOT
-  
+  ![Disbursement Message](https://assets.rumsan.net/rahat/disbursment-message-.png)
+
 - By clicking on the link, beneficiaries are taken to the **Rahat Offramping Portal**:  
 
 ![Crypto Offramp](https://assets.rumsan.net/rahat/crypto-offramp.png)
