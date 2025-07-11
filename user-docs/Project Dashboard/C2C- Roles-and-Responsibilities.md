@@ -125,7 +125,7 @@ b. The platform will **create a transaction request** and send it to the **Gnosi
 
 a. Go to **Disbursement section** → Click on the **transaction details**.
 
-![Screenshot - June 11, 2025 at 4:37 PM](https://assets.rumsan.net/rahat/screenshot-2025-06-11-at-4.37.26-pm.png)
+![Screenshot - June 11, 2025 at 4:37 PM](https://assets.rumsan.net/rahat/screenshot-2025-07-07-at-3.12.28-pm.png)
 
 b. Click the **Execute** button.
 
