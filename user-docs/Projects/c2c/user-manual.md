@@ -112,7 +112,7 @@ You will see 3 Treasury Source Options. Each option is a way to send money. Choo
 - This contract must already be funded with USDC
 - USDC is sent directly to the beneficiary from the smart contract
 
-[📎 See how to fund your project contract](#project-setup)
+[📎See how to fund your project contract](#-disbursement-via-multisig--detailed-steps)
 
 ##### 2. User Wallet
 
@@ -183,7 +183,7 @@ By clicking on the link, beneficiaries are taken to the Rahat offramping portal.
 
 If you want to understand how beneficiaries can offramp USDC, including the steps and flow:
 
-[🔗 How Offramping Works for Beneficiaries](#offramping-service)
+[🔗How Offramping Works for Beneficiaries](/user-docs/Projects/c2c/Offramping%20USDC)
 
 ## 📊 Tracking Offramping Transactions (for Admins)
 
