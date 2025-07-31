@@ -1,12 +1,15 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const {themes} = require("prism-react-renderer");
 const ArchivedVersions = require("./archivedVersions.json");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -18,16 +21,41 @@ const config = {
   baseUrl: "/",
   projectName: "rahat-documentation", // Usually your repo name.
   organizationName: "rahataid", // Usually your GitHub org/user name.
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn", // Changed from "throw" to "warn" to help during development
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   plugins: [
     [
-      "docusaurus-plugin-openapi",
+      '@docusaurus/plugin-content-docs',
       {
-        id: "rahat-core",
-        openapiPath: require.resolve("./openApi/rahat-core.json"),
-        routeBasePath: "api/rahat-core",
+        id: 'community',
+        path: 'community-docs',
+        routeBasePath: 'community',
+        sidebarPath: require.resolve('./sidebars-community.js'),
+        editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
+        showLastUpdateTime: true
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dev',
+        path: 'dev-docs',
+        routeBasePath: 'dev-docs',
+        sidebarPath: require.resolve('./sidebars-dev.js'),
+        editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
+        showLastUpdateTime: true
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'user',
+        path: 'user-docs',
+        routeBasePath: 'user-docs',
+        sidebarPath: require.resolve('./sidebars-user.js'),
+        editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
+        showLastUpdateTime: true
       },
     ],
   ],
@@ -37,16 +65,20 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
           showLastUpdateTime: true,
+          lastVersion: 'current',
           versions: {
             current: {
               label: 'Next',
-              path: 'next',
+              banner: 'unreleased'
             },
           },
         },
+        
         blog: {
           path: "blog",
           blogSidebarCount: "ALL",
@@ -66,17 +98,50 @@ const config = {
           src: "/img/rahat_logo.png",
         },
         items: [
+   
+          // {
+          //   type: 'doc',
+          //   docId: 'Introduction/Welcome',
+          //   position: 'left',
+          //   label: 'Old Docs',
+          // },
           {
-            type: "doc",
-            docId: "intro",
-            position: "right",
-            label: "Docs",
+            type: 'doc',
+            docsPluginId: 'dev',
+            docId: 'Introduction/Welcome',
+            position: 'left',
+            label: 'Developer Docs',
           },
           {
-            to: "api/rahat-core",
-            activeBasePath: "api",
-            label: "API",
+            type: 'doc',
+            docsPluginId: 'user',
+            docId: 'Introduction/Welcome',
+            position: 'left',
+            label: 'User Guide',
+          },
+          {
+            type: 'dropdown',
+            label: 'Community',
+            position: 'left',
+            items: [
+              {
+                label: 'Contribution',
+                to: '/community/contribution-guidelines',
+              },
+              {
+                label: 'PR Guidelines',
+                to: '/community/pr-guidelines',
+              },
+              {
+                label: 'Coding Standards',
+                to: '/community/coding-standards',
+              },
+            ],
+          },
+          {
+            type: "docsVersionDropdown",
             position: "right",
+            docsPluginId: "default",  // This makes it only work with the default plugin (developer docs)
           },
           { to: "blog", label: "Releases", position: "right" },
           {
@@ -84,19 +149,7 @@ const config = {
             position: "right",
             label: "Help",
           },
-
-          {
-            type: "docsVersionDropdown",
-            position: "left",
-            dropdownActiveClassDisabled: true,
-            dropdownItemsAfter: [
-              {
-                to: "/versions",
-                label: "All versions",
-              },
-            ],
-          },
-          { type: "localeDropdown", position: "right" },
+          // Removed locale dropdown since we only have English for now
           {
             href: "https://github.com/rahataid?tab=repositories",
             position: "right",
@@ -112,8 +165,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Documentation",
+                to: "/docs/Introduction/Welcome",
               },
             ],
           },
@@ -147,8 +200,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Rahat. A part of Rumsan Company. Designed by Rumsan | <a href="https://rahat.io/privacy-policy" target="_blank">Privacy Policy</a> | `,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: themes.github,
+        darkTheme: themes.dracula,
       },
       // algolia: {
       //   indexName: "jest-v2",

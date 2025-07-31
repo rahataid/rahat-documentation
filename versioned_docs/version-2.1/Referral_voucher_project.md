@@ -65,18 +65,14 @@ pnpm start
 
 ### Deployment of Subgraph
 
-<li>
-Update the contract addresses in the network.json file, following the specified format in the file.
-</li>
-<li>Authorize the graph using the authorization key available in your Subgraph Studio account.
-</li>
+- Update the contract addresses in the network.json file, following the specified format in the file.
+- Authorize the graph using the authorization key available in your Subgraph Studio account.
 
 ```bash
     graph auth --studio <Authorization_key>
 ```
 
-<li>Deploy the graph
-</li>
+- Deploy the graph
 
 ```bash
 graph deploy --studio <subgraph_slug_name>

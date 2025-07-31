@@ -1,5 +1,5 @@
 {
-  "version-1.0/tutorialSidebar": [
+  "tutorialSidebar": [
     {
       "collapsed": true,
       "type": "category",
@@ -7,16 +7,16 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.0/intro"
+          "id": "intro"
         },
         
         {
           "type": "doc",
-          "id": "version-1.0/rahat-team"
+          "id": "rahat-team"
         },
         {
           "type": "doc",
-          "id": "version-1.0/brand-guidelines"
+          "id": "brand-guidelines"
         }
       ]
     },
@@ -27,22 +27,22 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.0/licenses",
+          "id": "licenses",
           "label": "Licenses "
         },
         {
           "type": "doc",
-          "id": "version-1.0/os-strategy",
+          "id": "os-strategy",
           "label": "OS Strategy"
         },
         {
           "type": "doc",
-          "id": "version-1.0/contribution-guidelines",
+          "id": "contribution-guidelines",
           "label": "Contribution Guidelines"
         },
         {
           "type": "doc",
-          "id": "version-1.0/code-of-conduct",
+          "id": "code-of-conduct",
           "label": "Code of Conduct"
         }
       ]
@@ -54,34 +54,34 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.0/getting-started-developer",
+          "id": "getting-started-developer",
           "label": "Getting started"
         },
         {
           "type": "doc",
-          "id": "version-1.0/rahat-software-requirements-specifications",
+          "id": "rahat-software-requirements-specifications",
           "label": "Software Requirement Specification"
         },
 
         {
           "type": "doc",
-          "id": "version-1.0/integrating-rahat-with-external-services",
+          "id": "integrating-rahat-with-external-services",
           "label": "Integrating Rahat with External Services"
         },
         {
           "type": "doc",
-          "id": "version-1.0/rahat-beneficiary-registration-tool",
+          "id": "rahat-beneficiary-registration-tool",
           "label": " Beneficiary Registration Tool"
         },
         {
           "type": "doc",
-          "id": "version-1.0/rahat-crowd-fundraise-module",
+          "id": "rahat-crowd-fundraise-module",
           "label": "Crowd Fundraise Module"
         },
 
         {
           "type": "doc",
-          "id": "version-1.0/user-manual",
+          "id": "user-manual",
           "label": "User Manual"
         }
       ]
@@ -93,12 +93,12 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.0/community-feedback-reports",
+          "id": "community-feedback-reports",
           "label": "Community Feedback Reports"
         },
         {
           "type": "doc",
-          "id": "version-1.0/bounty-information",
+          "id": "bounty-information",
           "label": "Bounty Information"
         }
       ]
@@ -116,10 +116,10 @@
       ]
     }
   ],
-  "version-1.0/apiSidebar": [
+  "apiSidebar": [
     {
       "type": "doc",
-      "id": "version-1.0/API"
+      "id": "API"
     }
   ]
 }

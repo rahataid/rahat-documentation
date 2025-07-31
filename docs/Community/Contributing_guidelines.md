@@ -59,7 +59,9 @@ If you find any bug and you're not sure how to fix it, or you don't know how to 
 - [Rahat-contracts](https://github.com/rahataid/rahat-contracts)
 - [Rahat-OTP](https://github.com/rahataid/rahat-otp)
 - [Rahat-Documentation](https://github.com/rahataid/rahat-documentation)
-
+- [Rahat-C2C](https://github.com/rahataid/rahat-project-c2c)
+- [Rahat-Offramping](https://github.com/rahataid/rahat-offramp)
+  
 ## Reporting Bugs[​](https://docs.rahat.io/docs/next/Contribution-Guidelines#reporting-bugs)
 
 This section guides you through submitting a bug report for Rahat. Following these guidelines helps maintainers and the community understand your report 📝, reproduce the behavior 💻 💻, and find related reports 🔎. Before creating bug reports, please check [this list](https://github.com/orgs/esatya/projects/2) as you might find out that you don't need to create one. When you are creating a bug report, please [include as many details as possible](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#how-do-i-submit-a-good-bug-report).
@@ -82,7 +84,7 @@ If you have expertise and experience in cash transfer and want to share your ins
 
 The Rahat ecosystem is expanding and, as a result, so is the need for documentation. You can find the "official" Rahat Documentation [here ](https://docs.rahat.io/)— which provides high-level overviews and technical documentation.
 
-Whether it’s writing How-To guides, video demos, or creating diagrams on how the protocol ties together, there is something for everyone. If you speak another language, translations could help as well. Join our[ Discord](https://discord.gg/zDwzuCAhmu) and share your insights, so we can help you get started. Feel free to contact us with any documentation questions 👉 team@rahat.io.
+Whether it’s writing How-To guides, video demos, or creating diagrams on how the protocol ties together, there is something for everyone. If you speak another language, translations could help as well. 
 
 ### **For Designs[​](https://docs.rahat.io/docs/next/Contribution-Guidelines#for-designs)**
 
@@ -94,8 +96,6 @@ This repository uses [eslint ](https://github.com/eslint/eslint)to enforce [air-
 
 ## Connect with Rahat Contributors[​](https://docs.rahat.io/docs/next/Contribution-Guidelines#connect-with-rahat-contributors)
 
-If you want to connect with our contributors, you can connect us at Join us at Discord
+If you want to connect with our contributors, you can connect us at Join us at Telegram
 
-➡️[Click here to join.](https://discord.gg/zDwzuCAhmu)
-
-Last updated : 03/15/2022
+➡️[Click here to join.](https://t.me/+bzS2bx6Wmp41Y2Y1)
