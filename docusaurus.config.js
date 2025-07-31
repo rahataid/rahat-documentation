@@ -99,12 +99,12 @@ const config = {
         },
         items: [
    
-          {
-            type: 'doc',
-            docId: 'Introduction/Welcome',
-            position: 'left',
-            label: 'Old Docs',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'Introduction/Welcome',
+          //   position: 'left',
+          //   label: 'Old Docs',
+          // },
           {
             type: 'doc',
             docsPluginId: 'dev',
