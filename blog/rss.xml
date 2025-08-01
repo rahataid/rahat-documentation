@@ -4,7 +4,7 @@
         <title>Rahat - Aid Token Distribution Blog</title>
         <link>https://docs.rahat.io/blog</link>
         <description>Rahat - Aid Token Distribution Blog</description>
-        <lastBuildDate>Thu, 31 Jul 2025 11:14:33 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 01 Aug 2025 04:10:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Release Notes for Rahat Project C2C v1.1.0]]></title>
             <link>https://docs.rahat.io/blog/Release Notes for Rahat Project C2C v1.1.0</link>
             <guid>https://docs.rahat.io/blog/Release Notes for Rahat Project C2C v1.1.0</guid>
-            <pubDate>Thu, 31 Jul 2025 11:14:33 GMT</pubDate>
+            <pubDate>Fri, 01 Aug 2025 04:10:27 GMT</pubDate>
             <description><![CDATA[---]]></description>
             <content:encoded><![CDATA[<hr>
 <!-- --><h2 class="anchor anchorWithStickyNavbar_LWe7" id="-whats-changed">🚀 What's Changed<!-- --><a href="https://docs.rahat.io/blog/Release%20Notes%20for%20Rahat%20Project%20C2C%20v1.1.0#-whats-changed" class="hash-link" aria-label="Direct link to 🚀 What's Changed" title="Direct link to 🚀 What's Changed">​</a></h2>
@@ -42,7 +42,7 @@
             <title><![CDATA[v3.1.0]]></title>
             <link>https://docs.rahat.io/blog/v3.1.0 - Microservice Architecture</link>
             <guid>https://docs.rahat.io/blog/v3.1.0 - Microservice Architecture</guid>
-            <pubDate>Thu, 31 Jul 2025 11:14:33 GMT</pubDate>
+            <pubDate>Fri, 01 Aug 2025 04:10:27 GMT</pubDate>
             <description><![CDATA[We are excited to announce several significant updates to the Rahat platform, aimed at enhancing performance, scalability, and usability. This release introduces a range of enhancements across both the backend and frontend, alongside new tools and features designed to streamline operations and provide a more robust experience for users.]]></description>
             <content:encoded><![CDATA[<p>We are excited to announce several significant updates to the Rahat platform, aimed at enhancing performance, scalability, and usability. This release introduces a range of enhancements across both the backend and frontend, alongside new tools and features designed to streamline operations and provide a more robust experience for users.</p>
 <!-- --><h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-updates">Key Updates<!-- --><a href="https://docs.rahat.io/blog/v3.1.0%20-%20Microservice%20Architecture#key-updates" class="hash-link" aria-label="Direct link to Key Updates" title="Direct link to Key Updates">​</a></h3>
