@@ -1,0 +1,71 @@
+---
+id: queue-controller-get-pending-contract-jobs
+title: "Get Pending Contract Jobs with Filters"
+description: "Get Pending Contract Jobs with Filters"
+sidebar_label: "Get Pending Contract Jobs with Filters"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlN9P20AMx/+Vk5+YlP7aY94mGAg0JLYxTRWqkJO4yUFyl/qcblWV/31yUkphUHWDp8vdOfbHvq+9Bl8To1jvzjOI4WtDDR17J+zLkvg2J7kil1mXd4eYyoVPAkRQI2NFQhwgvlmDw4oghiAojV4zLRrLlEE8xzJQBNZBDIuGeAURZBRStrVGhRhObSnEJlmZO5+YrYuQFlQhxGuQVa3OkRn1bytUhZ3zIGxdDm3bRluQbnkLhjowRzTMh5FhLFCGdz4Jw4QczW1qkVfDpCnvbzEEm7vbpW/Sgjh8eAl8CxjtForlBOVtkClT93Smc2cyFDJH0+l0Ori8HJycHApDLns/FHLZP4LMNG6ovQvUPevH8ViXp9G+2CDGz828i0qZSTd61OhB0wHBXMXYaxhmz3nPSMxGy+ZBzEbVbH5ZKUyfjgqvIim8NkNO0ildCohhtJyMFup59BB5cNe3QiBe9n0w003asJXVd023z+fi57UuXQE08YSQiSHafJx6rlAg7uyih+oUInWXlXVz31XNSqkX31SM5tgz/fUin67OjcLYlMzcs3liqoi92WQ4hgg0C0wF4rVGqX2QCp0G2oji4HI9Ydi+rtBvGdUlWgdtBA2XeteX8gaWE4igK+YG5LGcswgKH0St1usEA/3gsm31uFehDpvMBkzKHZU+Q1CP5OT10fIi4z2tdifYEstGjUAb5X8jvmGK7GHcDLd3ITxghOyv1naMvS/Oa2NkD8zjGHtEmemGrbJof7Y73X32+Rra9g+6vmNN
+sidebar_class_name: "get api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Pending Contract Jobs with Filters"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/queue/contract-jobs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get Pending Contract Jobs with Filters
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"status","required":false,"in":"query","description":"Filter by job status","schema":{"type":"array","items":{"type":"string"}}},{"name":"name","required":false,"in":"query","description":"Filter by job name (e.g., rahat.jobs.beneficiary.bulk_assign_vouchers)","schema":{"type":"string"}},{"name":"startDate","required":false,"in":"query","description":"Filter by job creation start date (YYYY-MM-DD)","schema":{"type":"string"}},{"name":"endDate","required":false,"in":"query","description":"Filter by job creation end date (YYYY-MM-DD)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of filtered contract jobs"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: queue-controller-get-pending-rahat-jobs
+title: "Get Pending Rahat Jobs with Filters"
+description: "Get Pending Rahat Jobs with Filters"
+sidebar_label: "Get Pending Rahat Jobs with Filters"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVF1v2zAM/CsCn1bAWZI9+m1o1qLFCnRbhyEogkG2mVidLTkUnS0w/N8Hym4+2jXI2jzJlijeHXliA65C0mycvcoghi811njuLJMrCqSfC+RbtJmxi68613ztEg8RVJp0iYzkIb5vwOoSIQbPmms5JlzWhjCDeK4LjxEYCzEsa6Q1RJChT8lUAgkxXJiCkVSyVg8uUZsUPs2x1BA3wOtKkmsiLbcNY+l39j2TsQto2zbaEAnLW2j0CZ6R2IBFu6KJJ5rfBpgShh6okE5lmlG9m06n08HNzWAyOTuSDNrsdFTQZv9JZCa4vnLWY2jRh9FIln20z8azcnM1D6iYqWAsgfaiBVgvxFWdE2H2lOwlsuod2d8UT6rfhnPVCRH7lMi5Ez8vkINfOYcYhqvxcClphyQ3Bw+dmz3SqrPyTH7Smgyvv4nKTsb1jztZgm7Rm6AmJIj6jwtHpWaIQ1z0WJScuQp6jJ27UCzDhRx0pM8d4bNGfLy9UkLGpKjmjtReqFDswsbvRxBB6izrlCFuBKVynkttBaj3wnGF2iOw6SjjHx5WhTYW2ghqKuSsK+I9rMYQQSij+GxbyFkEufMsIU2TaI/fqWhb2e5sJ5MiM14nxY4tn+CLKLT88lz4J8FfuN4dPytd1BIE8jJei9iPgAN4fcRJ0I54/4eVb2bQaem8NAMOkNnOoC2VmfyQES7yytqdB3r56Q7a9i8kPDU9
+sidebar_class_name: "get api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Pending Rahat Jobs with Filters"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/queue/rahat-jobs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get Pending Rahat Jobs with Filters
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"status","required":false,"in":"query","description":"Filter by job status","schema":{"type":"array","items":{"type":"string"}}},{"name":"name","required":false,"in":"query","description":"Filter by job name","schema":{"type":"string"}},{"name":"startDate","required":false,"in":"query","description":"Filter by job creation start date (YYYY-MM-DD)","schema":{"type":"string"}},{"name":"endDate","required":false,"in":"query","description":"Filter by job creation end date (YYYY-MM-DD)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of filtered Rahat jobs"}}}
+>
+  
+</StatusCodes>
+
+
+      

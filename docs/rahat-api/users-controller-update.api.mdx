@@ -1,0 +1,71 @@
+---
+id: users-controller-update
+title: "UsersController_update"
+description: "UsersController_update"
+sidebar_label: "UsersController_update"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVdtO20AQ/RVrnlrJbRJKW/BTaRpaUCshGsRDFFUTexIv2LtmL0Bk+d+r2XUcEqf0yfZezsyZOWdcg6pIoxVKXmSQwI0hbcZKWq2KgvQfV2VoCWKoUGNJlrSBZFaDxJIgAedEBjFoenBCUwaJ1Y5iEBISqNDmEENGJtWi4giML8WDo0hkJK1YCtIQg0lzKhGSGuy6YlRjtZAraJp5gCZjv6pszSf2I6VKWpKWt7CqCpF6KoM7w9HqPrRa3FFqmY9m4laQ4d1AZz+BGOgZy6rgpUuU1GMzzSlauqKI+H6klpHNKeISQhPDimRG+nXU88mvs5+THu53f3UfkEoUxet4dyjpi3alQfk+VWUPeMIQ+7hVruR/2J+eHI+OPhx//PS5B3nFtyPpykU/4ycsCrKvQw+fW+ST0yEu0oyWvRC3HibCLNNkzG6Q5qX6ZqGRXe03Ndtw7DKax2CF9fFvvMIZ7JtV0DQB0VRKmqCNo+GQH7sp+cAWV+yGYBrGNJQ6LezaW+TydgrJbM4i3vPAvzxWks1VFqyT5t50NocEBo+jgeNLg5oN17BnSD8GL74I+5vVHpL2wVv9M8sFofYFCS/nSpdoWda3U4g33cmtrTwxts/11niTTbM637du2Eh8q+NWoweE2KpsV0obgRxSQcNzZKm8etpeXWOONhor3bfi2dVFxEURKUVLpaOdo1yqcGz0fghhamDKwmS2lTK2RPmCnu9QtG1R1LVoJ2gna0vPdlAVKCRn7bR3aWjeDB5HEINvH8SQ+Ik5jyFXxvJuXS/Q0I0umoaXHxzpdejqI2qBC+Y9qyETht8zSJZYGOol0s1BeHPd2uFtdGjYHsy4XUS55mJh4fgLYrin9WbIN/MmhpzQ93tWt1vjEPbdlAG2V3ujmE3QqfvqbDr+wVJsZ3qpMr6k8Yl/JfgUYivPzYvZr9VQoFw5XPk550G5eei4yl0n9nTuUz3Irq7Diam6J9k0HVnL38y2af4CFB9jpQ==
+sidebar_class_name: "patch api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"UsersController_update"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/users/{uuid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+UsersController_update
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","description":"Unique identifier","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"Jane","description":"The full name of the User"},"gender":{"type":"string","example":"FEMALE","description":"Gender of the User"},"email":{"type":"string","example":"jane@rumsan.com","description":"Email of the User"},"phone":{"type":"string","example":"9841234567","description":"Phone number of the User"},"wallet":{"type":"string","example":"0x1234567890abcdef","description":"Wallet address of the User"}},"required":["name","gender","email","phone","wallet"],"title":"UpdateUserDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

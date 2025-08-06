@@ -1,0 +1,71 @@
+---
+id: beneficiary-controller-add-group-purpose
+title: "BeneficiaryController_addGroupPurpose"
+description: "BeneficiaryController_addGroupPurpose"
+sidebar_label: "BeneficiaryController_addGroupPurpose"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9VEtv2zAM/isGTxvgLu2OviVpumVbHkhTDEMQFIzNxGptyZXktIah/z5Qdh5uuiGHyBJF8ntQNaiCNFqh5DiBCAYkaStigboaKmm1yjLSj5gk37Qqi3mpC2UIQihQY06WtIFoVYPEnCCCshQJhKDppRSaEoisLikEISGCAm0KIZg4pRwhqp1bN5Fk7EAlFUT1xcVYSUvS8hEWRSZi32jvySjJe8dcYKuC66vNE8WW29MMywoyfOrb+iCK3jAvMt66vmp/EEJCJtai4EpdQoLxLbgQdudMnLIaq4XcdbIO+tOfj8tFf3p/N1pcZJ5jpUobTChOUQqTG74ryxyi1cXNyWww/jV6nMymoz8QwnA2mTxMx8P+cjybwtq5c85XBxk6ja5DsML6tvqtmqY9u7UKnGuSmEJJ07D29fqa/7pNA4dZ3Bnf5ZEbJnodgqG41MJW3hM/fi8hWq1Z5n9S+l+P5WRTlTTWiVNvOptCBL39TW9zXrrnkZpezcBd7zKTIb1vrHrW5D27p4HqW239xAxtCDVpCNvFndI5Woh8XHgQPLW28HSwHRcnI48O+h+M13FX1z3vhHY8K1vlXdWKtcAUbTBUmi4M1J+PA0YmYgq2SgedUMbbhN184bo8ShhbP3ghFMrYHP0QtaN77vOTKgEmSeDJDE5sdro4+t/Sm+0VGQrJMEqd8Vmj2Ar2N57Mc7u0VPAiag37Xrh1CKkylhPU9QYNPejMOd5+KUlXjZx71AI3zNWqhkQYXicQbTEzdNHr8UGBT4t2YD4HJ0m7GNpNlBXziVnJXxDCM1WHt86tXQgpYULa12+Ohk2VqyUnOF29eMJ4NI4mn/eXw+/MUvsW5irhSxpf+UXF16a28lC8af1eDRnKXYk7jm2Ssr5YMu9Hbd752bf6Ibq6biKW6pmkc0ewlr8ZrXN/AVM0Gi0=
+sidebar_class_name: "patch api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"BeneficiaryController_addGroupPurpose"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/beneficiaries/groups/{uuid}/addGroupPurpose"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+BeneficiaryController_addGroupPurpose
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","schema":{}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"uuid":{"type":"object","example":"0-0-0-0-0","description":"Beneficiary ID"},"groupPurpose":{"type":"string","example":"BANK_TRANSFER","description":"Payout Mechanisms","enum":["BANK_TRANSFER","MOBILE_MONEY","COMMUNICATION"]}},"required":["uuid","groupPurpose"],"title":"AddGroupsPurposeDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

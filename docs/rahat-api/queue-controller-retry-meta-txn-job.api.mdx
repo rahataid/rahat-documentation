@@ -1,0 +1,71 @@
+---
+id: queue-controller-retry-meta-txn-job
+title: "Retry a Failed Meta Transaction Job"
+description: "Retry a Failed Meta Transaction Job"
+sidebar_label: "Retry a Failed Meta Transaction Job"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNk02P00AMhv/KyCeQZknLcW5oYVErIUEp2sOqQk7ibgaSmdTjVK2i+e/ISfko5cBpPuzY7/uMM0LsiVF8DKsaHHwaaKD7GIRj2xJ/ZRI+fyDB7SmsYwkWemTsSIgTuKcRAnYEDnwNFpgOg2eqwQkPZMEHcNCjNGChplSx77UROFjH0qzeGolmagAWUtVQh+BGkHOvFcPQlcSQ804Lpz6GREnjrxcLXa4LQs4WBJ9V1GwCdn833Wgrg+YBfUu1UVdmyxgSVpphZn8dSRMVxTPJZFcacFAcl8VByxYdCd7JKdx9i2UqJvnF6OusHoiPM5edHqqBvZw/q7FZ+fpxq8tkVS2WhEwM9rJ5iNyhKJ3HLdifHBqRfnLnwz5OfLy0Gthgg2LuI9MN3jcfV0bF+IrMPrK5SlWJc9ry1QIsVDEIVgJu1C59TNJh0EaXp/0/bFcCfj2i0EmKvkUfIFsYuNXYjPQJjkuwMEGdsf/GOs3SPBfO1/qSTUyi34xjiYm+cJuzXh8G4vPM+4jssVQyTyPUPum+BrfHNtGNPPVMQVm/2FyG9qW5Hcp/urhcYtCMI7aDnsDCdzrPP0Le5T/G6P27LeT8A77rJWg=
+sidebar_class_name: "get api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retry a Failed Meta Transaction Job"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/queue/meta-txn-jobs/retry/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retry a Failed Meta Transaction Job
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","required":true,"in":"path","description":"Job ID to retry","schema":{"type":"number"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

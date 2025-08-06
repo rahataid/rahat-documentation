@@ -11,7 +11,7 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid', 'docusaurus-theme-openapi-docs'],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -65,13 +65,13 @@ const config = {
       "docusaurus-plugin-openapi-docs",
       {
         id: "openapi",
-        docsPluginId: "classic",
+        docsPluginId: "default",
         config: {
-          petstore: {
+          rahat: {
             specPath: "openapi/rahat-api.yaml",
             outputDir: "docs/rahat-api",
             downloadUrl:
-              "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-template-openapi-docs/main/openapi/rahat-api.yaml",
+              "https://raw.githubusercontent.com/rahataid/rahat-documentation/main/openapi/rahat-api.yaml",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
@@ -162,9 +162,9 @@ const config = {
             ],
           },
           {
-            label: "Rahat API",
-            position: "left",
-            to: "/docs/category/rahat-api",
+            label: "API",
+            position: "right",
+            to: "/docs/category/rahat",
           },
           {
             type: "docsVersionDropdown",

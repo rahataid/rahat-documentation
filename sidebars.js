@@ -14,8 +14,8 @@ module.exports = {
         type: "generated-index",
         title: "Rahat API",
         description:
-          "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
-        slug: "/category/rahat-api"
+          "Rahat API documentation for all available endpoints and operations.",
+        slug: "/category/rahat"
       },
       items: require("./docs/rahat-api/sidebar.ts")
     }

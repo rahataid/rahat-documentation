@@ -1,0 +1,71 @@
+---
+id: roles-controller-update-role
+title: "RolesController_updateRole"
+description: "RolesController_updateRole"
+sidebar_label: "RolesController_updateRole"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVEtv2zAM/isGD8MGaEu7o29d1mEdMKBIM+yQBANjs7FaW3IlOq1h6L8PlJxni2En2xRf38MawLbkkLU1NyXkMLM1+ak17Gxdk/vTtSUySRQUtOiwISbnIV8MYLAhyNNDgaOnTjsqIWfXkQJtIIcWuQIFvqioQcgH4L6VGs9Omw2EsEqF5PmLLXvJOO9TWMNkWI6wbWtdxGUnD94aib1qbdcPVLBs6wQaa/JympY9X0ABvWDT1hL6iQY35CAo0P6u90zNUcHa2prQHFfcY+0pKGjJNdp7bY1/a4/DhGEJnSe3hHyxhCaOW4JagiMsl7AKEIIC1hyTr0vNwvtXthCCnDjyrTU+4fl8cSGPknzhdCuUQA6pAW5EnyRl9i67PVpvpcBT0TnNfZTwx+855IuVyHDa6Z8+aIgrWyZ5iyoagyvIYbK9nDgpnAxCdxDlyW2TX45G34lmCUZcYFQx0kzoyIEaX75Z1yBDHvPUjtqKuY1QxQSzg32ud0zvvbnT9FjSKNuZav8hjTj63kaBR4VmWCFnU+uEk1P6rm5vMoGuC8rurctOUoWQlHb56QKSw7EQhwum1npu0ByBSEIexMiSGNmoxsnkvf2YXnjS1qiNrN65Ws6STgvYXsoPK21BQR7HrBRU1rOcDsMaPf1ydQgSfurI9UnALTqNawG/GKDUXt7LPaNni+x/XHg/G//pD9lBxNMFxyCaXgjCupMvUPBI/e6KCaugoCIsycX56WiapnycS4ND6aurQiy+9+3t1Xz6XUw23jmNLaXI4bPwgs9pto1Qok1jbIAazabDjeSmpiIYdkLq4aI4dXBc9U10w5Ay5vaRTAh7sCzfgjaEv9Nr6Xo=
+sidebar_class_name: "patch api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"RolesController_updateRole"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/roles/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+RolesController_updateRole
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","required":true,"in":"path","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"Manager"},"isSystem":{"type":"boolean","example":false},"permissions":{"type":"object","example":"{\"user\":[\"manage\",\"read\"]}"}},"title":"EditRoleDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: vendors-controller-register-vendor
+title: "VendorsController_registerVendor"
+description: "VendorsController_registerVendor"
+sidebar_label: "VendorsController_registerVendor"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVlFFv00AMx79K5OewrttAkCfGNqRNIKatsIeqQm7qNTeSu8zndK2ifHfkS5o2MAbkoU0uf5/P/v/iGlxJjGKcvVxAAt/ILhz7M2eFXZ4Tf2daGi/E7RuIoUTGgoTYQzKdxcD0WJGXD26xgaQOj4ZpAYlwRTGkzgpZ0VdYlrlJQ7LRg3dW13yaUYF6J5uSIAE3f6BUNA/r0cSQDzrilUnpOSGtsShzXbr4fHr5CZoYLBb7Ui9s7HIgvXKZjc4dqZoKNPnL8geX2fcqMxbF8UHqCo0sM2f/kujd2+OT8dHxyes3GoCVZHeY5yQvRx2uD7eXhj39X8j+FQpcC6N/sXc1GN9ZHIxrmibe83LaG9A1dxaDGAmJ27CbjpNzcdB00b501rf+HR2O9W9BPmVTKgKQAKhMcKkkbdHTnYeqf2CyIMmc8ls6H9hBySCB0Wo8WnXbxqGCnlpPacVGNrfKX3vEq7tJT6TWNSdk0t3bm4+OCxRF524C8baTmUgZylCgb3afwsWusT26HZ9bPHcM9gg+y1mP2T5LQ5QGvOxw+SMT+0j86nsMxt67AEtn8A1mKNGZYz3p0JvT68uoqy+6dxwNpNrtVjY+0Jw6CjBVjDWLWlVgGAJdPzqjo53T0dbpqLd6kL8HWmgtozJHY5X3isPn3FIwhdU4HKbHK1NIkinU9Rw9feW8aXT5sSLetHSskA3OtfjprIkhI1wQQzKt4QdtIIGzdqi9mmh2leeVnuK3AdfM9ti8/nKr4My7QVm4hcYwPkEcfhOAGFyoLBgT1mrI0S4rXIYpFPbU6yecDedD
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"VendorsController_registerVendor"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/vendors"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+VendorsController_registerVendor
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"service":{"type":"object","example":"EMAIL"},"name":{"type":"string","example":"John Doe"},"email":{"type":"string","example":"john@mailinator.com"},"phone":{"type":"string","example":"9834123456"},"authWallet":{"type":"string","example":"0x000000000"},"wallet":{"type":"string","example":"0x000000000000000000000"},"extras":{"type":"object","example":{"isVendor":true}}},"required":["service","name"],"title":"VendorRegisterDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      
