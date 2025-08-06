@@ -96,8 +96,7 @@ const config = {
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
           versions: {
             current: {
-              label: 'Next',
-              banner: 'unreleased'
+              label: 'Next'
             },
           },
         },
