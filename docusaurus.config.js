@@ -1,11 +1,13 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const {themes} = require("prism-react-renderer");
+const { themes } = require("prism-react-renderer");
 const ArchivedVersions = require("./archivedVersions.json");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  // #region: general
+  title: "Rahat - Aid Token Distribution",
   markdown: {
     mermaid: true,
   },
@@ -14,7 +16,6 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-  title: "Rahat - Aid Token Distribution",
   tagline:
     "Supporting vulnerable communities with a simple and efficient relief distribution platform.",
   url: "https://docs.rahat.io",
@@ -24,6 +25,8 @@ const config = {
   onBrokenLinks: "warn", // Changed from "throw" to "warn" to help during development
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  // #endregion: general 
+
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
@@ -58,10 +61,29 @@ const config = {
         showLastUpdateTime: true
       },
     ],
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "openapi",
+        docsPluginId: "classic",
+        config: {
+          petstore: {
+            specPath: "openapi/rahat-api.yaml",
+            outputDir: "docs/rahat-api",
+            downloadUrl:
+              "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-template-openapi-docs/main/openapi/rahat-api.yaml",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          }
+        }
+      },
+    ],
   ],
   presets: [
     [
-      "@docusaurus/preset-classic",
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -71,6 +93,7 @@ const config = {
           editUrl: "https://github.com/rahataid/rahat-documentation/blob/dev",
           showLastUpdateTime: true,
           lastVersion: 'current',
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
           versions: {
             current: {
               label: 'Next',
@@ -78,7 +101,7 @@ const config = {
             },
           },
         },
-        
+
         blog: {
           path: "blog",
           blogSidebarCount: "ALL",
@@ -98,7 +121,7 @@ const config = {
           src: "/img/rahat_logo.png",
         },
         items: [
-   
+
           // {
           //   type: 'doc',
           //   docId: 'Introduction/Welcome',
@@ -137,6 +160,11 @@ const config = {
                 to: '/community/coding-standards',
               },
             ],
+          },
+          {
+            label: "Rahat API",
+            position: "left",
+            to: "/docs/category/rahat-api",
           },
           {
             type: "docsVersionDropdown",

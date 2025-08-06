@@ -6,4 +6,18 @@ module.exports = {
       dirName: '.', // '.' means the current docs folder
     },
   ],
+  openApiSidebar: [
+    {
+      type: "category",
+      label: "Rahat",
+      link: {
+        type: "generated-index",
+        title: "Rahat API",
+        description:
+          "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
+        slug: "/category/rahat-api"
+      },
+      items: require("./docs/rahat-api/sidebar.ts")
+    }
+  ]
 };
