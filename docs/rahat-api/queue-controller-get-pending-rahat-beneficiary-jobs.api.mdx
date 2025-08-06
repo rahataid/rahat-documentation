@@ -1,0 +1,71 @@
+---
+id: queue-controller-get-pending-rahat-beneficiary-jobs
+title: "Get Pending Rahat Beneficiary Jobs with Filters"
+description: "Get Pending Rahat Beneficiary Jobs with Filters"
+sidebar_label: "Get Pending Rahat Beneficiary Jobs with Filters"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNFum0AQ/JXTPrUSru0+8tbGTZSokdI2VWVFVnXAYi6FO7y3uEUW/14tUBsnjpU0fjrglp3ZubnZgCuRNBtnLxMI4UuFFZ45y+TyHOnnEvkGbWLs8qvONH9Ei6mJjab6ykUeAig16QIZyUN4twGrC4QQPGuuZJtwVRnCBMJU5x4DMBZCWFVINQSQoI/JlIIOIZybnJFUVKt7F6ltCx9nWGgIN8B1Kc01kZa/DWPhB989k7FLaJom2BJpl9fQ6Bs8IrEFC4ZDE880vw4wJmyPQ7XtVKIZ1Zv5fD4fXV+PZrO3zySDNjkdFbTJC4ksBNeXznpsj+j9ZCLLPtpn41m5VKUtKiaq9ZgamExoeJkLWC/FYZ1BYfGQ+AWy6o16oIt4Vf02nKluQLFVgZw5sfwSufUxZxDCeD0drwRiTNJlFO26jO47x3ukdWf3hbzEFRmuv4kS3ahXP25labURTSLUhARB/3DuqNAMYVsX/BMuYy7bOY1NXSuo4Vw2umHOHOGjw/pwc6mEjIlRpY7UXqlQ7Mqm7yYQQOws65gh3AhK6TwX2gpQ75eXC7hHZusAxj88LnNtLDQBVJTLXifuHaynEEArr/jysMCLADLnWco3m0h7/E5508jnzrKSMonxOsoHln7ARYZFy09nykGyv7AeRtda55UUgdyq/0Xs4+MIXl9xErRnZMfxybf5dVo6T+XHETK7/NpRWcgLGeEit68ZXOKLT7fQNH8BokBQfQ==
+sidebar_class_name: "get api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Pending Rahat Beneficiary Jobs with Filters"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/queue/rahat-beneficiary-jobs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get Pending Rahat Beneficiary Jobs with Filters
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"status","required":false,"in":"query","description":"Filter by job status","schema":{"type":"array","items":{"type":"string"}}},{"name":"name","required":false,"in":"query","description":"Filter by job name","schema":{"type":"string"}},{"name":"startDate","required":false,"in":"query","description":"Filter by job creation start date (YYYY-MM-DD)","schema":{"type":"string"}},{"name":"endDate","required":false,"in":"query","description":"Filter by job creation end date (YYYY-MM-DD)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of filtered Rahat Beneficiary jobs"}}}
+>
+  
+</StatusCodes>
+
+
+      

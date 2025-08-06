@@ -6,4 +6,18 @@ module.exports = {
       dirName: '.', // '.' means the current docs folder
     },
   ],
+  openApiSidebar: [
+    {
+      type: "category",
+      label: "Rahat",
+      link: {
+        type: "generated-index",
+        title: "Rahat API",
+        description:
+          "Rahat API documentation for all available endpoints and operations.",
+        slug: "/category/rahat"
+      },
+      items: require("./docs/rahat-api/sidebar.ts")
+    }
+  ]
 };

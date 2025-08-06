@@ -1,0 +1,71 @@
+---
+id: grievance-controller-change-status
+title: "GrievanceController_changeStatus"
+description: "GrievanceController_changeStatus"
+sidebar_label: "GrievanceController_changeStatus"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVEtT2zAQ/iuePbUzpoEefaMhbemhZUIoh0yG2dibWGBLRloHMh79985KjoMJh54sS/v6HlIHpiGLrIy+LiCDH1bRDnVOU6PZmqoi+5CXqLd0y8itgxQatFgTk3WQLTvQWBNk0LaqgBQsPbfKUgEZ25ZSUBoyaJBLSMHlJdUIWQe8byTHsVV6C96vYiI5/maKvUS8r5MbzaRZjrBpKpWHkSePzmjZOylt1o+Us0xrBSArciEugvggjl6xbirZuvt9NZs/zGd/r2f3kEJBLreqkXaQQWQhMZuES0q2B7bA+7fYl4dGqxRYcSg7DSwO/MZCV4s/4H1Mdo3RLo759fxcPuPWoQfjVmg/6hR6OMpbq3gfBPl1v4BsuRJSxwX+Q9uauDRFlCwvg9hcQgaT3cVkAOsmnajtJzH5zB2yHdldtMWbmW5FmggrTNaLJZSsCS1ZSPvFd2NrZMhCXHpQqGRuAnTRen50yewg2FHVsXRe3LcxQexegzmWyMnUWDoR9vLmOpH5VU7JxthkFCqoYtjFl3OIbsRc3CiDNcZxjcGH/WUYmE6OVCeRrWTgetR/MCTTK0+aCpUWAK2t5CyqsITdBaRw1AFSyPp7N5ZilUJpHEtK163R0Z2tvJft55bsPgq0Q6twLbwsOyiUk3UB2QYrRyfTDfcPPs17m39OjiKNp+43Ue+FO6xa+YMUnmh/eCn8yqdQEhZkQ/94NI1dzhZS4Jh6cuPF24NVby4X059iov7pqE0hSRZf5D3Cl9jbBCjBhmGvgwr1tsWtxMaioiW2wvSgxjuHhlE/RNd1MWJhnkh7P4Bl+Re03v8DKyLbNw==
+sidebar_class_name: "patch api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"GrievanceController_changeStatus"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/grievances/{uuid}/change-status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+GrievanceController_changeStatus
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"object","example":"UNDER_REVIEW","description":"Status of the grievance"}},"required":["status"],"title":"ChangeGrievanceStatusDTO"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: users-controller-add-roles
+title: "UsersController_addRoles"
+description: "UsersController_addRoles"
+sidebar_label: "UsersController_addRoles"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9U0tv2zAM/isGTxugLc2Oum3FBnSXFWmKHYJgYCwm1mpLDiWnDQz994FSHmuT7WRZosjvpRF8T4zRendnQMNjIA633kX2bUv8C42Z+ZYCKOiRsaNIHEAvRnDYEWgYBmtAAdN2sEwGdOSBFFgHGnqMDSgwFGq2vcyQCc5uB6qsIRft2hKDglA31CHoEeK+l64hsnUbSGlZWlOIX7zZS8XbSbV3kVyUI+z71taZzOR3kGnjZWtkxj0ooBfs+pZALwBNZx0oGAIxLBXYSF24hialJHhC712gXPHpZiqf1xRByiJuRKiiqHQNVA9s4z6r9/3nHPRiKfzeyPNvAzqKjReTeh9iNiQ2oGGym04EeZiMYkaa8KE+EO+KW39NfxA9CvaM4aCQ0FwRcrajLL557jCCznXqqEUTY5/5icCzszVf/yOnW/uspo1SADNsMFa3nukiHJ/v7yqBbWuq1p6rV6VCppRNP95AcR5rcV7wiCgdZs8P0cxSVmctKzSmOor5au7J6UgvcdK3aB0kBQO3clZ0XsBueiAl9/Ux+LnfUkEjpugFjOMKAz1ym5JsbwfifbFgh2xxlTUawdggawN6jW2gC0CnWMO72SHx76trb+cq8mPWnSR9h+0gf6DgifbHN5uWSUFDaIgzoHJ0W8Z+mEuD89WLlyXBPeXx/seDJGR1eKGdN3KH8Vn0wecy2mdqOXh5b4QW3WbAjdSWnmIjDiL2yZA3mcxIr5Ibx1Ix90/kUjpxjfIvZFP6A1L3rbg=
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"UsersController_addRoles"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/users/{uuid}/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+UsersController_addRoles
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","description":"Unique identifier","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"array","example":["admin","user"],"items":{"type":"string"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: settings-controller-udpdate
+title: "SettingsController_udpdate"
+description: "SettingsController_udpdate"
+sidebar_label: "SettingsController_udpdate"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNlE1v2zAMhv+KwdMGeEvTo29dtmLdZUXaYocgGBibidXJkivRaQ3D/32g5NhxWwzzxbbED4nvQ3Zga3LIypqbAjK4I2ZlDn5lDTurNbnfTVEXyAQp1OiwIibnIdt0YLAiyOIrBUdPjXJUQMauoRSUgQxq5BJS8HlJFULWAbe1+Hh2yhyg77fRkTx/sUUrFq/j5NYwGZYtrGut8nDYxaO3RtbehLa7R8pZTuvkaqzIy+4RdUPvmdELVrUOW3tFulhCFo2XkMaVy9PKJfT9dNFr2fNnIdE5bCEFxVT5dy57lmtzyjWm2PYpKH/r1FFqPTnvrNWE5vyge9SegvmasPhpdPs/9v25RJuhHuc5ZwG3KbBi8YaHIL+AYQ7+K1vo+xjM19b4WN3Liwt5FeRzp2oRCDII1WI8CC0jWBJ5bvZP5Cri0haRpLwMDHIJGSyOy4UfHBedINgLZ+SOkc6t/OSNU9zeCSHxmD9+3Y/MhGIROnKQDh/X1lXIkAW79FTRkrkOVxHk1hOs3yZwRrj+g6C3AL0Dw4yFoN9c7hEBs7dB/EGrNZbIyco6qd28zFe3N4nUR+WU7K1LZqZStWi2/HwBsekwl6aTi9fWc4Wh3YaeP2mWTKIlk2izxCOZTC+8qDUqI0VonJa9KOcGjssg38BICllItE2htJ7FoOt26OnB6b6X5aeGXBt1PqJTuAtd1UGhvHwXY9VenWWcJvBhPcjwMZm0np/x1NdGunrQGCCFP9Se5l4vfVsSFuRC/ri1ilk+3UuAyfXN/JLxNxJ+e3W/+i4sDoOwsoU4OXyW6YrPMbcNVwk0h7UONJpDgwexjUHl+Qt/Pf4b
+sidebar_class_name: "patch api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"SettingsController_udpdate"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/settings/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+SettingsController_udpdate
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","required":true,"in":"path","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"value":{"type":"object","example":{"field1":"value1","field2":"value2"}},"requiredFields":{"type":"array","items":{"type":"string"},"example":["field1","field2"]},"isPrivate":{"type":"boolean","example":false},"isReadOnly":{"type":"boolean","example":false}},"required":["value","isPrivate","isReadOnly"],"title":"UpdateSettngsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

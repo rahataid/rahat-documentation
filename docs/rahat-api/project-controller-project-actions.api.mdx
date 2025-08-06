@@ -1,0 +1,71 @@
+---
+id: project-controller-project-actions
+title: "ProjectController_projectActions"
+description: "ProjectController_projectActions"
+sidebar_label: "ProjectController_projectActions"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1vm0AQ/StoTq1E47hHbmnSSsmlUeIqB8uKxjA2m8AumV2cILT/vZpdDKGO2p6AYT7fezM9mIYYnTL6uoAMbtk8Ue4ujXZsqor4sYmWi1x8LKTQIGNNjthCtu5BY02QQduqAlJgemkVUwGZ45ZSUBoyaNCVkILNS6oRst77TfQk676ZooOsPwnMjXaknfzCpqlUHnpcPFmjxTbmAtc1Ut9spUtpj2Uip8iG2ND2Oz/rWOk9pEBvWDeVmLakaadyhdyd5UzoCLyM2VUGi49KjKHj9Dem1MmVIfA+Bcdqvyf+RyQdSLvHIZ6pIKrPDqbNS2LwkmZCZH0cY+pqqrJJwSkXBhnJq+tWD4hdOSPpQj7bGG0jLl/Pl/IoyOasmogRxO5xL8Qek1kpYClvWbkuEH7zsIJsvREO5+H/oZ2aXGlEZ42xgSxRRgaLw3Ix+NpFL1LyCxyDLPEhqu1dK/cigDhLaGiQROQTmRjS4eWH4RqdkPSwEtwiJaVzTZhXFHU3afH7xNBROx8JZKaPExHMNPB3omVFdiZoZWDxDkt0yaVhqTJH+OL2OhE0VE7JznAycxWMotvy7BziBmHuwr6lAfAa9bt2B7qSia9k4CCZCJvVH/Xs6M0tmgqVlllbruRf5HINh2XcwqieFLLhNBwJ3aRQCvvZGvp+i5Z+ceW9mF9a4i7SfEBWuBU81j0Uysp7AdkOK0snXY23Aj7dDUvzOZmonnc7GFF3ghlWrXxBCs/UHc+Y3/gUSsJCCFz3w6/LWOXLShJMoSfXSRZj1Pntz3sR3Xa4crUpggrwVW4lvsbSponIyBkUWw8V6n2Le/GNOYVCbAXgkYQ/ZB46/XC4vo8eK/NM2vtxViffMqz3vwE/hhMl
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ProjectController_projectActions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/projects/{uuid}/actions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+ProjectController_projectActions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","schema":{}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"action":{"type":"string","example":"beneficiary.create"},"payload":{"type":"object","example":{"name":"John Doe"}},"trigger":{"type":"object","example":{"event_name":"redeem.voucher"}}},"required":["action","payload","trigger"],"title":"ProjectCommunicationDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

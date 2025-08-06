@@ -1,0 +1,71 @@
+---
+id: offramp-controller-register-provider
+title: "OfframpController_registerProvider"
+description: "OfframpController_registerProvider"
+sidebar_label: "OfframpController_registerProvider"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlU1v2zAMhv+KwbMaN9vNty3tgK7AGjQddgiCgbGZWK0tqRKd1gj83wfKzhfatR2wHBJbpsWX5PMqW7COPLK25qqADG5WK4+1m1jD3lYV+d+e1jow+am3G12QBwUOPdbE5ANk84UCT48NBf5qixaybbzVngrI2DekILeGybA8Qucqncd06X2wRtZCXlKNcsWtI8jALu8pZ8njRRxrCvLUYE1HUYG9NmtQQM9Yu0qWri2j0ckUW1BQUMi9dpIKMviBNSV2lXApP7HGxO0q6qLGlV6/JmK//RaWGOinryCDktmFLE0DmmJpn8/Q6dFDzO6wHWmbotPp5jMoQKevqYUMHogk0amsSUzb9AN4S9/Jax/rQaJDgonDtibDyRqZnl5pzMXh7q389Mwewzv9WRFBdj4aKwiNc9YzFZPGezJ5C9kcri9noODn7AIWLxpxKfsn2qysr/tm4NI2/Bc9nTqCbN6TsZ/h6dZ76QsFrDn2aOIJmQbUd1xfsIWu67cOzprQU/fpfCw/p2qjAsa18L+zTMxwGvYhM9XEpRXrORsi9MglZJBuxulQeEh3lQdQEMhv9s4LlDdeczsTD/WCv/+627tKil0S+piov/gWGwxZjFO7aQrPsSgx5e3BzpeH4fb2O/XYwTX/3xrvg3xg8h/A6xQIZZHkAYdbLJGTifX0wh1fpleJNFznlKysT05CZQx92Hh03neDMZdzTrLIOGs0R60bcEgOPCQ7HpIjIF63OtMzp65CbaRVjbR6O7Ayh80YFOxo6Q/OgZeFglK4yuaw3Q5D6jpZfmzItz1FG/Qal9KLuTizJBQl2XwLD3E+k/4AP7sTKRJeNSLpxWHeLY5wnt7MBLDl8KdQ20Le8fgEKn5nIJpjmXGGcW0LFZp1g2uJ7feUzx9vgU2s
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OfframpController_registerProvider"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/offramps/providers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+OfframpController_registerProvider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"Kotani Pay","description":"Name of the offramp provider"},"config":{"type":"object","example":{"baseUrl":"https://sandbox-api.kotanipay.io/api/v3","apiKey":"kee"},"description":"Configuration of the offramp provider"},"description":{"type":"string","example":"Kotani Pay is a payment gateway","description":"Description of the offramp provider"},"extras":{"type":"object","example":{"fee":0.1,"supportedCurrency":["KES","USD"]},"description":"Extra information about the offramp provider"}},"required":["name","config","description","extras"],"title":"CreateOfframpProviderDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

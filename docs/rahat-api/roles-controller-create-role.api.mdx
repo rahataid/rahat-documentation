@@ -1,0 +1,71 @@
+---
+id: roles-controller-create-role
+title: "RolesController_createRole"
+description: "RolesController_createRole"
+sidebar_label: "RolesController_createRole"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNlMFu2zAMhl/F4GEnbWl29G3rNqADhhVthx0cY2BsNlZrSy4lpzUMvftAyUmcbhh2sk1R+kl+vzyB7YnRa2uuasjhxrbkLq3xbNuW+FfFhJ4kCgp6ZOzIEzvIi1IB09NAzn+09Qj5FD81Uw2554EUVNZ4Ml6WsO9bXUWZ1YOzRmKuaqhDefNjT5CD3T5Q5UWHpSivycmqwY4WWc6zNjtQQC/Y9a2EvqHBHTEEBdrdjs5Tt9iwtbYlNMsd99g6Cgp64k47p61xf6vjpDBtYHDEG8iLDXRRbgNqA0xYb6AMEIJa9F+kohflnGuVCrz28eTL44A/eQshpINcb41L7b+/WMujJlex7mWCkEPU87gTEIlZ9ia7PldwVA2s/Qh5McHXn3fCLJTq1Un/BN6Rb6zYorcugkHfQA6r/XrFsg9EhfdHQxwkbwVtKj8Kz7AjDUImBjW/fLHcoYc85qkDgcb7PrYoXrk5uezzAcjBFUf0S/KR7iu4/0FQgTb3NvpgZnODDfrs0rLM4nxsH66vMmldV5TdW87OUmUgKW397gLSRcBKLoL0JLPs0CyaSABPELIEIZspnCkfXerpxa/6FrWR0gduZS0BKmC/BgUJUamgEXp5AdO0RUc/uA1Bwk8D8ZjA7ZE1bqXpogwKGsKaOBrnkUZxabrKb+9EW9LbQWr441qLv46muf5+K0y38++hs7XsYXyW2vBZbKzAxr6iVWJsghbNbsCd5KYzZWg4SGOnO33uoljpvIRmXFQ4TSnjzj6SCQHU3JCXbwhlCOE3xu620g==
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"RolesController_createRole"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+RolesController_createRole
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"Manager"},"isSystem":{"type":"boolean","example":false},"permissions":{"type":"object","example":"{\"user\":[\"manage\",\"read\"]}"}},"required":["name","isSystem","permissions"],"title":"CreateRoleDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: project-controller-ms-actions
+title: "ProjectController_msActions"
+description: "ProjectController_msActions"
+sidebar_label: "ProjectController_msActions"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVE1P4zAQ/SvRnL2U7jE3tuxKcFkEXXGIKjRNpo0hscPY6RJF/u+ridOkBcRe8mGP/d689+webEOMXltzU0AKd2yfKfcrazzbqiJ+qt1VLtMOFDTIWJMndpBmGwVMry05/8MWHaT98KuZCkg9t6Qgt8aT8TKFTVPpfMBZPDtrZMzlJdUoX75rCFKwW8EWHBZWXpMb1g74J3XOszZ7UEBvWDeVDG3J0E7nGrm7yJnQEwTh21UWi88gpqU9GKxl6taWJrm2BCEo8Kz3e+L/rKQDGf80rmcqiOqLg23zkhiCbDMrkh3bmFnNKBsFXvuhkcmAum7NqNi1t7LdsJ9rrHFRl++XS3kV5HLWTdQIInvci0PHzZwAOMpb1r6DNOvh9nEtDoaNerf8a/9r8qWVmDTWDT6hLyGFxWG5aEaoBU7VjvgwReUI/yCmR/4DiTEG0UNkYlDjxy/LNXox5nEtWkUbSu+boUdJ0f2cv5+zK8e8fBaKs0x8MP7M96/NVaDNzg75GJ27xxJ9srIsKOeqXt3dJKKGzinZWU7OSkWjWLa8uIR4ajCXUyMoonSN5oTuaFEye5TULplNOoOe4uvpzS+aCrWRNluuZC76l8FhGQ9dDIuCo4cbBaU4nWbQ91t09IerEGT4tSXuorMHZI1bkSDbBAUlYSECZj28UAcprOIt8G0tRKS8aoXQhxtBwjgF7O73g5i+HW+W2haDC/gX1PBMARTYJtKUq0fGeqjQ7FvcS23cUyTEVrqclHgXs4HpOIWmO2HY97FibV/IhABqbMjLP4RNCOEfKWHPGQ==
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ProjectController_msActions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/projects/actions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+ProjectController_msActions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"action":{"type":"string","example":"beneficiary.create"},"payload":{"type":"object","example":{"name":"John Doe"}},"trigger":{"type":"object","example":{"event_name":"redeem.voucher"}}},"required":["action","payload","trigger"],"title":"ProjectCommunicationDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

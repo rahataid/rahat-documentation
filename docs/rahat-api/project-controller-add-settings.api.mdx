@@ -1,0 +1,71 @@
+---
+id: project-controller-add-settings
+title: "ProjectController_addSettings"
+description: "ProjectController_addSettings"
+sidebar_label: "ProjectController_addSettings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VcGO2zYQ/RViTi3ArrNF24NuW6cBtkC7hr1FDoZRjKWxxUQiFZLyxtDy34MhacleL5IWaE+WySHnzcx7jwOYjix6ZfR9BQUsrPlApZ8b7a1pGrJ/Y1WtyHul9w4kdGixJU/WQbEeQGNLUEDfqwokWPrUK0sVFN72JEFpKKBDX4MEV9bUIhRDCJsUSc7/aqojFMPVwdJoT9rzFnZdo8oIcPbBGc1r413gjx3nN1sGzfAsl+MVOd5N6MYo563Se5BAn7HtGl5a/fG4AAkVudKqjpNAAX9iS8LshK9JuFQ6BAkHbHp6Lel43QC1cZ4ztb672beompvStCBhYayH4qdffpbgqOwtnSrtHdncRE8uloDOPRlbnVbCS3inaYgI6EbMUYstiVSdeBa6b7dkxbPYGtMQavEsMtQwjeidoqaKTRrRrxN6CR2DHYGeYZSwuFut3j8s38Lmv0MlTw1Fa/EIEpSn1l3PLQQJyi0JqwfdHM/2843nk9hh4+glxPudiE0/DTVBFSVqbTyDLWvUe6ogJlpYdUBPX8+ThviP0ignOI0l31tNlVBadP22UaW4W9zH4iYVrCH3O3HuamwXjTgHu5HglY/UnltCT3ksb72BEFIS1xntkkB+fHPLP5f4IxaPe1b4yQ8c3xwJofwxKv/3949QrDfhigjfcpCWfG2Y3V1mG/tDAbPD7azLyWYDG0qYuemUI3tIpnMGZMU+kCqJcLIzxFkRWrIg88c7Y1tkZXLcSLja+y5Wy8aynCzpt0nQWZvZJ0YL+H90/lKc/1aR5+rICjjjMQNhZuudiaTOPFlijV7MTbz4cpR3i3vBjVcliZ2x4iKUx5HCbm/eQPJsLH10eBmH26I+a2HmhZiIIbCqxBkzLpKPqvP02c+6BpXmFvW24b1EmjUcbpPpJ45KKPJLNDJnI/Os1jAMW3T0l21C4OVPPdlj4tMBrcJt9MABKuX4u3rdRIbpbYLvlnle34uJU5dwT86mjxN7ACR8pOPp2QybIKEmrMjG/GlrnrL88MgXTEevXkPW36ioxcOK2b3Nr2prKj5j8YkdBJ9SahMriaKJawM0qPc97jk23ckDxJ47PHnfpZ4i0leLG4YU8Wg+kg5hrNXzfy42hC+G5OR9
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ProjectController_addSettings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/projects/{uuid}/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+ProjectController_addSettings
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","schema":{}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"SMTP","description":"Name of the setting"},"value":{"type":"object","example":{"host":"smtp.gmail.com","Port":465,"secure":true,"username":"test","password":"test"},"description":"Settings value. Can be string | number | boolean | object"},"requiredFields":{"example":["host","port","secure","username","PASSWORD"],"description":"Settings value. Can be string | number | boolean | object","type":"array","items":{"type":"string"}},"isReadOnly":{"type":"boolean","example":false,"description":"If true, setting value cannot be changed"},"isPrivate":{"type":"boolean","example":true,"description":"If true, setting value is not returned in public API"}},"required":["name","value","requiredFields","isReadOnly","isPrivate"],"title":"CreateSettingDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: users-controller-remove-roles
+title: "UsersController_removeRoles"
+description: "UsersController_removeRoles"
+sidebar_label: "UsersController_removeRoles"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9U0tv2zAM/isGTxugLc2Ovm1dBnTYYchS7BAEA2MzsVZbcig6bWDovw+UknRtgp78EEV+L47ge2IU691dDSXcB+Jw652wb1viP0yd39PctxTAQI+MHQlxgHI5gsOOoIRhsDUYYNoNlqmGUnggA9ZBCT1KAwZqChXbXsfoEGd3AxW2Jid2Y4nBQKga6hDKEeTQa9cgbN0WYlzl1hTki68PWvF6UuWdkBM9wr5vbZX4TP4GnTZetkZmPIABesKubwnKJWDdWQcGhkAMKwNWqAvX0MQYFU/ovQuUKj7d3OjjJUXQMsGtCpVF1a6BqoGtHJJ6338voFyulN8red70oCNpvFpVU0tCyRVpoITJfjpR+GEyqiNxwscbgXifLfsPwi8VJRNIQI4yKdc1ISdP8ss3zx0KlKnOnARpRPpEUlWeP/sze0NTt/FJUitaAHNsUIpbz3SRkM8/7wqFbSsqNp6LF6VKJpdNP95Ath8rtV/x9D5Ih8n4Yz6TnsWzoEUWtDgp+mL02XGhJ5n0LVoH0cDArZ5lqZewnx556f3ytACp38pA44No1TiuMdA9tzHq791AfMgu7JEtrpNMI9Q26HsN5QbbQBeAzvGGd/Nj8t8X13boKvJT5p0mfo/toF9g4IEOp92Nq2igIayJE6B8dJvHflhog+erFxumAT6H8uvsx2wx0+wcd7Xztd5ifFSF8DEP94lcSl/6N0KLbjvgVmtzV/USB5X7bMmrYCasV+mNY65Y+AdyMZ7Zin4r3Rj/AfodswA=
+sidebar_class_name: "delete api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"UsersController_removeRoles"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/v1/users/{uuid}/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+UsersController_removeRoles
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","description":"Unique identifier","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"array","example":["admin","user"],"items":{"type":"string"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      
