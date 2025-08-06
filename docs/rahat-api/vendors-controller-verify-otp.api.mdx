@@ -1,0 +1,71 @@
+---
+id: vendors-controller-verify-otp
+title: "VendorsController_verifyOtp"
+description: "VendorsController_verifyOtp"
+sidebar_label: "VendorsController_verifyOtp"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFk01v2zAMhv+KwbPWNDv6tC3YgO7Sou26gxEMjM3GymzJpWivRuD/PlDKh4MOnQ+2LFHiy/eh9uA7YhTr3U0FOTyRqzyHlXfCvmmIfw3E9nm8lQ4MdMjYkhAHyIu1AaaXnoJ88dUI+T7+WqYKcuGeDJTeCTnRJey6xpYxz2IXvNO5UNbUoo5k7Ahy8JsdlaJ5WFWJpaCrZY1NQ25Ls9AgbN0WDNArtl2jUzAZwKpiCuH9wJ2v3acWbWMdiuer0re610v3vwSTmdVYzISdM6dz1gbEStz1FP1LvqqL05SOCZ13IRX48Xqpn4pCybZTj47ZBLdq9RGLnnsZ9T6vlqT2irXzIfqKUkMOi2G5GNLGxTw8EA8ntoHKnq2MD0op6fz+8/HETUvbEDIxmMPgm+cWBfIYZ45G1hKLNqDY788N8/Xo6wVgmFn5b1IHUBG3dc8+Mjt4fY81SrbyrEQujfp8d5Npfbak7NlzdhGqVaew5dU1pMbFUhtXhat5LcaWddjS2fXsbHuWfMySkRepTy0l9CqLrkHrVHvPja4lJAUMy6gjYY6KDljWBmqllxew328w0A9upkmnX3riMcEakC1u1INiPRmoCStiyIs9/KYRclilm/jhUZVoeNOroje3clrPmubu9kE5bg63u/WV7mH8Aya+Iywfq4ztEef20KDb9hhhpjP1+Qvnv4N9
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"VendorsController_verifyOtp"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/vendors/verifyOtp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+VendorsController_verifyOtp
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"challenge":{"type":"string","example":""},"address":{"type":"string","example":"john@mailinator.com"},"otp":{"type":"string","example":""}},"required":["challenge","address","otp"],"title":"VerifyVendorOtp"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

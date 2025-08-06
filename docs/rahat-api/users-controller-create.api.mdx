@@ -1,0 +1,71 @@
+---
+id: users-controller-create
+title: "UsersController_create"
+description: "UsersController_create"
+sidebar_label: "UsersController_create"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVNtO20AQ/RVrnl2SUNqCn0ppqECtiiCIhyiqJvYkNti7ZnYdsCz/ezXrSy6m9Mn2evbMnJlzpgKdE6NNtLqKIIB7Q2wutLKs05T4T8iElsCHHBkzssQGgvnCB6bngoz9pqMSgsp9JkwRBJYL8iHUypKy8gvzPE1Cl2L0aLSSMxPGlKG82TInCEAvHym0koelIJuQkb8KM9qJMpYTtQYf6BWzPJWja1RSXkQm5CSXJBDALCZvVaSpJ/c9vfJsTJ5Qg9qHNamI+H3Uy+mv85/TAe4Pd/UQkDJM0vfxHlHRVy4yg+oo1NkAeCoQh7h5rNV/2J+dnkyOP558+vxlAHkjtz1VZMthxS+YpmTfhx6/tsinZ2NchhGtBikeHIyHUcRkzGES1mkzxB5zDhhliQIfColZHOLdyo09GL8rEJmxBB8SS5kZFl7Xtb+jwXkjnH7W3Yy6nvYd6Kpc+GAT63hfOMVL9u9WC7BDNrlWpqFzPJ7IY790kDCLa3FHYyLBNBQWnNgSgnkF1w8zsU49oP1Pz2VkYy2uzLVx3kAbQwCjzWRUuBSSgTe9J7t0d+KupliXtPWbsFsSsmtI83KpOUMrNnqYbZsdW5s7QmLX263Rp90gO2N27usstfVN64k3hN+qel+6nSDfVl2rpEP51D4kaqWdGtrh3WKM1rvQPNwJ5zdXnnQrCclbafb2QqWHTdjkaAzN+sJQHCJtkPZnqHZ4u5F525l5/cz2kvYytfRqR3mKiRJnFOzWRTPOOWwmLSWnmVhmHcyhqpZo6J7Tupbj54K4bMa8QU5w6QwlPYgJXfPnFTxRKQpudu+HmeSW8LRwFjrcw6LEXmI3v+9EAct2n2c6kjuML9J/fBGJ+6AdLycsd1ZBimpd4NrtOIcp/cJCiPXkDzTnKu1srcqdCquqiZjpJ1J1DX5LyMo31Iu6rv8CG2M9dA==
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"UsersController_create"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+UsersController_create
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"Jane","description":"The full name of the User"},"gender":{"type":"string","example":"FEMALE","description":"Gender of the User"},"email":{"type":"string","example":"jane@rumsan.com","description":"Email of the User"},"phone":{"type":"string","example":"9841234567","description":"Phone number of the User"},"wallet":{"type":"string","example":"0x1234567890abcdef","description":"Wallet address of the User"},"roles":{"example":["admin","user"],"description":"Roles of the User","type":"array","items":{"type":"string"}}},"required":["name","gender","email","phone","wallet","roles"],"title":"CreateUserDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

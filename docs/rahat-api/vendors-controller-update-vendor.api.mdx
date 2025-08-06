@@ -1,0 +1,71 @@
+---
+id: vendors-controller-update-vendor
+title: "VendorsController_updateVendor"
+description: "VendorsController_updateVendor"
+sidebar_label: "VendorsController_updateVendor"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFlE1P20AQhv+KNadWMoQArahPpaFVoRJFNJRDFFUTe4iX2rtmd5wQWf7v1ewaOykIkkOc9Ts7X89MA6Yii6yMPs8ggd+kM2PdxGi2pijI/qmrDJnCOcRQocWSmKyDZNaAxpIggbpWGcRg6aFWljJI2NYUg9KQQIWcQwwuzalESJq2nQclOf5isg0kzTPD1GgmzfIKq6pQqY9wdO+MlrP+LuBNJf7N4p5SlvCs5MOKnLwN0fUqx1bpJcRAj1hWhRxdmFxHZ4agjYFKVMXr8nuT688iUxrZ2P3UlGJZ5Ua/4ejTydHx+PDo+MNHMViSzsi+lMBgcXP54/Ln7aXI11gUxK/LD/b81yfyyBbdq/IGlOt66kvetu12+2ahdPMYWLG/PohvPAxnbKDtLFxltAvVPjw4kJ+MXGpVJQ2DBEBkjEvB5YkuuXdX9SZ2JXFuskBTmnsOOYcERqvxaBWMR8Fk1AiMrRBHdhU4ncuftLaKN78EnRDvxe20h0lSXBBaEmfh4ZuxJbIwcjuF+KmUOXPlcxIWrweKvw6V7WaiR6sn60V8enq2ERkI6TEYKOhbvd3p/9spw3dnPANdB68xR44mxkpEu+U/vTqPpFoqpejO2GhHKjUMsvG++JTZxJT9JMdQGccl6q28u15GQzOj0Jmo7+aO955SpkceVQUqLRDX1s9i6PMMVmMfSuAnhnAjxJD41TOPITeORdg0C3R0Y4u2leOHmuwmILBCq3AhtZg1kCknzxkkd1g4ehZTv4Hg3XU3Fu+jAYPdWLtD1BsJEota/kEMf2nztBzbeRtDTuibOmu6V5PgZW8qFwymz3aerMx+BK5Op5Pvgmm3PEuTiZHFtaxgXAffxqfi2fBnDRSolzUu/R7zl8rnH9BEBaQ=
+sidebar_class_name: "patch api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"VendorsController_updateVendor"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/vendors/update/{uuid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+VendorsController_updateVendor
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","schema":{}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"John Doe"},"email":{"type":"string","example":"john@mailinator.com"},"phone":{"type":"string","example":"9834123456"},"gender":{"type":"object","example":"UNKNOWN"},"wallet":{"type":"object","example":"0-0-0-0"},"extras":{"type":"object","example":{"isVendor":true}}},"required":["name"],"title":"VendorUpdateDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: offramp-controller-provider-actions
+title: "OfframpController_providerActions"
+description: "OfframpController_providerActions"
+sidebar_label: "OfframpController_providerActions"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9lEtv2zAMx7+Kwevs5dFkbX3b2g7INqBBH9ghCALZpmO3tqRSdLog8HcfaOXRrN3Q03yIFYoW/6R+5AaMRVJcGj3JIIbrPCdV2wujmUxVIS0smVWZIX1OxclBCFaRqpGRHMSzeQiETw06/mKyNcSb7m9JmEHM1GAIqdGMmmVLWVuVaRet9+CMFptLC6yVrHhtEWIwyQOmLHFItHGJTnabpsxeeDmmUi8hBPylaluJqZ/j2RmOhlGejZNolHwaR0maJNF5/+T8ZNTPR6fjcwghQ5dSaUUExHB/P7kMTB5wgYHxyQe7lKENQaXe8V+BU0LFGOWl4uhZVRXyqzC+egGbIMHAIuWGaswCMf0lsFXryqjsrcLsI28gNY1mWi9Sk4nL9yupW2E0LnRTJ0gQw4fheHQ6HA7Go9PROIAQNPKzoUdRNbm5u/oBkmV30EKrWo6hpnZKR4yOvZjjZKZe2jYbh5pl+XYibQhcclem6RFJl2ygbWWf0Fmjnb/mYX8gr+OA/hi1FOB2iDqY/6nrPfDWyIUR0q1xHWSKC4ihtxr0tuJdb/eV66n9dw5ptSfeYdpQyetbYdfr/vbzbk+zJJugIiQIt4uvhmrFEHd+4e5GC2bb5SbNcHNoo6vDBXvs38v2jta3kXyB1H/hpg2h1LnpEN4ycKMKxcGFIXzdItNJIFUuUwxyQ8GRq9Teuw0+9sEPFZXKUJEocpe16rp0q2SLQnBgYc9kcIDhSMC+zxh/cc9WqtSCfkOV7HlOZrAaQAg7UvyQ8qzsq9+BWQhd8Qw2m0Q5vKeqbcX81CCtPUMrRaVKpCizeRtCgUr6JZ5t4BHXEMOFH5vRnYgS96oRca9GaDt/AfX0+lbwSrajuPa3S+oZwu43BlFvvUyZ1WLbQKX0slFL8fVnyvMb1qQSgA==
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OfframpController_providerActions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/offramps/providers/actions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+OfframpController_providerActions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"uuid":{"type":"string","example":"0fe88e42-fd5b-4b65-bcbb-9039340f4759","description":"UUID of the offramp provider"},"action":{"type":"string","example":"create-fiat-wallet","description":"Action to be performed on the offramp provider"},"payload":{"type":"object","example":{"country_code":"KE","phone_number":"+254722154745 ","network":"AIRTEL","account_name":"rumsan-tester"},"description":"Payload to be sent to the offramp provider"}},"title":"ProviderActionDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: settings-controller-create
+title: "SettingsController_create"
+description: "SettingsController_create"
+sidebar_label: "SettingsController_create"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1v4zYQ/SvEnNlkU7Q96JZmu0AKtDHiFHswjGIsjS1uJVI7HDlrOPrvxZCyLCfbogVaXyyTNOfN+xgdIXTEKC74+woKWJKI87t4F7xwaBri30smFAILHTK2JMQRitXaAtPnnqL8GKoDFMf00zFVUAj3ZKEMXsiLbmHXNa5MVa4/xeB1LZY1tahPcugICgibT1SK1mHFJI6i7npsaXYqCju/Awv0Bduu0aXlL08LsFBRLNl1WgQK+BVbMmFrpCYTc1MwWNhj09PXik7XHaEOUbRSK93VrkXXXJWhBQuLwALFdz98byFS2TOdOu0jcYYJQjG1gDE+B65OK8NreCeeTQJ0Ze7Qmw2Z3J15Mb5vN8TmxWxCaAi9eTEj1MFOTH9w1FSJpAn9KqO30CnYCegMo4XF7XL58eHxPaz/O1T2RCgy4wEsOKE2vtVtGCy4+EhYPfjmMNsfb5wrscUm0muI91uTSD+JmqGaEr0PomDLGv2OKkiFFuz2at6/rZNF/EdlXDRahkl69lQZ503XbxpXmtvFfWrunIIVjHxnz72R7YKIOdi1BXGSrH2XsjfK8l4CDEMuErvgYw7It+9u9OsSf8IiuNOoTrL+teBfi3tLUgd1cDc6CqWGAq73N9fxdKEajPfTREhuc3JYarYzup8/Pk1pT/wTMjHY8eFD4BY1bXpuMlEt0qUOdFg8nsfMT+eQjnkbsz/F+v/J7uvA/duUzR0/unrmTQWibvXbkIw6av+INYq5C+niS9luF/dGiXclmW1gc3FU5cjHbq7eQZ7DWOocVkZVzBb9nMJT6M8mMJMJLupOIRL6Itddg84rOz03upf9sYL9TWLkbLmsyQqOxw1G+o2bYdDlzz3xIftmj+xwk+bXerBQE1bEUKyO8AcdNAb5VfLNk5af1H77WhnWM9suHpZqqc34empDpf9hfNYo4rOGxEJIrSWnprUjNOh3Pe70bL5TP38CewJz8w==
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"SettingsController_create"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+SettingsController_create
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"SMTP","description":"Name of the setting"},"value":{"type":"object","example":{"host":"smtp.gmail.com","Port":465,"secure":true,"username":"test","password":"test"},"description":"Settings value. Can be string | number | boolean | object"},"requiredFields":{"example":["host","port","secure","username","PASSWORD"],"description":"Settings value. Can be string | number | boolean | object","type":"array","items":{"type":"string"}},"isReadOnly":{"type":"boolean","example":false,"description":"If true, setting value cannot be changed"},"isPrivate":{"type":"boolean","example":true,"description":"If true, setting value is not returned in public API"}},"required":["name","value","requiredFields","isReadOnly","isPrivate"],"title":"CreateSettingDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

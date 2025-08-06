@@ -1,0 +1,71 @@
+---
+id: auths-controller-login-otp
+title: "AuthsController_loginOtp"
+description: "AuthsController_loginOtp"
+sidebar_label: "AuthsController_loginOtp"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFk01v2zAMhv+KwbO2JDv61mUtkKFDirbDDkYwMDYbq5MlVaKzBob/+0DJzcc2bD7EikSTL5+XGsB5Csja2VUDJVz13MalsxycMRS+G7fTds0eFHgM2BFTiFBWGwWBXnqK/NE1ByiH9FcHaqDk0JOC2lkmy3KE3htdpyKz5+is7MW6pQ5lxQdPUILbPlPNUieIJNYU5bRu0RiyOzoLjRy03YECesXOG9mCUYFj//+gSGGva/pb4VPg9Zer1S2MozrrqjqTkmudkm0UsOb06Zr9rTD7xA7GMaeI3tmY2/kwn8uroVgH7YVI0jUqYNwJ2OSAJLwM+YcvHXHrxDvvYuKH3EIJs/1ihj23sxQ6iT2aF6nug+bDg9iQpX3+9ng0RjrZEgYKoKbFjQsdMpQpTr3Ba5l9ki++3p8m4vqN5YWDMJFLi6MTb7gVaPvkkjMTzHtskYulC4L8NyB3q2LKUDy5UFyESp85bPF+DnkWsZZZFKnCqcM0hRZTq4luccJbJGZF5ntR9zg1TK888wa1FeF9MHKW0VewX4ACgQ8KMv6NglbsKSsYhi1G+hrMOMr2S0/hkE3ZY9C4lc6rzaigJWwoQFkN8IMOUMIyX6l3jyJBwk0vUv64XuPmbCru1g/i13a6pp1r5JuAP0Gl32xKai+NQdobwKDd9ZhMyznl+QX+bGof
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"AuthsController_loginOtp"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/auth/login"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+AuthsController_loginOtp
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"challenge":{"type":"string","example":""},"otp":{"type":"string","example":""},"service":{"type":"object","example":"EMAIL"}},"required":["challenge","otp","service"],"title":"OtpLoginDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

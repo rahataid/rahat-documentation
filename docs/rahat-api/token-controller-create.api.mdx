@@ -1,0 +1,71 @@
+---
+id: token-controller-create
+title: "TokenController_create"
+description: "TokenController_create"
+sidebar_label: "TokenController_create"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlUtv2kAQx78KmrNb/AKMb5CHkl5aJVQ9IFSt12O8ie11dtc0CPm7V7NOwBRKVKk+YLOe3Xn9/uMdyBoVM0JW9ynEsJDPWF3JyihZFKh+coXMIDhQM8VKNKg0xMuVAwpfGtRmLtMtxDv7VyhMITaqQQe4rAxWhl6xui4Ety6GT1pWtKZ5jiWjJ7OtEWKQyRNyQ34UBWQEanpbsRJ7VtooUa3BAXxlZV3Q0gPLmRnYsKF1QG/LRBYfbLlbkGmKmitRU1yX7Re50AOhB3+4SpGLkhW6t7lqygRVf7MXtQ6IShjBisemrovtZXPXdVsHMiXLeSH580VjPxi1XaUV42aWpgq1vpyK+xq683QW+JOUjcOxO/fcset6E3eKmX87CdzIH/FxEF5HlKFRrNKMU4XumM4/OnrKx2kUTKNJlo3TLI28JMTQj5IwC3k4jlJ/Mp4m4cjjzE9DHnjJdJokQRBhxBNEPrUu7fmnWBz8XD3czBY319C2To+6ZYfKHoDj9vYrelqxlQNGmO5wi7tt8bWR0LadF13LSndE+q5HtyN4wAZj2Jq00UnInnps9FdplWhySeKrpbYSYCaHGIYbb2gsbA5oVJu99DTyRgmzfSQRdVF9+bHYy4rySJApC0v3cCtVyQzE1u69yJAbU9vISZUPBz3fvNf6XX9HIjtozArpJMszYulrxYtO9EDQHzHvB6MzXP8LvGfY/R+A7ku3h5CSyaQl9g2hLvErqfCkNrNv9wPqpOA4yKQaHJlSfzsz77P7RinjNEGpRYRGyapeT2xpBweeBnuezg82g69mWBdM2OHVKDskO9SWsPEoN9uslQM5cRgvYbdLmMbvqmhbWn5pUG07BDdMCZZQvstV60COLEUF8XIHz7il+nTj/9OCfJN50VAMJ5+CdtXD/9vXR+IpefuklDKlPYr9Asf+xgAOSJuXhd6u7aBg1bpha7LtzqTrNzVcQYA=
+sidebar_class_name: "post api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"TokenController_create"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/v1/token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+TokenController_create
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","example":"Rahat Token"},"symbol":{"type":"string","example":"RHT"},"description":{"type":"string","example":"This is Rahat Token"},"decimals":{"type":"number","example":18},"initialSupply":{"type":"number","example":1000},"fromBlock":{"type":"number","example":235},"contractAddress":{"type":"string","example":"0x40BdA327da6460B106001709ef2F730825c634D8"},"transactionHash":{"type":"string","example":"0x9c6d83987ff6dfd81b4e428b4f4c468d2769b451ca2d4c31b99bb338e8cbeec9"},"type":{"type":"object","example":"CREATED"}},"required":["name","symbol","description","fromBlock","contractAddress"],"title":"CreateTokenDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

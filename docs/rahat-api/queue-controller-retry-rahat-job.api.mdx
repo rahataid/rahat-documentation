@@ -1,0 +1,71 @@
+---
+id: queue-controller-retry-rahat-job
+title: "Retry a Failed Rahat Job"
+description: "Retry a Failed Rahat Job"
+sidebar_label: "Retry a Failed Rahat Job"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9UkuP0zAQ/ivWnFjJkJajb2hhV+0JStEeqgpNkunGkNjpeFJRRf7vaJKy2lLEya/xfI/5Rog9MYqPYVWDgy8DDXQfg3BsW+LvTMLnDTYo61iChR4ZOxLiBG43QsCOwIGvwQLTcfBMNTjhgSz4AA56lAYs1JQq9r3CgIN1LM3qo5FopvZgIVUNdQhuBDn32jEMXUkMOe+1cepjSJT0/f1ioct1Q8jZguCzkpolwP5v0I1CGTQP6FuqzaTJzKI6kiaq+meSSaM04KA4LYuj9ipYa9/+iGUqJsLF6OusrIlPsxN7PVQDezl/VSkz1/XTVpdJnIoqCZkY7GXzELlDUT+etmD/KG9E+kmPD4c4OeKl1YeZ8X1kujH0w+eVUTK+InOIbK5KleJctny3AAtVDIKVgBsVpY9JOgwKdBnmf4y6Qn2ZldAvKfoWfYBsYeBW32YTd3BagoXJRo3Ii5FTXubZO1/rtJqYRD+MY4mJvnGbs14fB+Lz7PAJ2WOpXuxGqH3SfQ3ugG2iG26qkoK6+2ZzCeaduQ3ePyVcLjFoxQnbQU9g4Sed57DnfX6VmsdPW8j5NyDGGeE=
+sidebar_class_name: "get api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retry a Failed Rahat Job"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/queue/rahat-jobs/retry/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retry a Failed Rahat Job
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","required":true,"in":"path","description":"Job ID to retry","schema":{"type":"number"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

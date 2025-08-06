@@ -1,0 +1,71 @@
+---
+id: project-controller-update-status
+title: "ProjectController_updateStatus"
+description: "ProjectController_updateStatus"
+sidebar_label: "ProjectController_updateStatus"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFlMFu2zAMhl/F4GkDtKXd0bcu27DuVLQpdgiCgbGZWK1tqRSdNjD07gMlJ1naDTvZliiR/P6fHsF5YhTr+usaSrhh90CVzF0v7NqW+NfgaxS6E5QhgAGPjB0JcYByOUKPHUEJw2BrMMD0NFimGkrhgQzYHkrwKA0YCFVDHUI5xrjKkRTks6v3UI5vDlauF+pFt9D71lapwtlDcL2uHe8C2XvN79ZatZbH2o9YCikuV32KC8K234IBesHOt7p05zoq6EUYC9tvHHcpFcRoQKykkPuEYEKTSXwRBzFqEFPwrg854aeLC33UFCq2Pl1UQr4Lt0rsADjAykCgamAr+0Tyx88FlMuVwjk//l9JOpLG1Zl01SSNpIESZrvLmZ/SzUaVKM7C4VAg3mUR/yjkTrnmTlI5E2llsCZkYjDTy7cECsoUZw54GxGfulWhbk8Sfz3QPknyT+7qmo1Lmk34b7FBKeaOCV6zubq5LrQTW1GxcVychWp/Oezy4wVkU2ElyYIGvAvSYbLTZOIJdHEiXWTSxRH1Wfajq4ReZOZbtKn8gVvdyyIsYXeZbZlVN1BOszKBWBloXBCNHMc1BrrnNkZdfhqI91mfHbLFtcJYjlDboO81lBtsA70p6jg78O52Gqv3xUmj82KnRez3CgzbQb/AwCPtD2MdV9FAQ1gTp/x5a56zfFjoBaejb6ZV/Xw06M3VYv5dPTSNfedqPcT4rD8PfM65XWoluTCtjdBivx1wq7H5UhUQBwV8FOGVQVOpf+1uHHPEwj1SH+OxWdFv7TbG39ALwJI=
+sidebar_class_name: "patch api-method"
+info_path: docs/rahat-api/rahat-core
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ProjectController_updateStatus"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/v1/projects/{uuid}/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+ProjectController_updateStatus
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"uuid","required":true,"in":"path","schema":{}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","example":"Some extra information"}},"title":"UpdateProjectStatusDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      
