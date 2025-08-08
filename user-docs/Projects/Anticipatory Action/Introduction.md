@@ -1,0 +1,50 @@
+# AA Tool
+
+The anticipatory action tool is a comprehensive solution for managing anticipatory action (AA) projects, providing features for activity management, trigger modules, forecasting data integration, communication, assistance distribution, real-time monitoring, and beneficiary information management. It enables efficient planning, resource allocation, early warning detection, and effective collaboration among stakeholders. With capabilities for transparent oversight and informed decision-making, the tool ensures timely responses to emerging crises and efficient aid distribution, ultimately enhancing preparedness and resource allocation for organizations.
+
+## Features
+
+### 1. Role-Based User Management
+Assigning and managing user roles and permissions is crucial for maintaining security, ensuring data integrity, and effectively managing systems and resources within an organization. In AA projects, pre-defined roles for user management will be available, and only System Admins can add or assign these roles based on the organization's requirements. Access control will be enforced based on these roles to ensure appropriate permissions and secure operations.
+
+### 2. Manage Forecast Sources
+The Rahat system provides access to data sources such as GLoFAS and DHM for analyzing information at the station level. It also includes a Daily Monitoring feature, allowing users to update data from various sources, supporting informed decision-making.
+
+### 3. Manage Trigger Thresholds
+This feature is pivotal in disaster preparedness systems, enabling organizations to establish predefined criteria for triggering response actions based on specific thresholds. By incorporating blockchain technology into trigger management, this feature gains enhanced transparency, security, and traceability. Blockchain ensures that trigger thresholds, along with the conditions that activate them, are immutably recorded and accessible in a decentralized ledger.
+
+### 4. Activity Management
+Activity Management involves efficiently coordinating and overseeing disaster response efforts to ensure timely and coordinated actions. This entails organizing and directing various tasks and initiatives aimed at mitigating the impact of disasters and providing effective assistance to affected populations.
+
+By effectively managing activities, responders can streamline operations, allocate resources efficiently, and maximize the effectiveness of the overall response effort. This includes tasks such as planning and prioritizing response activities, assigning responsibilities to relevant teams or individuals, monitoring progress in real-time, and adapting strategies as needed based on evolving conditions. Activities Management is essential for promoting collaboration, communication, and synergy among response teams, ultimately facilitating a more effective and cohesive disaster response effort.
+
+### 5. Communication Management
+It is a vital component of disaster response, facilitating seamless interaction and information sharing among stakeholders to enhance coordination and effectiveness. Rahat Platform provides three types of communication services:
+
+- Voice messaging  
+- Text messaging  
+- Interactive voice response (IVR)
+
+### 6. Fund Management and Disbursement
+In this version of AA, a **Cash and Voucher Assistance (CVA)** module will be introduced to enhance the management and distribution of aid. This module will streamline processes such as beneficiary identification, eligibility assessment, and the delivery of cash or in-kind assistance, ensuring efficient and timely support for those in need.
+
+Additionally, the platform will feature a fund allocation system that assigns resources to selected beneficiary groups. Vendors can also be onboarded, enabling beneficiaries to redeem their tokens directly at designated vendor locations. This approach not only provides beneficiaries with greater flexibility and autonomy but also supports local economies by involving community vendors in the assistance process.
+
+### 7. Payout
+The Payout feature enables users to initiate fund transfers through integrated Financial Service Providers (FSPs) or vendors. It is connected via APIs with FSPs such as banks, digital wallets, and the Nepal Clearing House Limited (NCHL). This integration allows users to directly disburse funds to beneficiaries, eliminating the need for additional operational or administrative steps.
+
+### 8. Import Beneficiary from Community Tool
+Importing beneficiary data from the Community Tool application via APIs improves the effectiveness of targeting and categorizing individuals using various criteria. Integration of this tool streamlines the gathering and structuring of beneficiary information, refining the selection process for distributing aid. This guarantees that resources are directed to those with the greatest need, enhancing coordination and allocation of assistance based on specific demographics and requirements.
+
+### 9. Reporting
+The system generates reports based on:
+
+- Beneficiary data  
+- Area of coverage  
+- Activity completion charts  
+- And others
+
+These reports may be filtered by date ranges, and these filtered reports can be exported in an Excel file as well, according to the requirements of the client.
+
+### 10. Offline Application
+The mobile version of the application enables users to manage activities, configure triggers, and forecast sources, even in low-connectivity environments. This offline functionality ensures that users can send updates without relying on a constant internet connection. Implementing offline capabilities in mobile apps enhances user experience by allowing access to essential features regardless of connectivity status.
