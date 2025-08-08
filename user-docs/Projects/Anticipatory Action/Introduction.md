@@ -1,4 +1,6 @@
-# AA Tool
+# Introduction
+
+## AA Tool
 
 The anticipatory action tool is a comprehensive solution for managing anticipatory action (AA) projects, providing features for activity management, trigger modules, forecasting data integration, communication, assistance distribution, real-time monitoring, and beneficiary information management. It enables efficient planning, resource allocation, early warning detection, and effective collaboration among stakeholders. With capabilities for transparent oversight and informed decision-making, the tool ensures timely responses to emerging crises and efficient aid distribution, ultimately enhancing preparedness and resource allocation for organizations.
 
