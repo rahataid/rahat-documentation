@@ -9,6 +9,8 @@ Complete guide for managing USDC disbursements, project setup, and beneficiary m
 
 ## 📊 Dashboard Overview
 
+![C2C Dashboard Screenshot](https://assets.rumsan.net/rahat/c2c-dashboard-2.png)
+
 :::info
 Within each project, the Project Dashboard provides a quick overview of key details and progress.
 :::
@@ -106,6 +108,8 @@ Make sure:
 
 You will see 3 Treasury Source Options. Each option is a way to send money. Choose one based on where the funds are coming from:
 
+![Treasury Source](https://assets.rumsan.net/rahat/treasury-source.png)
+
 ##### 1. Project Balance
 
 - Funds are held in a project-specific smart contract
@@ -128,30 +132,60 @@ You will see 3 Treasury Source Options. Each option is a way to send money. Choo
 
 [📎 See full guide on multisig disbursement](#multisig-disbursement)
 
-## 🔐 Disbursement via Multisig – Detailed Steps
+## Disbursement via Project Balance – Detailed Steps
 
-:::info
+To disburse funds using the **Project Balance**, follow these steps:
+
+### 1. Load Balance into Project Contract
+
+First, you must load the balance into the project contract.
+
+#### Go to Fund Management section
+
+- **Option 1**: Copy the *Project Contract Wallet Address* from the dashboard and paste it into your wallet.  
+- **Option 2**: Scan the QR code by clicking the QR code sign.
+
+  ![Fund Management Screenshot](https://assets.rumsan.net/rahat/fund-managment-.png)
+
+### 2. Initiate Disbursement
+
+- Select **Project Balance** as your treasury source.  
+- Enter the amount to disburse.  
+- Complete the disbursement.
+
+## Disbursement via Multisig – Detailed Steps
+
 After selecting **Multisig Wallet** as your treasury source, follow these detailed steps:
-:::
 
 ### Step-by-Step Process
 
 #### Step 1: Input Amount
 Input the amount of USDC you want to send per beneficiary.
 
+![Disbursement screen mockup](https://assets.rumsan.net/rahat/disburesemnt-1.png)
+
 #### Step 2: Transaction Request
 The platform will create a transaction request and send it to the Gnosis Safe dashboard.
+
+![Disbursement Step 2](https://assets.rumsan.net/rahat/disbursement-2.png)
 
 #### Step 3: Signer Notification
 The Gnosis Safe signers will receive a notification in Safe Wallet Dashboard.
 
+![Wallet Dashboard](https://assets.rumsan.net/rahat/wallet-dashboard.png)
+
 #### Step 4: Approval Process
 Once the required number of signers approve it (e.g., 2 out of 4), the transaction becomes ready.
+
+![Screenshot - June 11, 2025 at 4:37 PM](https://assets.rumsan.net/rahat/screenshot-2025-06-11-at-4.37.26-pm.png)
 
 #### Step 5: Execute Transaction
 **Execute the Transaction:**
 - Go to Disbursement section → Click on the transaction details
+![Screenshot – July 7, 2025 at 3:12 PM](https://assets.rumsan.net/rahat/screenshot-2025-07-07-at-3.12.28-pm.png)
+
 - Click the Execute button
+![Screenshot – June 11, 2025 at 4:33 PM](https://assets.rumsan.net/rahat/screenshot-2025-06-11-at-4.33.14-pm.png)
 
 :::success
 ✅ The system will now automatically send the USDC to each beneficiary's wallet.
