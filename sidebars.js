@@ -17,7 +17,7 @@ module.exports = {
           "Rahat API documentation for all available endpoints and operations.",
         slug: "/category/rahat"
       },
-      items: require("./docs/rahat-api/sidebar.ts")
+      items: require("./docs/rahat-api/sidebar.ts").default
     }
   ]
 };
