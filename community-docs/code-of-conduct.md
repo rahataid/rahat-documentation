@@ -1,3 +1,9 @@
+---
+id: code-of-conduct
+title: Code Of Conduct
+---
+
+
 # Code of Conduct
 
 ## Our Commitment
