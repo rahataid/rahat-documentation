@@ -6,7 +6,9 @@ module.exports = {
       items: [
         'contribution-guidelines',
         'pr-guidelines',
-        'coding-standards'
+        'coding-standards',
+        'code-of-conduct',
+        'rahat-improvement-proposal'
       ],
     },
   ],

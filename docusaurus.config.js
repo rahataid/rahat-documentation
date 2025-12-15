@@ -158,6 +158,14 @@ const config = {
                 label: 'Coding Standards',
                 to: '/community/coding-standards',
               },
+               {
+                label: 'Code Of Conduct',
+                to: '/community/code-of-conduct',
+              },
+              {
+                label:'Rahat Improvement Proposal',
+                to: '/community/rahat-improvement-proposal',
+              }
             ],
           },
           {
