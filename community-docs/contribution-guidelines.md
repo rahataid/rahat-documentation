@@ -5,7 +5,7 @@ title: Contribution Guidelines
 
 # Contribution Guidelines
 
-We would love to have your help. Before you start working, however, please read and follow this short guide.
+We’re  glad you’re here! Whether it’s a tiny typo fix or a major new feature, every contribution helps Rahat make more impact. To get started, please take a quick look at our [Code of Conduct](https://docs.rahat.io/community/code-of-conduct/) and our [Contribution Guide](https://docs.rahat.io/community/contribution-guidelines) to help us keep our community helpful and inclusive.
 
 ## Getting Started
 
@@ -19,6 +19,13 @@ Namaste, Rahat development team would like to thank you for taking the time to c
 - Getting involved with Rahat community
 
 We have created guidelines for contributing to Rahat project and packages. These are guidelines, not rules. We encourage you to use your best judgment and feel free to recommend changes to this document in a pull request. We use GitHub to host code, track issues and feature requests, as well as accept pull requests.
+
+## Before you "Submit," please make sure you've:
+
+1. Showed it: Include screenshots for any visual changes.
+2. Explained it: Give us a clear, detailed PR description.
+3. Tested it: Run the code locally and double-check your work first.
+4. Shared it: Keep all discussions inside the GitHub issue or PR so the whole team stays in the loop.
 
 ## How to contribute to the Rahat Project?
 
